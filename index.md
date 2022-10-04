@@ -3,4 +3,4 @@ layout: default
 description: Contents
 ---
 
-[Sample](./sample.html).
+[Sample](./sample.html)
