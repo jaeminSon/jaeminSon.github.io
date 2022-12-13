@@ -3,4 +3,4 @@ layout: default
 description: Contents
 ---
 
-[Sample](./sample.html)
+[Undistort Image with OpenCV-Python](./opencv-python.html)
