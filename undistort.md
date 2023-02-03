@@ -6,10 +6,10 @@ layout: default
 
 [Reference](https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html)
 
-[Python File](./data/opencv-python/undistort_opencv.py)
+[Python File](./data/undistort/undistort_opencv.py)
 
 ## Input
-<img src="./data/opencv-python/check.png" width="411" height="297" />
+<img src="./data/undistort/check.png" width="411" height="297" />
 
 ## Source Code
 
@@ -59,7 +59,7 @@ if corners_detected:
 ```
 
 ## Results
-<img src="./data/opencv-python/distorted.png" width="411" height="297" />
-<img src="./data/opencv-python/undistorted.png" width="411" height="297" />
-<img src="./data/opencv-python/corners.png" width="411" height="297" />
+<img src="./data/undistort/distorted.png" width="411" height="297" />
+<img src="./data/undistort/undistorted.png" width="411" height="297" />
+<img src="./data/undistort/corners.png" width="411" height="297" />
 
