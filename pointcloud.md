@@ -2,7 +2,7 @@
 layout: default
 ---
 
-**Rotation matrix with Quaternion**
+**Visualize Pointcloud with Open3D**
 
 [Reference](http://www.open3d.org/docs/release/tutorial/geometry/pointcloud.html)
 
