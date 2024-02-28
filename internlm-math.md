@@ -21,6 +21,6 @@ layout: default
 - SFT 데이터: filtering, depulication 이후 31.2B tokens   
 <img src="./data/papers/internlm-math/sft-data.png" width="600" />
 
-- 타 모델과 비교
+- 타 모델과 비교  
 <img src="./data/papers/internlm-math/internmath_result.png" width="400" />
 
