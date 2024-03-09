@@ -14,3 +14,5 @@ description: Contents
 [(논문 요약) InternLM-Math: Open Math Large Language Models Toward Verifiable Reasoning](./internlm-math.html)
 
 [(논문 요약) Beyond A\*: Better Planning with Transformers via Search Dynamics Bootstrapping](./searchformer.html)
+
+[(논문 요약) Efficient Tool Use with Chain-of-Abstraction Reasoning](./coa.html)
