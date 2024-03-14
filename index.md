@@ -18,3 +18,5 @@ description: Contents
 [(논문 요약) Efficient Tool Use with Chain-of-Abstraction Reasoning](./coa.html)
 
 [(논문 요약) Simple and Scalable Strategies to Continually Pre-train Large Language Models](./contllm.html)
+
+[(논문 요약) Scaling Instructable Agents Across Many Simulated Worlds](./sima.html)
