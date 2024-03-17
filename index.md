@@ -20,3 +20,7 @@ description: Contents
 [(논문 요약) Simple and Scalable Strategies to Continually Pre-train Large Language Models](./contllm.html)
 
 [(논문 요약) Scaling Instructable Agents Across Many Simulated Worlds](./sima.html)
+
+[(논문 요약) Stop Regressing: Training Value Functions via Classification for Scalable Deep RL](./stopregress.html)
+
+[(논문 요약) DEMYSTIFYING EMBEDDING SPACES USING LARGE LANGUAGE MODELS](./cav.html)
