@@ -24,3 +24,13 @@ description: Contents
 [(논문 요약) Stop Regressing: Training Value Functions via Classification for Scalable Deep RL](./stopregress.html)
 
 [(논문 요약) DEMYSTIFYING EMBEDDING SPACES USING LARGE LANGUAGE MODELS](./cav.html)
+
+[(논문 요약) SceneScript: Reconstructing Scenes With An Autoregressive Structured Language Model](./scenescript.html)
+
+[(논문 요약) STaR: Self-Taught Reasoner Bootstrapping Reasoning With Reasoning](./star-self-taught.html)
+
+[(논문 요약) Quiet-STaR: Language Models Can Teach Themselves to Think Before Speaking](./quiet-star.html)
+
+[(논문 요약) RAT: Retrieval Augmented Thoughts Elicit Context-Aware Reasoning in Long-Horizon Generation](./rat.html)
+
+[(논문 요약) Branch-Train-MiX: Mixing Expert LLMs into a Mixture-of-Experts LLM](./branch-train-mix.html)
