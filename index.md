@@ -34,3 +34,7 @@ description: Contents
 [(논문 요약) RAT: Retrieval Augmented Thoughts Elicit Context-Aware Reasoning in Long-Horizon Generation](./rat.html)
 
 [(논문 요약) Branch-Train-MiX: Mixing Expert LLMs into a Mixture-of-Experts LLM](./branch-train-mix.html)
+
+[(논문 요약) Text Embeddings by Weakly-Supervised Contrastive Pre-training](./e5.html)
+
+[(논문 요약) Generative Representational Instruction Tuning](./gen_rep_inst.html)
