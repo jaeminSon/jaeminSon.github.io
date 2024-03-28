@@ -40,3 +40,5 @@ description: Contents
 [(논문 요약) Generative Representational Instruction Tuning](./gen_rep_inst.html)
 
 [(논문 요약) Chart-based Reasoning: Transferring Capabilities from LLMs to VLMs](./chart-based-reasoning.html)
+
+[(논문 요약) MTEB: Massive Text Embedding Benchmark](./mteb.html)
