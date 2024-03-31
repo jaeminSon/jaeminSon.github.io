@@ -2,7 +2,7 @@
 layout: default
 ---
 
-**(논문 요약) Chart-based Reasoning: Transferring Capabilities from LLMs to VLMs** [(Paper)](https://arxiv.org/pdf/2210.07316.pdf)
+**(논문 요약) MTEB: Massive Text Embedding Benchmark** [(Paper)](https://arxiv.org/pdf/2210.07316.pdf)
 
 ## 핵심 내용
 - Massive Text Embedding Benchmark (MTEB)

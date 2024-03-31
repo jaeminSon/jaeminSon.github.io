@@ -46,3 +46,5 @@ description: Contents
 [(논문 요약) LONG-FORM FACTUALITY IN LARGE LANGUAGE MODELS](./safe.html)
 
 [(논문 요약) RAFT: Adapting Language Model to Domain Specific RAG](./raft.html)
+
+[(논문 요약) GaLore: Memory-Efficient LLM Training by Gradient Low-Rank Projection](./galore.html)

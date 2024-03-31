@@ -6,3 +6,4 @@ Gemfile.lock
 .jekyll-cache
 
 .DS_Store
+check_url.py
