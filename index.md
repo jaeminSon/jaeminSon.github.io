@@ -42,3 +42,7 @@ description: Contents
 [(논문 요약) Chart-based Reasoning: Transferring Capabilities from LLMs to VLMs](./chart-based-reasoning.html)
 
 [(논문 요약) MTEB: Massive Text Embedding Benchmark](./mteb.html)
+
+[(논문 요약) LONG-FORM FACTUALITY IN LARGE LANGUAGE MODELS](./safe.html)
+
+[(논문 요약) RAFT: Adapting Language Model to Domain Specific RAG](./raft.html)
