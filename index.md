@@ -58,3 +58,5 @@ description: Contents
 [(논문 요약) Gorilla: Large Language Model Connected with Massive APIs](./gorilla.html)
 
 [(논문 요약) Gecko: Versatile Text Embeddings Distilled from Large Language Models](./gecko.html)
+
+[(논문 요약) Integrating Code Generation with Execution and Refinement](./opencode.html)
