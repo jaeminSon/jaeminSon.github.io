@@ -60,3 +60,11 @@ description: Contents
 [(논문 요약) Gecko: Versatile Text Embeddings Distilled from Large Language Models](./gecko.html)
 
 [(논문 요약) Integrating Code Generation with Execution and Refinement](./opencode.html)
+
+[(논문 요약) Towards General Computer Control: A Multimodal Agent for Red Dead Redemption II as a Case Study](./rdr2.html)
+
+[(논문 요약) Leave No Context Behind: Efficient Infinite Context Transformers with Infini-attention](./infiniattn.html)
+
+[(논문 요약) RecurrentGemma: Moving Past Transformers for Efficient Open Language Models](./recurrentgemma.html)
+
+[(논문 요약) CodeGemma: Open Code Models Based on Gemma](./codegemma.html)
