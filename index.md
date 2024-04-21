@@ -68,3 +68,5 @@ description: Contents
 [(논문 요약) RecurrentGemma: Moving Past Transformers for Efficient Open Language Models](./recurrentgemma.html)
 
 [(논문 요약) CodeGemma: Open Code Models Based on Gemma](./codegemma.html)
+
+[(모델 요약) LLaMa3](./llama3.html)
