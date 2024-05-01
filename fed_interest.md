@@ -12,3 +12,6 @@ layout: default
   - 장기 금리는 과매도에 의한 반동 상승이 있을수 있음.
   - 단기 금리는 지속적으로 하락함.
 - 1973~1974년 경기 침체 시, 장기 금리는 상승함 (석유 파동이 있었음)
+
+<img src="./data/us_treasury_yield/nominal-gdp-interest-rate.png" width="800" />
+- interest rate 은 nominal gdp (YoY Percent Change) 와 상관관계가 높음.

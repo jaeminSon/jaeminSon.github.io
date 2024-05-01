@@ -2,7 +2,7 @@
 layout: default
 ---
 
-**** [(모델 요약) LLaMa3](https://github.com/meta-llama/llama3/blob/main/MODEL_CARD.md)
+**[(모델 요약) LLaMa3](https://github.com/meta-llama/llama3/blob/main/MODEL_CARD.md)**
 
 - param size: 8B, 70B
 - context length: 8k
