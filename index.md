@@ -2,6 +2,10 @@
 layout: default
 description: Contents
 ---
+[(논문 요약) Chat Vector: A Simple Approach to Equip LLMs with Instruction Following and Model Alignment in New Languages](./chatvector.html)
+
+[(논문 요약) AgentCoder: Multiagent-Code Generation with Iterative Testing and Optimisation](./agentcoder.html)
+
 [(논문 요약) NExT: Teaching Large Language Models to Reason about Code Execution](./next.html)
 
 [(논문 요약) Make Your LLM Fully Utilize the Context](./utilize-context.html)
