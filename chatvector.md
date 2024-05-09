@@ -11,7 +11,7 @@ layout: default
   - RLHF: Reinforcement learning from human feedback
 <img src="./data/papers/chatvector/overview.png" width="600" />
 - prompts
-<img src="./data/papers/chatvector/overview2.png" width="800" />  
+<img src="./data/papers/chatvector/overview2.png" width="600" />  
 
 ## 실험 결과
 - 0.5 곱한건 heuristic 인 듯함.
