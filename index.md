@@ -2,6 +2,12 @@
 layout: default
 description: Contents
 ---
+[(논문 요약) Better & Faster Large Language Models via Multi-token Prediction](./multitoken.html)
+
+[(논문 요약) LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale](./llmint8.html)
+
+[(논문 요약) OBELICS: An Open Web-Scale Filtered Dataset of Interleaved Image-Text Documents](./OBELICS.html)
+
 [(논문 요약) SWE-AGENT: AGENT-COMPUTER INTERFACES ENABLE AUTOMATED SOFTWARE ENGINEERING](./swe-agent.html)
 
 [(논문 요약) Chat Vector: A Simple Approach to Equip LLMs with Instruction Following and Model Alignment in New Languages](./chatvector.html)
