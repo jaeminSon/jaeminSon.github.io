@@ -2,6 +2,8 @@
 layout: default
 description: Contents
 ---
+[(코드 실행) Alphacodium](./alphacodium-code.html)
+
 [(논문 요약) Code Generation with AlphaCodium: From Prompt Engineering to Flow Engineering](./alphacodium.html)
 
 [(논문 요약) Better & Faster Large Language Models via Multi-token Prediction](./multitoken.html)
