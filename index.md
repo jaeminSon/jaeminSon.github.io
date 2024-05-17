@@ -86,6 +86,8 @@ description: Contents
 
 [(논문 요약) InternLM-Math: Open Math Large Language Models Toward Verifiable Reasoning](./internlm-math.html)
 
+[(코드 실행) AnyMAL: An Efficient and Scalable Any-Modality Augmented Language Model](./anymal.html)
+
 [(논문 요약) Textbooks Are All You Need](./textbook.html)
 
 [FED 금리 수익률 곡선](./fed_interest.html)
