@@ -2,6 +2,8 @@
 layout: default
 description: Contents
 ---
+[(논문 요약) What matters when building vision-language models?](./idefics2.html)
+
 [(코드 실행) Alphacodium](./alphacodium-code.html)
 
 [(논문 요약) Code Generation with AlphaCodium: From Prompt Engineering to Flow Engineering](./alphacodium.html)
@@ -85,6 +87,8 @@ description: Contents
 [(논문 요약) Beyond A\*: Better Planning with Transformers via Search Dynamics Bootstrapping](./searchformer.html)
 
 [(논문 요약) InternLM-Math: Open Math Large Language Models Toward Verifiable Reasoning](./internlm-math.html)
+
+[(논문 요약) Grounded Language-Image Pre-training](./glip.html)
 
 [(코드 실행) AnyMAL: An Efficient and Scalable Any-Modality Augmented Language Model](./anymal.html)
 
