@@ -2,6 +2,10 @@
 layout: default
 description: Contents
 ---
+[(논문 요약) Does Fine-Tuning LLMs on New Knowledge Encourage Hallucinations?](./finetuning-hallucination.html)
+
+[(논문 요약) Chameleon: Mixed-Modal Early-Fusion Foundation Models](./chameleon.html)
+
 [(논문 요약) What matters when building vision-language models?](./idefics2.html)
 
 [(코드 실행) Alphacodium](./alphacodium-code.html)
