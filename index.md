@@ -2,6 +2,8 @@
 layout: default
 description: Contents
 ---
+[(논문 요약) Granite Code Models: A Family of Open Foundation Models for Code Intelligence](./granite.html)
+
 [(논문 요약) Does Fine-Tuning LLMs on New Knowledge Encourage Hallucinations?](./finetuning-hallucination.html)
 
 [(논문 요약) Chameleon: Mixed-Modal Early-Fusion Foundation Models](./chameleon.html)

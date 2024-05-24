@@ -22,5 +22,4 @@ layout: default
 <img src="./data/papers/swe-agent/edit.png" width="800" />
 
 ## 실험 결과
-- 0.5 곱한건 heuristic 인 듯함.
 <img src="./data/papers/swe-agent/result.png" width="800" />
