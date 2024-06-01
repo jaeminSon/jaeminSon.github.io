@@ -2,6 +2,8 @@
 layout: default
 description: Contents
 ---
+[(논문 요약) DeepSeek-Prover: Advancing Theorem Proving in LLMs through Large-Scale Synthetic Data](./deepseek-prover.html)
+
 [(논문 요약) Layer-Condensed KV Cache for Efficient Inference of Large Language Models](./lckv.html)
 
 [(논문 요약) Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet](./sonnetinterpret.html)
