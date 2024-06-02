@@ -2,6 +2,10 @@
 layout: default
 description: Contents
 ---
+[(논문 요약) Extreme Compression of Large Language Models via Additive Quantization](./aqlm.html)
+
+[(논문 요약) QuIP#: Even Better LLM Quantization with Hadamard Incoherence and Lattice Codebooks](./quip.html)
+
 [(논문 요약) DeepSeek-Prover: Advancing Theorem Proving in LLMs through Large-Scale Synthetic Data](./deepseek-prover.html)
 
 [(논문 요약) Layer-Condensed KV Cache for Efficient Inference of Large Language Models](./lckv.html)
