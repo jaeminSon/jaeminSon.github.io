@@ -2,6 +2,8 @@
 layout: default
 description: Contents
 ---
+[(논문들 요약) Large Language Model Tuning](./llmtune.html)
+
 [(논문 요약) Extreme Compression of Large Language Models via Additive Quantization](./aqlm.html)
 
 [(논문 요약) QuIP#: Even Better LLM Quantization with Hadamard Incoherence and Lattice Codebooks](./quip.html)
@@ -83,6 +85,8 @@ description: Contents
 [(논문 요약) Text Embeddings by Weakly-Supervised Contrastive Pre-training](./e5.html)
 
 [(논문 요약) Branch-Train-MiX: Mixing Expert LLMs into a Mixture-of-Experts LLM](./branch-train-mix.html)
+
+[(논문 요약) Direct Preference Optimization: Your Language Model is Secretly a Reward Model](./dpo.html)
 
 [(논문 요약) RAT: Retrieval Augmented Thoughts Elicit Context-Aware Reasoning in Long-Horizon Generation](./rat.html)
 
