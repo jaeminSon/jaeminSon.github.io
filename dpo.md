@@ -8,7 +8,7 @@ layout: default
 - reward 모델 없이 바로 llm 에 loss 흘려줌  
 <img src="./data/papers/dpo/concept.png" width="800" />
 - Reinforcement Learning from Human Feedback (RLHF)
-   - Reward Model Loss:  <img src="./data/papers/dpo/loss.png" width="400" /> (1)
+   - Reward Model Loss (using BradleyTerry (BT) ranking objective):  <img src="./data/papers/dpo/loss.png" width="400" /> (1)
    - Optimizing LLM: <img src="./data/papers/dpo/RL.png" width="400" />  (2)
         - $\pi_{\theta}$: target policy
         - $\pi_{ref}$: supervised-finetuned-model's policy

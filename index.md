@@ -2,6 +2,10 @@
 layout: default
 description: Contents
 ---
+[(논문 요약) SimPO: Simple Preference Optimization with a Reference-Free Reward](./simpo.html)
+
+[(논문 요약) Faithful Logical Reasoning via Symbolic Chain-of-Thought](./symboliccot.html)
+
 [(논문들 요약) Large Language Model Tuning](./llmtune.html)
 
 [(논문 요약) Extreme Compression of Large Language Models via Additive Quantization](./aqlm.html)
