@@ -2,6 +2,12 @@
 layout: default
 description: Contents
 ---
+[(논문 요약) Show, Don’t Tell: Aligning Language Models with Demonstrated Feedback](./ditto.html)
+
+[(논문 요약) Towards Scalable Automated Alignment of LLMs: A Survey](./alignment.html)
+
+[(논문 요약) Buffer of Thoughts: Thought-Augmented Reasoning with Large Language Models](./bot.html)
+
 [(논문 요약) SimPO: Simple Preference Optimization with a Reference-Free Reward](./simpo.html)
 
 [(논문 요약) Faithful Logical Reasoning via Symbolic Chain-of-Thought](./symboliccot.html)
