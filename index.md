@@ -2,6 +2,12 @@
 layout: default
 description: Contents
 ---
+[(논문 요약) MAGPIE: Alignment Data Synthesis from Scratch by Prompting Aligned LLMs with Nothing](./magpie.html)
+
+[(논문 요약) Mixture-of-Agents Enhances Large Language Model Capabilities](./togethermoa.html)
+
+[(논문 요약) OpenVLA: An Open-Source Vision-Language-Action Model](./openvla.html)
+
 [(논문 요약) Show, Don’t Tell: Aligning Language Models with Demonstrated Feedback](./ditto.html)
 
 [(논문 요약) Towards Scalable Automated Alignment of LLMs: A Survey](./alignment.html)
