@@ -39,3 +39,7 @@ layout: default
 ## I-Quantization [(PR)](https://github.com/ggerganov/llama.cpp/pull/4773)
 - IQ2_XXS, IQ3_S 등
 - [QuIP#](https://arxiv.org/pdf/2402.04396) 에서 sign flip, lattice 기법을 차용.
+
+## GGUF 모델 변환
+- HuggingFace checkpoint 를 GGUF 포맷으로 변환 필요 (convert-hf-to-gguf.py)
+- gguf-py 폴더는 GGUF 포맷을 read/write 하기 위한 python 코드들이 들어있음.

@@ -2,6 +2,8 @@
 layout: default
 description: Contents
 ---
+[(논문 요약) DeepSeek-Coder-V2: Breaking the Barrier of Closed-Source Models in Code Intelligence](./deepseekcoderv2.html)
+
 [(논문 요약) AGENTGYM: Evolving Large Language Model-based Agents across Diverse Environments](./agentgym.html)
 
 [(논문 요약) MAGPIE: Alignment Data Synthesis from Scratch by Prompting Aligned LLMs with Nothing](./magpie.html)
