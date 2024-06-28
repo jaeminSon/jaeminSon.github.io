@@ -2,6 +2,8 @@
 layout: default
 description: Contents
 ---
+[(논문 요약) Meta Large Language Model Compiler: Foundation Models of Compiler Optimization](./metacompiler.html)
+
 [(논문 요약) TREE SEARCH FOR LANGUAGE MODEL AGENTS](./treellmagent.html)
 
 [(논문 요약) Debug like a Human: A Large Language Model Debugger via Verifying Runtime Execution Step by Step](./ldb.html)
@@ -139,6 +141,10 @@ description: Contents
 [(코드 실행) AnyMAL: An Efficient and Scalable Any-Modality Augmented Language Model](./anymal.html)
 
 [(논문 요약) Textbooks Are All You Need](./textbook.html)
+
+[(논문 요약) Generating Diverse High-Fidelity Images with VQ-VAE-2](./vqvae2.html)
+
+[(논문 요약) Neural Discrete Representation Learning](./vqvae.html)
 
 [FED 금리 수익률 곡선](./fed_interest.html)
 
