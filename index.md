@@ -2,6 +2,10 @@
 layout: default
 description: Contents
 ---
+[(논문 요약) Connecting the Dots: LLMs can Infer and Verbalize Latent Structure from Disparate Training Data](./connectdots.html)
+
+[(논문 요약) WorkBench: a Benchmark Dataset for Agents in a Realistic Workplace Setting](./workbench.html)
+
 [(논문 요약) Meta Large Language Model Compiler: Foundation Models of Compiler Optimization](./metacompiler.html)
 
 [(논문 요약) TREE SEARCH FOR LANGUAGE MODEL AGENTS](./treellmagent.html)
