@@ -2,6 +2,8 @@
 layout: default
 description: Contents
 ---
+[(논문 요약) Connecting the Dots: LLMs can Infer and Verbalize Latent Structure from Disparate Training Data](./gemma2.html)
+
 [(논문 요약) Connecting the Dots: LLMs can Infer and Verbalize Latent Structure from Disparate Training Data](./connectdots.html)
 
 [(논문 요약) WorkBench: a Benchmark Dataset for Agents in a Realistic Workplace Setting](./workbench.html)
