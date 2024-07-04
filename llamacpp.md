@@ -43,3 +43,6 @@ layout: default
 ## GGUF 모델 변환
 - HuggingFace checkpoint 를 GGUF 포맷으로 변환 필요 (convert-hf-to-gguf.py)
 - gguf-py 폴더는 GGUF 포맷을 read/write 하기 위한 python 코드들이 들어있음.
+
+## wrapper
+- ollama: gguf 서버를 띄운뒤, go 로 짜여진 코드로 통신
