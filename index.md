@@ -2,7 +2,9 @@
 layout: default
 description: Contents
 ---
-[(논문 요약) Connecting the Dots: LLMs can Infer and Verbalize Latent Structure from Disparate Training Data](./gemma2.html)
+[(논문 요약) InternLM-XComposer-2.5: A Versatile Large Vision Language Model Supporting Long-Contextual Input and Output](./internlm.html)
+
+[(논문 요약) Gemma 2: Improving Open Language Models at a Practical Size](./gemma2.html)
 
 [(논문 요약) Connecting the Dots: LLMs can Infer and Verbalize Latent Structure from Disparate Training Data](./connectdots.html)
 
@@ -151,6 +153,8 @@ description: Contents
 [(논문 요약) Generating Diverse High-Fidelity Images with VQ-VAE-2](./vqvae2.html)
 
 [(논문 요약) Neural Discrete Representation Learning](./vqvae.html)
+
+[(논문 요약) ROFORMER: ENHANCED TRANSFORMER WITH ROTARY POSITION EMBEDDING](./rope.html)
 
 [FED 금리 수익률 곡선](./fed_interest.html)
 

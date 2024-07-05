@@ -45,4 +45,5 @@ layout: default
 - gguf-py 폴더는 GGUF 포맷을 read/write 하기 위한 python 코드들이 들어있음.
 
 ## wrapper
-- ollama: gguf 서버를 띄운뒤, go 로 짜여진 코드로 통신
+- ollama: gguf 서버를 내부적으로 띄운뒤, go 로 짜여진 코드로 request 하는 구조 (2024.07.05)
+- gpt4all: gguf 함수를 call 하는 구조. UI 와 연동되는 cpp 코드를 자체적으로 작성 (2024.07.05)
