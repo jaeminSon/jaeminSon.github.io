@@ -2,6 +2,10 @@
 layout: default
 description: Contents
 ---
+[(논문 요약) Data curation via joint example selection further accelerates multimodal learning](./jest.html)
+
+[(논문 요약) MobileLLM: Optimizing Sub-billion Parameter Language Models for On-Device Use Cases](./mobilellm.html)
+
 [(논문 요약) APIGen: Automated PIpeline for Generating Verifiable and Diverse Function-Calling Datasets](./apigen.html)
 
 [(논문 요약) Searching for Best Practices in Retrieval-Augmented Generation](./bestRAG.html)
