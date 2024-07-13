@@ -2,6 +2,10 @@
 layout: default
 description: Contents
 ---
+[(논문 요약) Planetarium: A Rigorous Benchmark for Translating Text to Structured Planning Languages](./planetarium.html)
+
+[(논문 요약) DiPaCo: Distributed Path Composition](./dipaco.html)
+
 [(논문 요약) Data curation via joint example selection further accelerates multimodal learning](./jest.html)
 
 [(논문 요약) MobileLLM: Optimizing Sub-billion Parameter Language Models for On-Device Use Cases](./mobilellm.html)
