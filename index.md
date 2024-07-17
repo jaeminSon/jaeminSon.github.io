@@ -2,6 +2,8 @@
 layout: default
 description: Contents
 ---
+[(논문 요약) Florence-2: Advancing a Unified Representation for a Variety of Vision Tasks](./florence.html)
+
 [(논문 요약) FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision](./flashattention3.html)
 
 [(논문 요약) RouteLLM: Learning to Route LLMs with Preference Data](./routellm.html)
