@@ -2,6 +2,12 @@
 layout: default
 description: Contents
 ---
+[(논문 요약) From GaLore to WeLore: How Low-Rank Weights Non-uniformly Emerge from Low-Rank Gradients](./welore.html)
+
+[(논문 요약) Q-GaLore: Quantized GaLore with INT4 Projection and Layer-Adaptive Low-Rank Gradients](./qgalore.html)
+
+[(논문 요약) DataComp-LM: In search of the next generation of training sets for language models](./datacomp.html)
+
 [(논문 요약) Florence-2: Advancing a Unified Representation for a Variety of Vision Tasks](./florence.html)
 
 [(논문 요약) FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision](./flashattention3.html)
