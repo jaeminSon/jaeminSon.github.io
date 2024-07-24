@@ -2,6 +2,8 @@
 layout: default
 description: Contents
 ---
+[(논문 요약) The Llama 3 Herd of Models](./llama31.html)
+
 [(논문 요약) From GaLore to WeLore: How Low-Rank Weights Non-uniformly Emerge from Low-Rank Gradients](./welore.html)
 
 [(논문 요약) Q-GaLore: Quantized GaLore with INT4 Projection and Layer-Adaptive Low-Rank Gradients](./qgalore.html)
