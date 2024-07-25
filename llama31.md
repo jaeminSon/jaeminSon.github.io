@@ -25,6 +25,7 @@ layout: default
     - 학습시 tensor parallelism, pipeline parallelism, context parallelism, data parallelism 활용  
     <img src="./data/papers/llama31/parallelism.png" width="800" />
     <img src="./data/papers/llama31/pipelineparallelism.png" width="800" />
+    - (1) initial pre-training, (2) long-context pre-training, (3) annealing (data upsampling, weight average) 으로 진행 
 - post-training
   - rejection sampling: 모델의 output 중 Reward Model 로 평가했을때 가장 좋은것을 취득. Reward Model 은 humman annotated data 로 학습 (edited > chosen > rejected)
   - code data

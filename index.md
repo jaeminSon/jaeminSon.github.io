@@ -2,6 +2,10 @@
 layout: default
 description: Contents
 ---
+[(논문 요약) Weak-to-Strong Reasoning](./weaktostrong.html)
+
+[(논문 요약) PROVER-VERIFIER GAMES IMPROVE LEGIBILITY OF LLM OUTPUTS](./pvgame.html)
+
 [(논문 요약) The Llama 3 Herd of Models](./llama31.html)
 
 [(논문 요약) From GaLore to WeLore: How Low-Rank Weights Non-uniformly Emerge from Low-Rank Gradients](./welore.html)
