@@ -2,6 +2,8 @@
 layout: default
 description: Contents
 ---
+[(논문 요약) Solving olympiad geometry without human demonstrations](./alphageometry.html)
+
 [(논문 요약) LEAN-GitHub: Compiling GitHub LEAN repositories for a versatile LEAN prover](./leangithub.html)
 
 [(논문 요약) Weak-to-Strong Reasoning](./weaktostrong.html)
