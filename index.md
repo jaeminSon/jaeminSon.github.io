@@ -2,6 +2,10 @@
 layout: default
 description: Contents
 ---
+[(논문 요약) LazyLLM: DYNAMIC TOKEN PRUNING FOR EFFICIENT LONG CONTEXT LLM INFERENCE](./lazyllm.html)
+
+[(논문 요약) MINT-1T: Scaling Open-Source Multimodal Data by 10x: A Multimodal Dataset with One Trillion Tokens](./mint.html)
+
 [(논문 요약) Solving olympiad geometry without human demonstrations](./alphageometry.html)
 
 [(논문 요약) LEAN-GitHub: Compiling GitHub LEAN repositories for a versatile LEAN prover](./leangithub.html)
