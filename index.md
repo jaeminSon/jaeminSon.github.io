@@ -2,6 +2,12 @@
 layout: default
 description: Contents
 ---
+[(논문 요약) SAM 2: Segment Anything in Images and Videos](./sam2.html)
+
+[(논문 요약) Segment Anything](./sam.html)
+
+[(논문 요약) META-REWARDING LANGUAGE MODELS: Self-Improving Alignment with LLM-as-a-Meta-Judge](./metareward.html)
+
 [(논문 요약) LazyLLM: DYNAMIC TOKEN PRUNING FOR EFFICIENT LONG CONTEXT LLM INFERENCE](./lazyllm.html)
 
 [(논문 요약) MINT-1T: Scaling Open-Source Multimodal Data by 10x: A Multimodal Dataset with One Trillion Tokens](./mint.html)
