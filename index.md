@@ -2,6 +2,12 @@
 layout: default
 description: Contents
 ---
+[(논문 요약) Stretching Each Dollar: Diffusion Training from Scratch on a Micro-Budget](./microbudget.html)
+
+[(논문 요약) MindSearch: Mimicking Human Minds Elicits Deep AI Searcher](./mindsearch.html)
+
+[(논문 요약) Apple Intelligence Foundation Language Models](./afm.html)
+
 [(논문 요약) SAM 2: Segment Anything in Images and Videos](./sam2.html)
 
 [(논문 요약) Segment Anything](./sam.html)
