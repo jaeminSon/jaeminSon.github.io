@@ -2,6 +2,12 @@
 layout: default
 description: Contents
 ---
+[(논문 요약) Scaling Exponents Across Parameterizations and Optimizers](./scaling.html)
+
+[(논문 요약) Large Language Monkeys: Scaling Inference Compute with Repeated Sampling](./llmonkey.html)
+
+[(논문 요약) REACT: SYNERGIZING REASONING AND ACTING IN LANGUAGE MODELS](./react.html)
+
 [(논문 요약) Stretching Each Dollar: Diffusion Training from Scratch on a Micro-Budget](./microbudget.html)
 
 [(논문 요약) MindSearch: Mimicking Human Minds Elicits Deep AI Searcher](./mindsearch.html)
