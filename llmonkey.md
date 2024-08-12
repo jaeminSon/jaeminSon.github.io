@@ -6,8 +6,8 @@ layout: default
 
 ## 핵심 내용
 - output 을 다양하게 생성해서, rule-based verifier 로 검증
-- output 개수에 따른 성능 향상 추이 관찰  
 <img src="./data/papers/llmonkey/concept.png" width="800" />
+   - output 개수에 따른 성능 향상 추이 실험적 관찰  
 - 실험 데이터
   - GSM8K: 초등학교 수학 문제
   - MATH: GSM8K 보다 어려운 초등학교 수학 문제
@@ -31,10 +31,11 @@ layout: default
 
 - 모델을 활용한 verification 은 무용지물  
 <img src="./data/papers/llmonkey/model_verification.png" width="800" />
-  - Reward Model + Best-of-N: ArmoRM-Llama3-8B-v0.1 reward model 로 개별 output 에 score 메긴 뒤, 가장 높은 것 고름
+  - Majority vote: most common final answer
+  - Reward Model + Best-of-N: ArmoRM-Llama3-8B-v0.1 reward model (SOTA reasoning on the RewardBench) 로 개별 output 에 score 메긴 뒤, 가장 높은 것 고름
   - Reward Model + Majority Vote: ArmoRM-Llama3-8B-v0.1 reward model 로 개별 output 에 score 메긴 뒤, score 에 비례하여 sample
 
-- 틀리는 케이스 분석: Chain of Thought 자체는 맞는 경우가 많음     
+- 틀리는 케이스 분석: Chain of Thought 단계 하나 하나는 맞는 경우가 많음     
   <img src="./data/papers/llmonkey/failure.png" width="800" />
 
 - 일부 문제는 정답을 맞출 확률이 극히 낮음 (1만개 output 에서 몇개만 정답을 생성)  
