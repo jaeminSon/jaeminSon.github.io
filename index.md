@@ -2,6 +2,8 @@
 layout: default
 description: Contents
 ---
+[(논문 요약) Self-Taught Evaluators](./ste.html)
+
 [(논문 요약) Scaling Exponents Across Parameterizations and Optimizers](./scaling.html)
 
 [(논문 요약) Large Language Monkeys: Scaling Inference Compute with Repeated Sampling](./llmonkey.html)
