@@ -2,6 +2,8 @@
 layout: default
 description: Contents
 ---
+[(논문 요약) Distributed Inference and Fine-tuning of Large Language Models Over The Internet](./petal.html)
+
 [(논문 요약) Self-Taught Evaluators](./ste.html)
 
 [(논문 요약) Scaling Exponents Across Parameterizations and Optimizers](./scaling.html)
