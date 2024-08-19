@@ -2,6 +2,12 @@
 layout: default
 description: Contents
 ---
+[(논문 요약) MUTUAL REASONING MAKES SMALLER LLMS STRONGER PROBLEM-SOLVERS](./mutualreasoning.html)
+
+[(논문 요약) MEDICAL GRAPH RAG: TOWARDS SAFE MEDICAL LARGE LANGUAGE MODEL VIA GRAPH RETRIEVALAUGMENTED GENERATION](./medicalgraphrag.html)
+
+[(논문 요약) Can Generalist Foundation Models Outcompete Special-Purpose Tuning? Case Study in Medicine](./medprompt.html)
+
 [(논문 요약) Distributed Inference and Fine-tuning of Large Language Models Over The Internet](./petal.html)
 
 [(논문 요약) Self-Taught Evaluators](./ste.html)
