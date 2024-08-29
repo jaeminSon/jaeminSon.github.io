@@ -2,6 +2,12 @@
 layout: default
 description: Contents
 ---
+[(논문 요약) LLM Pruning and Distillation in Practice: The Minitron Approach](./llmpractice.html)
+
+[(논문 요약) Automated Design of Agentic Systems](./autoagent.html)
+
+[(논문 요약) xGen-MM (BLIP-3): A Family of Open Large Multimodal Models](./blip3.html)
+
 [(논문 요약) MUTUAL REASONING MAKES SMALLER LLMS STRONGER PROBLEM-SOLVERS](./mutualreasoning.html)
 
 [(논문 요약) MEDICAL GRAPH RAG: TOWARDS SAFE MEDICAL LARGE LANGUAGE MODEL VIA GRAPH RETRIEVALAUGMENTED GENERATION](./medicalgraphrag.html)
