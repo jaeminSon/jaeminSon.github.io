@@ -2,6 +2,10 @@
 layout: default
 description: Contents
 ---
+[(논문 요약) Speculative RAG: Enhancing Retrieval Augmented Generation through Drafting](./speculativeRAG.html)
+
+[(논문 요약) Scaling Laws for Data Filtering—Data Curation cannot be Compute Agnostic](./datafiltering.html)
+
 [(논문 요약) LLM Pruning and Distillation in Practice: The Minitron Approach](./llmpractice.html)
 
 [(논문 요약) Automated Design of Agentic Systems](./autoagent.html)
