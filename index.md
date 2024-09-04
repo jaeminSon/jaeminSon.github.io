@@ -2,6 +2,14 @@
 layout: default
 description: Contents
 ---
+[(논문 요약) DIFFUSION MODELS ARE REAL-TIME GAME ENGINES](./gameengine.html)
+
+[(논문 요약) Transfusion: Predict the Next Token and Diffuse Images with One Multi-Modal Model](./transfusion.html)
+
+[(논문 요약) Smaller, Weaker, Yet Better: Training LLM Reasoners via Compute-Optimal Sampling](./smaller.html)
+
+[(논문 요약) To Code, or Not To Code? Exploring Impact of Code in Pre-training](./tocode.html)
+
 [(논문 요약) Speculative RAG: Enhancing Retrieval Augmented Generation through Drafting](./speculativeRAG.html)
 
 [(논문 요약) Scaling Laws for Data Filtering—Data Curation cannot be Compute Agnostic](./datafiltering.html)
