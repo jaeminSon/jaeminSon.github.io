@@ -3,7 +3,7 @@ title: (코드 탐색) llama.cpp
 parent: Code Review
 ---
 
-**[(코드 탐색) llama.cpp]** [(code)](https://github.com/ggerganov/llama.cpp)
+**(코드 탐색) llama.cpp** [(code)](https://github.com/ggerganov/llama.cpp)
 
 ## Legacy quantization (linear quantization) [(PR)](https://github.com/ggerganov/llama.cpp/pull/1684)
 - type-0 (Q4_0, Q5_0): scale only (weight = scale * quantized)

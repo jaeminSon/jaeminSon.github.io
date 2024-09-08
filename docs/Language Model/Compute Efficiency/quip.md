@@ -3,7 +3,7 @@ title: (논문 요약) QuIP#; Even Better LLM Quantization with Hadamard Incoher
 parent: Compute Efficiency
 ---
 
-**[(논문 요약) QuIP#: Even Better LLM Quantization with Hadamard Incoherence and Lattice Codebooks](https://arxiv.org/pdf/2402.04396)**
+**(논문 요약) QuIP#: Even Better LLM Quantization with Hadamard Incoherence and Lattice Codebooks** [(paper)](https://arxiv.org/pdf/2402.04396)
 
 ## 핵심 내용
 1. randomized Hadamard transform

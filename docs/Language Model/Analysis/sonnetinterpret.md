@@ -3,7 +3,7 @@ title: (논문 요약) Scaling Monosemanticity; Extracting Interpretable Feature
 parent: Analysis
 ---
 
-**[(논문 요약) Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet](https://transformer-circuits.pub/2024/scaling-monosemanticity/index.html#assessing-features-v-neurons)**
+**(논문 요약) Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet** [(paper)](https://transformer-circuits.pub/2024/scaling-monosemanticity/index.html#assessing-features-v-neurons)
 
 ## feature 정의
 - 2-layered Sparse Auto-Encoder 학습

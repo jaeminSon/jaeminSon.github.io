@@ -1,6 +1,6 @@
 ---
 title: (논문 요약) DeepSeek-Coder-V2; Breaking the Barrier of Closed-Source Models in Code Intelligence
-parent: Foundation Model
+parent: Code and Math
 ---
 
 **(논문 요약) DeepSeek-Coder-V2: Breaking the Barrier of Closed-Source Models in Code Intelligence** [(Paper)](https://github.com/deepseek-ai/DeepSeek-Coder-V2/blob/main/paper.pdf)

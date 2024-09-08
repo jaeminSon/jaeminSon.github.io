@@ -3,7 +3,7 @@ title: (논문 요약) Direct Preference Optimization; Your Language Model is Se
 parent: Training
 ---
 
-**(논문 요약) Direct Preference Optimization: Your Language Model is Secretly a Reward Model**[(paper)](https://arxiv.org/pdf/2305.18290)
+**(논문 요약) Direct Preference Optimization: Your Language Model is Secretly a Reward Model** [(paper)](https://arxiv.org/pdf/2305.18290)
 
 ## 핵심 내용
 - reward 모델 없이 바로 llm 에 loss 흘려줌  

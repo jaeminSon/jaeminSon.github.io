@@ -3,7 +3,7 @@ title: (논문 요약) DeepSeek-Prover; Advancing Theorem Proving in LLMs throug
 parent: Code and Math
 ---
 
-**[(논문 요약) DeepSeek-Prover: Advancing Theorem Proving in LLMs through Large-Scale Synthetic Data](https://arxiv.org/pdf/2405.14333)**
+**(논문 요약) DeepSeek-Prover: Advancing Theorem Proving in LLMs through Large-Scale Synthetic Data** [(paper)](https://arxiv.org/pdf/2405.14333)
 
 ## 핵심 내용
 - 중등, 고등, 대학부 수학 문제를 Lean4 로 formalize

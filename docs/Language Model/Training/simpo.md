@@ -3,7 +3,7 @@ title: (논문 요약) SimPO; Simple Preference Optimization with a Reference-Fr
 parent: Training
 ---
 
-**[(논문 요약) SimPO: Simple Preference Optimization with a Reference-Free Reward](https://arxiv.org/pdf/2405.14734)**
+**(논문 요약) SimPO: Simple Preference Optimization with a Reference-Free Reward** [(paper)](https://arxiv.org/pdf/2405.14734)
 
 ## 핵심 내용
 - DPO 의 $\pi_{ref}$ 를 없애 연산을 단순화   

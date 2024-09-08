@@ -3,7 +3,7 @@ title: (논문 요약) Layer-Condensed KV Cache for Efficient Inference of Large
 parent: Compute Efficiency
 ---
 
-**[(논문 요약) Layer-Condensed KV Cache for Efficient Inference of Large Language Models](https://arxiv.org/pdf/2405.10637)**
+**(논문 요약) Layer-Condensed KV Cache for Efficient Inference of Large Language Models** [(paper)](https://arxiv.org/pdf/2405.10637)
 
 ## 핵심 내용
 - 몇몇 layer 에서는 standard attention, 그 외 layer 에서는 top layer 에서만 Key, Value 사용.  

@@ -3,7 +3,7 @@ title: (논문 요약) Faithful Logical Reasoning via Symbolic Chain-of-Thought
 parent: Code and Math
 ---
 
-**[(논문 요약) Faithful Logical Reasoning via Symbolic Chain-of-Thought](https://arxiv.org/pdf/2405.18357)**
+**(논문 요약) Faithful Logical Reasoning via Symbolic Chain-of-Thought** [(paper)](https://arxiv.org/pdf/2405.18357)
 
 ## 핵심 내용
 - first order logic 을 LLM 의 Chain of Thought 에 추가하여 성능 향상  

@@ -4,6 +4,12 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model](./docs/Language%20Model/Foundation%20Model/deepseekv2/)
+
+[(모델 요약) Yi-Coder](./docs/Language%20Model/Data/yicoder/)
+
+[(모델 요약) Reflection Llama](./docs/Language%20Model/Data/reflectionllama/)
+
 [(논문 요약) DIFFUSION MODELS ARE REAL-TIME GAME ENGINES](./docs/Computer%20Vision/gameengine)
 
 [(논문 요약) Transfusion: Predict the Next Token and Diffuse Images with One Multi-Modal Model](./docs/Vision%20Language%20Model/transfusion)
@@ -106,7 +112,7 @@ layout: default
 
 [(논문 요약) Debug like a Human: A Large Language Model Debugger via Verifying Runtime Execution Step by Step](./docs/Language%20Model/Agents/ldb)
 
-[(논문 요약) DeepSeek-Coder-V2: Breaking the Barrier of Closed-Source Models in Code Intelligence](./docs/Language%20Model/Foundation%20Model/deepseekcoderv2)
+[(논문 요약) DeepSeek-Coder-V2: Breaking the Barrier of Closed-Source Models in Code Intelligence](./docs/Language%20Model/Code%20and%20Math/deepseekcoderv2)
 
 [(논문 요약) AGENTGYM: Evolving Large Language Model-based Agents across Diverse Environments](./docs/Language%20Model/Agents/agentgym)
 

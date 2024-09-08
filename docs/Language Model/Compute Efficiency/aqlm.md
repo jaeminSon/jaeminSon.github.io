@@ -3,7 +3,7 @@ title: (논문 요약) Extreme Compression of Large Language Models via Additive
 parent: Compute Efficiency
 ---
 
-**[(논문 요약) Extreme Compression of Large Language Models via Additive Quantization](https://arxiv.org/pdf/2401.06118)**
+**(논문 요약) Extreme Compression of Large Language Models via Additive Quantization** [(paper)](https://arxiv.org/pdf/2401.06118)
 
 ## 핵심 내용
 - generalizes the classic Additive Quantization   
