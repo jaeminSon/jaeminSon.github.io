@@ -83,6 +83,13 @@ jobs:
         run: bundle exec jekyll build
 
   assets:
+    name: Test CSS and JS
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x]
+
     steps:
     - uses: actions/checkout@v4
     - name: Use Node.js ${{ matrix.node-version }}
