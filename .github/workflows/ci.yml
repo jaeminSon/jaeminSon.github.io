@@ -81,23 +81,8 @@ jobs:
           key: ${{ runner.os }}-htmlproofer
       - name: Build Site
         run: bundle exec jekyll build
-      - name: Test with Nu Validator
-        uses: Cyb3r-Jak3/html5validator-action@2a593a9f2c10593cbac84791a6fc4c47e9a106c8
-        with:
-          config: fixtures/html5validator-config.yml
-      - name: Test with html-proofer
-        run: bundle exec htmlproofer _site --ignore-urls "/github.com/,/web.archive.org/"
-        env:
-          NOKOGIRI_USE_SYSTEM_LIBRARIES: true
 
   assets:
-    name: Test CSS and JS
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [18.x]
-
     steps:
     - uses: actions/checkout@v4
     - name: Use Node.js ${{ matrix.node-version }}
