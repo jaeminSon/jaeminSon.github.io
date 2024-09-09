@@ -4,6 +4,12 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) The Effects of Generative AI on High Skilled Work: Evidence from Three Field Experiments with Software Developers](./docs/Language%20Model/Application/copilot/)
+
+[(논문 요약) Strategic Chain-of-Thought: Guiding Accurate Reasoning in LLMs through Strategy Elicitation](./docs/Language%20Model/Hallucination/strategicCoT/)
+
+[(논문 요약) Open Mixture-of-Experts Language Models](./docs/Language%20Model/Foundation%20Model/openmoe/)
+
 [(논문 요약) DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model](./docs/Language%20Model/Foundation%20Model/deepseekv2/)
 
 [(모델 요약) Yi-Coder](./docs/Language%20Model/Data/yicoder/)
