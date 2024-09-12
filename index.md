@@ -4,6 +4,12 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) Automatic Data Curation for Self-Supervised Learning: A Clustering-Based Approach](./docs/Language%20Model/Data/datacuration/)
+
+[(논문 요약) Can LLMs Generate Novel Research Ideas? A Large-Scale Human Study with 100+ NLP Researchers](./docs/Language%20Model/Application/llmresearch/)
+
+[(논문 요약) Are Emergent Abilities of Large Language Models a Mirage?](./docs/Language%20Model/Analysis/mirage/)
+
 [(논문 요약) The Effects of Generative AI on High Skilled Work: Evidence from Three Field Experiments with Software Developers](./docs/Language%20Model/Application/copilot/)
 
 [(논문 요약) Strategic Chain-of-Thought: Guiding Accurate Reasoning in LLMs through Strategy Elicitation](./docs/Language%20Model/Hallucination/strategicCoT/)

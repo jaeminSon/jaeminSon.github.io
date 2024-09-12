@@ -18,10 +18,7 @@ parent: Foundation Model
 <img src="/data/papers/deepseekv2/architecture.png" width="800" />
 <img src="/data/papers/deepseekv2/attention.png" width="800" />
 
-
 - 데이터: gpt4, claude 등의 모델을 활용하여 alignment 데이터 생성  
-<img src="/data/papers/deepseekv2/data1.png" width="800" />
-<img src="/data/papers/deepseekv2/data2.png" width="400" />
 
 ## 실험 결과
 - benchmark 에서 gpt4v 와 비슷  
