@@ -8,7 +8,7 @@ parent: Data
 ## 핵심 내용
 - $k$-means clustring 을 hierarchically 적용하여 data imbalance 를 줄임  
    - $k$-means centroids 들이 $p^{d/(d+2)}$ 에 비례하게 분포한다는 증명이 존재
-   - $k$ means 를 $T$ 번 반복하면, $p^{(d/(d+2))^T}$ 에 비례하게 되고, 점점 uniform 에 가까워짐  
+   - $k$-means 를 $T$ 번 반복하면, $p^{(d/(d+2))^T}$ 에 비례하게 되고, 점점 uniform 에 가까워짐  
 <img src="/data/papers/datacuration/overview.png" width="800" />
 
 - algorithm: $k$-means clustering 반복  
