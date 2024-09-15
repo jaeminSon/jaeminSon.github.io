@@ -4,6 +4,10 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(잡생각) statistical models](./docs/Thoughts/statistical_model/)
+
+[(잡생각) 좌절 관리 알고리즘](./docs/Thoughts/depressed/)
+
 [(논문 요약) Automatic Data Curation for Self-Supervised Learning: A Clustering-Based Approach](./docs/Language%20Model/Data/datacuration/)
 
 [(논문 요약) Can LLMs Generate Novel Research Ideas? A Large-Scale Human Study with 100+ NLP Researchers](./docs/Language%20Model/Application/llmresearch/)
