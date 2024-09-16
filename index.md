@@ -4,6 +4,8 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(잡생각) Intelligence](./docs/Thoughts/intelligence/)
+
 [(논문 요약) LLAMA-OMNI: SEAMLESS SPEECH INTERACTION WITH LARGE LANGUAGE MODELS](./docs/Language%20Model/Training/llamaomni)
 
 [(논문 요약) AGENT WORKFLOW MEMORY](./docs/Language%20Model/Agent/workflow)
