@@ -8,7 +8,7 @@ layout: default
 
 [(논문 요약) LLAMA-OMNI: SEAMLESS SPEECH INTERACTION WITH LARGE LANGUAGE MODELS](./docs/Language%20Model/Training/llamaomni)
 
-[(논문 요약) AGENT WORKFLOW MEMORY](./docs/Language%20Model/Agent/workflow)
+[(논문 요약) AGENT WORKFLOW MEMORY](./docs/Language%20Model/Agents/workflow)
 
 [(논문 요약) Knowing When to Ask - Bridging Large Language Models and Data](./docs/Language%20Model/Application/datagemma)
 
