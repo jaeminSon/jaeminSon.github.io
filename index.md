@@ -4,6 +4,12 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) LLAMA-OMNI: SEAMLESS SPEECH INTERACTION WITH LARGE LANGUAGE MODELS](./docs/Language%20Model/Training/llamaomni)
+
+[(논문 요약) AGENT WORKFLOW MEMORY](./docs/Language%20Model/Agent/workflow)
+
+[(논문 요약) Knowing When to Ask - Bridging Large Language Models and Data](./docs/Language%20Model/Application/datagemma)
+
 [(잡생각) statistical models](./docs/Thoughts/statistical_model/)
 
 [(잡생각) 좌절 관리 알고리즘](./docs/Thoughts/depressed/)
