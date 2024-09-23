@@ -4,6 +4,10 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(잡생각) 종과 개체](./docs/Thoughts/species/)
+
+[(책 요약) Quantitative Finance with Python](./docs/Economy/quant_python/chapter1)
+
 [(잡생각) Intelligence](./docs/Thoughts/intelligence/)
 
 [(논문 요약) LLAMA-OMNI: SEAMLESS SPEECH INTERACTION WITH LARGE LANGUAGE MODELS](./docs/Language%20Model/Training/llamaomni)
