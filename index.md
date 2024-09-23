@@ -4,6 +4,10 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) Qwen2.5-Coder Technical Report](./docs/Language%20Model/Code%20and%20Math/qwen2_code/)
+
+[(논문 요약) QWEN2 TECHNICAL REPORT](./docs/Language%20Model/Foundation%20Model/qwen2/)
+
 [(잡생각) 종과 개체](./docs/Thoughts/species/)
 
 [(책 요약) Quantitative Finance with Python](./docs/Economy/quant_python/chapter1)
