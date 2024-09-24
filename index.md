@@ -4,6 +4,8 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(잡생각) 미래의 직업](./docs/Thoughts/futurejobs/)
+
 [(논문 요약) Qwen2.5-Coder Technical Report](./docs/Language%20Model/Code%20and%20Math/qwen2_code/)
 
 [(논문 요약) QWEN2 TECHNICAL REPORT](./docs/Language%20Model/Foundation%20Model/qwen2/)
