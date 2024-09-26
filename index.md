@@ -4,6 +4,12 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(모델 요약) Llama 3.2: Revolutionizing edge AI and vision with open, customizable models](./docs/Vision%20Language%20Model/llama32/)
+
+[(논문 요약) Training Language Models to Self-Correct via Reinforcement Learning](./docs/Language%20Model/Training/selfcorrect/)
+
+[(논문 요약) TORA: A TOOL-INTEGRATED REASONING AGENT FOR MATHEMATICAL PROBLEM SOLVING](./docs/Language%20Model/Code%20and%20Math/tora/)
+
 [(잡생각) 미래의 직업](./docs/Thoughts/futurejobs/)
 
 [(논문 요약) Qwen2.5-Coder Technical Report](./docs/Language%20Model/Code%20and%20Math/qwen2_code/)
