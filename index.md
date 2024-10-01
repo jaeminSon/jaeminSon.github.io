@@ -4,6 +4,8 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(잡생각) 자본과 미디어](./docs/Thoughts/capital/)
+
 [(모델 요약) Llama 3.2: Revolutionizing edge AI and vision with open, customizable models](./docs/Vision%20Language%20Model/llama32/)
 
 [(논문 요약) Training Language Models to Self-Correct via Reinforcement Learning](./docs/Language%20Model/Training/selfcorrect/)
@@ -18,7 +20,7 @@ layout: default
 
 [(잡생각) 종과 개체](./docs/Thoughts/species/)
 
-[(책 요약) Quantitative Finance with Python](./docs/Economy/quant_python/chapter1)
+[(책 요약) Quantitative Finance with Python](./docs/Economy/quant_python/)
 
 [(잡생각) Intelligence](./docs/Thoughts/intelligence/)
 
