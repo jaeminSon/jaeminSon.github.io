@@ -4,6 +4,8 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(Quant) 종목 선정](./docs/Economy/etf)
+
 [(잡생각) 자본과 미디어](./docs/Thoughts/capital/)
 
 [(모델 요약) Llama 3.2: Revolutionizing edge AI and vision with open, customizable models](./docs/Vision%20Language%20Model/llama32/)
