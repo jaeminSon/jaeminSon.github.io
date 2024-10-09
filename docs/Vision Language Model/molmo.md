@@ -1,5 +1,5 @@
 ---
-title: (논문 요약) Molmo and PixMo: Open Weights and Open Data for State-of-the-Art Multimodal Models
+title: (논문 요약) Molmo and PixMo; Open Weights and Open Data for State-of-the-Art Multimodal Models
 parent: Vision Language Model
 ---
 
