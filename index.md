@@ -4,6 +4,16 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) Molmo and PixMo: Open Weights and Open Data for State-of-the-Art Multimodal Models](./docs/Vision%20Language%20Model/molmo)
+
+[(논문 요약) Logic-of-Thought: Injecting Logic into Contexts for Full Reasoning in Large Language Models](./docs/Language%20Model/Code%20and%20Math/lot)
+
+[(논문 요약) LOTUS: Diffusion-based Visual Foundation Model for High-quality Dense Prediction](./docs/Computer%20Vision/lotus)
+
+[(논문 요약) Retrieval Augmented Generation (RAG) and Beyond: A Comprehensive Survey on How to Make your LLMs use External Data More Wisely](./docs/Language%20Model/Application/ragbeyond/)
+
+[(논문 요약) GPT o1 검증](./docs/Language%20Model/Application/o1/)
+
 [(Quant) 자산 배분](./docs/Economy/allocation)
 
 [(Quant) 포트폴리오 구성](./docs/Economy/portfolio)
