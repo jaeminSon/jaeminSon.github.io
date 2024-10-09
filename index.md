@@ -4,6 +4,8 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(Quant) 자산 배분](./docs/Economy/allocation)
+
 [(Quant) 포트폴리오 구성](./docs/Economy/portfolio)
 
 [(Quant) 종목 선정](./docs/Economy/etf)
