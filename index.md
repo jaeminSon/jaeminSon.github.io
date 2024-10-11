@@ -4,6 +4,10 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) Not All LLM Reasoners Are Created Equal](./docs/Language%20Model/Analysis/notequal/)
+
+[(논문 요약) Archon: An Architecture Search Framework for Inference-Time Techniques](./docs/Language%20Model/Agents/archon/)
+
 [(잡생각) 피라미드 구조의 조직](./docs/Thoughts/pyramid/)
 
 [(논문 요약) Molmo and PixMo: Open Weights and Open Data for State-of-the-Art Multimodal Models](./docs/Vision%20Language%20Model/molmo)
