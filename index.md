@@ -4,6 +4,8 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(잡생각) 스토리](./docs/Thoughts/story/)
+
 [(논문 요약) Movie Gen: A Cast of Media Foundation Models](./docs/Computer%20Vision/moviegen)
 
 [(논문 요약) Scaling Proprioceptive-Visual Learning with Heterogeneous Pre-trained Transformers](./docs/Vision%20Language%20Model/proprioceptive)
