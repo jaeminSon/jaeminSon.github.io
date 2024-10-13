@@ -4,6 +4,12 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) Movie Gen: A Cast of Media Foundation Models](./docs/Computer%20Vision/moviegen)
+
+[(논문 요약) Scaling Proprioceptive-Visual Learning with Heterogeneous Pre-trained Transformers](./docs/Vision%20Language%20Model/proprioceptive)
+
+[(논문 요약) One Initialization to Rule them All: Fine-tuning via Explained Variance Adaptation](./docs/Language%20Model/Training/eva/)
+
 [(논문 요약) Not All LLM Reasoners Are Created Equal](./docs/Language%20Model/Analysis/notequal/)
 
 [(논문 요약) Archon: An Architecture Search Framework for Inference-Time Techniques](./docs/Language%20Model/Agents/archon/)
