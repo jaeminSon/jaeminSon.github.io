@@ -1,5 +1,5 @@
 ---
-title: (논문 요약) GSM-Symbolic: Understanding the Limitations of Mathematical Reasoning in Large Language Models
+title: (논문 요약) GSM-Symbolic; Understanding the Limitations of Mathematical Reasoning in Large Language Models
 parent: Analysis
 ---
 
