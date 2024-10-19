@@ -4,6 +4,12 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) Matryoshka Representation Learning](./docs/Language%20Model/Embedding/matryoshka/)
+
+[(논문 요약) jina-embeddings-v3: Multilingual Embeddings With Task LoRA](./docs/Language%20Model/Embedding/jinav3/)
+
+[(논문 요약) DIFFERENTIAL TRANSFORMER](./docs/Language%20Model/Architecture/differential/)
+
 [(논문 요약) Astute RAG: Overcoming Imperfect Retrieval Augmentation and Knowledge Conflicts for Large Language Models](./docs/Language%20Model/RAG/astuterag/)
 
 [(논문 요약) GSM-Symbolic: Understanding the Limitations of Mathematical Reasoning in Large Language Models](./docs/Language%20Model/Analysis/gsm/)
