@@ -4,6 +4,10 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) Janus: Decoupling Visual Encoding for Unified Multimodal Understanding and Generation](./docs/Vision%20Language%20Model/janus/)
+
+[(논문 요약) THINKING LLMS: GENERAL INSTRUCTION FOLLOWING WITH THOUGHT GENERATION](./docs/Language%20Model/Training/tpo/)
+
 [(논문 요약) Matryoshka Representation Learning](./docs/Language%20Model/Embedding/matryoshka/)
 
 [(논문 요약) jina-embeddings-v3: Multilingual Embeddings With Task LoRA](./docs/Language%20Model/Embedding/jinav3/)
