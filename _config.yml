@@ -16,7 +16,7 @@
 title: Jaemin's Arxiv
 description: Log of one human being on earth
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://jaeminson.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://jaeminson.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 repository: https://github.com/jaeminSon/jaeminSon.github.io # for github-metadata
 
 permalink: pretty
