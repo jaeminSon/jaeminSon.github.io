@@ -4,6 +4,14 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(모델 요약) CodeRetriever: Large-scale Contrastive Pre-training for Code Search](./docs/Language%20Model/Code%20and%20Math/coderetriever)
+
+[(모델 요약) Lightweight Llama Models](./docs/Language%20Model/Compute%20Efficiency/llama/)
+
+[(논문 요약) BitNet: Scaling 1-bit Transformers for Large Language Models](./docs/Language%20Model/Compute%20Efficiency/bitnet/)
+
+[(논문 요약) SPIRIT LM: Interleaved Spoken and Written Language Model](./docs/Language%20Model/Application/spiritlm/)
+
 [(논문 요약) Janus: Decoupling Visual Encoding for Unified Multimodal Understanding and Generation](./docs/Vision%20Language%20Model/janus/)
 
 [(논문 요약) THINKING LLMS: GENERAL INSTRUCTION FOLLOWING WITH THOUGHT GENERATION](./docs/Language%20Model/Training/tpo/)
