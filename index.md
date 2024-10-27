@@ -4,7 +4,7 @@ layout: default
 # All pages (in chronological order)
 <br>
 
-[(모델 요약) CodeRetriever: Large-scale Contrastive Pre-training for Code Search](./docs/Language%20Model/Code%20and%20Math/coderetriever)
+[(논문 요약) CodeRetriever: Large-scale Contrastive Pre-training for Code Search](./docs/Language%20Model/Code%20and%20Math/coderetriever)
 
 [(모델 요약) Lightweight Llama Models](./docs/Language%20Model/Compute%20Efficiency/llama/)
 
