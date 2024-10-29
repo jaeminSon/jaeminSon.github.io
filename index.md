@@ -4,6 +4,12 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) A COMPARATIVE STUDY ON REASONING PATTERNS OF OPENAI’S O1 MODEL](./docs/Language%20Model/Application/gpto1)
+
+[(모델 요약) GRANITE 3.0 LANGUAGE MODELS](./docs/Language%20Model/Foundation%20Model/granite3)
+
+[(모델 요약) Aya Expanse: Connecting Our World](./docs/Language%20Model/Foundation%20Model/aya)
+
 [(논문 요약) CodeRetriever: Large-scale Contrastive Pre-training for Code Search](./docs/Language%20Model/Code%20and%20Math/coderetriever)
 
 [(모델 요약) Lightweight Llama Models](./docs/Language%20Model/Compute%20Efficiency/llama/)
