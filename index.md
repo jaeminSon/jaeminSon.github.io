@@ -4,6 +4,8 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) TOKEN MERGING: YOUR VIT BUT FASTER](./docs/Language%20Model/Compute%20Efficiency/tome)
+
 [(논문 요약) A COMPARATIVE STUDY ON REASONING PATTERNS OF OPENAI’S O1 MODEL](./docs/Language%20Model/Application/gpto1)
 
 [(모델 요약) GRANITE 3.0 LANGUAGE MODELS](./docs/Language%20Model/Foundation%20Model/granite3)
