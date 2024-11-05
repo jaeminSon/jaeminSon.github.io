@@ -4,6 +4,10 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) ARITHMETIC WITHOUT ALGORITHMS: LANGUAGE MODELS SOLVE MATH WITH A BAG OF HEURISTICS](./docs/Language%20Model/Analysis/bagofheuristics)
+
+[(논문 요약) AFLOW: AUTOMATING AGENTIC WORKFLOW GENERATION](./docs/Language%20Model/Agents/aflow)
+
 [(논문 요약) TOKEN MERGING: YOUR VIT BUT FASTER](./docs/Language%20Model/Compute%20Efficiency/tome)
 
 [(논문 요약) A COMPARATIVE STUDY ON REASONING PATTERNS OF OPENAI’S O1 MODEL](./docs/Language%20Model/Application/gpto1)
