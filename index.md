@@ -4,6 +4,8 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) Executable Code Actions Elicit Better LLM Agents](./docs/Language%20Model/Code%20and%20Math/executable)
+
 [(논문 요약) ARITHMETIC WITHOUT ALGORITHMS: LANGUAGE MODELS SOLVE MATH WITH A BAG OF HEURISTICS](./docs/Language%20Model/Analysis/bagofheuristics)
 
 [(논문 요약) AFLOW: AUTOMATING AGENTIC WORKFLOW GENERATION](./docs/Language%20Model/Agents/aflow)
