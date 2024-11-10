@@ -4,6 +4,8 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(잡생각) 목표의 최적화](./docs/Thoughts/optimization_future_plan/)
+
 [(잡생각) 가치에 관하여](./docs/Thoughts/value/)
 
 [(논문 요약) Executable Code Actions Elicit Better LLM Agents](./docs/Language%20Model/Code%20and%20Math/executable)
