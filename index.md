@@ -4,6 +4,8 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) OPENCODER: THE OPEN COOKBOOK FOR TOP-TIER CODE LARGE LANGUAGE MODELS](./docs/Language%20Model/Code%20and%20Math/opencoder/)
+
 [(논문 요약) LayerSkip: Enabling Early Exit Inference and Self-Speculative Decoding](./docs/Language%20Model/Compute%20Efficiency/layerskip/)
 
 [(잡생각) 목표의 최적화](./docs/Thoughts/optimization_future_plan/)
