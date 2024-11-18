@@ -1,5 +1,5 @@
 ---
-title: (모델 요약) LayerSkip: Enabling Early Exit Inference and
+title: (모델 요약) LayerSkip; Enabling Early Exit Inference and
 parent: Compute Efficiency
 ---
 

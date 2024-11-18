@@ -24,7 +24,7 @@ parent: Analysis
 - Heuristic 분류
    - 특정 layer, neuron index 를 고정
    - (op1, op2) pairs 의 activation 값 계산 ($h_{post}^{l,i}$)
-   - $v_{out}^{l,i}$ (weight 의 $i$ 번째 row) 를 Logit Lens (학습된 activation -> logit linear projection) 로 logit 계산 후, 정답에 해당하는 값들을 (op1, op2) pairs 로 추출
+   - $v_{out}^{l,i}$ (weight 의 $i$ 번째 row) 를 Logit Lens 로 logit 계산 후, 정답에 해당하는 값들을 (op1, op2) pairs 로 추출
    - 위 2개 matrix 를 dot product
    - Top $k$ 에서 $k$: heuristic 을 만족하는 operands 쌍 개수
 <img src="/data/papers/bagofheuristics/concept.png" width="800" />  
@@ -32,7 +32,7 @@ parent: Analysis
 - 임의의 heuristic 에 대해, 이 heuristic 으로 classify 된 neuron 들의 activation 을 0 으로 두면 해당 heuristic 을 만족하는 문제를 잘 못맞춤. 
 <img src="/data/papers/bagofheuristics/knockout.png" width="800" />  
 
-- 주어진 연산 문제에서 classification score 가 가장 높은 neuron 들의 activation 을 0 으로 두면 성능이 급격히 떨어짐.  
+- 주어진 연산 문제에서 intersection score 가 가장 높은 neuron 들의 activation 을 0 으로 두면 성능이 급격히 떨어짐.  
 <img src="/data/papers/bagofheuristics/ablation.png" width="800" />  
 
 

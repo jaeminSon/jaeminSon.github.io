@@ -4,6 +4,10 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) Hunyuan-Large: An Open-Source MoE Model with 52 Billion Activated Parameters by Tencent](./docs/Language%20Model/Foundation%20Model/hunyuan/)
+
+[(논문 요약) Scaling Laws for Precision](./docs/Language%20Model/Analysis/scaling_law/)
+
 [(논문 요약) OPENCODER: THE OPEN COOKBOOK FOR TOP-TIER CODE LARGE LANGUAGE MODELS](./docs/Language%20Model/Code%20and%20Math/opencoder/)
 
 [(논문 요약) LayerSkip: Enabling Early Exit Inference and Self-Speculative Decoding](./docs/Language%20Model/Compute%20Efficiency/layerskip/)
