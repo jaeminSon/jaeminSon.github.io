@@ -4,6 +4,10 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) Mixture-of-Transformers: A Sparse and Scalable Architecture for Multi-Modal Foundation Models](./docs/Language%20Model/Compute%20Efficiency/mot/)
+
+[(논문 요약) LLaVA-o1: Let Vision Language Models Reason Step-by-Step](./docs/Language%20Model/Training/llavao1/)
+
 [(논문 요약) Hunyuan-Large: An Open-Source MoE Model with 52 Billion Activated Parameters by Tencent](./docs/Language%20Model/Foundation%20Model/hunyuan/)
 
 [(논문 요약) Scaling Laws for Precision](./docs/Language%20Model/Analysis/scaling_law/)

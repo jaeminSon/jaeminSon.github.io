@@ -1,9 +1,9 @@
 ---
-title: (모델 요약) LayerSkip; Enabling Early Exit Inference and
+title: (모델 요약) LayerSkip; Enabling Early Exit Inference and Self-Speculative Decoding
 parent: Compute Efficiency
 ---
 
-**(모델 요약) Self-Speculative Decoding**[(paper)](https://arxiv.org/pdf/2404.16710)
+**(모델 요약) LayerSkip: Enabling Early Exit Inference and Self-Speculative Decoding**[(paper)](https://arxiv.org/pdf/2404.16710)
 
 ## 핵심 내용
 - Motivation
