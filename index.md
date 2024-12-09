@@ -4,6 +4,12 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) PROCEDURAL KNOWLEDGE IN PRETRAINING DRIVES REASONING IN LARGE LANGUAGE MODELS](./docs/Language%20Model/Analysis/procedual_knowledge/)
+
+[(논문 요약) Reverse Thinking Makes LLMs Stronger Reasoners](./docs/Language%20Model/Code%20and%20Math/reverse_thinking/)
+
+[(논문 요약) OpenAI o1 System Card](./docs/Language%20Model/Code%20and%20Math/o1_system_card/)
+
 [(논문 요약) TULU 3: Pushing Frontiers in Open Language Model Post-Training](./docs/Language%20Model/Code%20and%20Math/tulu/)
 
 [(논문 요약) Mixture-of-Transformers: A Sparse and Scalable Architecture for Multi-Modal Foundation Models](./docs/Language%20Model/Compute%20Efficiency/mot/)
