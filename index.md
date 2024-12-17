@@ -4,6 +4,12 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) Phi-4 Technical Report](./docs/Language%20Model/Foundation%20Model/phi4/)
+
+[(논문 요약) DOES RLHF SCALE? EXPLORING THE IMPACTS FROM DATA, MODEL, AND METHOD](./docs/Language%20Model/Training/rlhf_scale/)
+
+[(논문 요약) Clio: Privacy-Preserving Insights into Real-World AI Use](./docs/Language%20Model/Analysis/clio/)
+
 [(논문 요약) PROCEDURAL KNOWLEDGE IN PRETRAINING DRIVES REASONING IN LARGE LANGUAGE MODELS](./docs/Language%20Model/Analysis/procedual_knowledge/)
 
 [(논문 요약) Reverse Thinking Makes LLMs Stronger Reasoners](./docs/Language%20Model/Code%20and%20Math/reverse_thinking/)
