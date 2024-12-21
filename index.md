@@ -4,6 +4,8 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(잡생각) 지식](./docs/Thoughts/knowledge/)
+
 [(논문 요약) Phi-4 Technical Report](./docs/Language%20Model/Foundation%20Model/phi4/)
 
 [(논문 요약) DOES RLHF SCALE? EXPLORING THE IMPACTS FROM DATA, MODEL, AND METHOD](./docs/Language%20Model/Training/rlhf_scale/)
