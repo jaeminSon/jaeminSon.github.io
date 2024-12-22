@@ -4,6 +4,12 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) Byte Latent Transformer: Patches Scale Better Than Tokens](./docs/Language%20Model/Embedding/blt/)
+
+[(논문 요약) CUT YOUR LOSSES IN LARGE-VOCABULARY LANGUAGE MODELS](./docs/Language%20Model/Compute%20Efficiency/cce/)
+
+[(논문 요약) Training Large Language Models to Reason in a Continuous Latent Space](./docs/Language%20Model/Code%20and%20Math/coconut/)
+
 [(잡생각) 지식](./docs/Thoughts/knowledge/)
 
 [(논문 요약) Phi-4 Technical Report](./docs/Language%20Model/Foundation%20Model/phi4/)

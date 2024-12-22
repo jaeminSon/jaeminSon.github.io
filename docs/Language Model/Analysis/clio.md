@@ -1,5 +1,5 @@
 ---
-title: (논문 요약) Clio: Privacy-Preserving Insights into Real-World AI Use
+title: (논문 요약) Clio; Privacy-Preserving Insights into Real-World AI Use
 parent: Analysis
 ---
 

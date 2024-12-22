@@ -13,7 +13,7 @@ parent: Compute Efficiency
 - {-1,0,1} weight matrix 로 muliplication 가속화.  
 <img src="/data/papers/bitnet/concept.png" width="800" />
 - Weight quantization formula  
-<img src="/data/papers/bitnet/concept.png" width="500" />
+<img src="/data/papers/bitnet/weight.png" width="500" />
 
 ## 실험 결과
 <img src="/data/papers/bitnet/result.png" width="800" />
