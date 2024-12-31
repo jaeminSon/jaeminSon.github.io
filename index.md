@@ -4,6 +4,8 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(잡생각) 인간과 기계](./docs/Thoughts/human_machine/)
+
 [(잡생각) 프로 스포츠](./docs/Thoughts/sports/)
 
 [(논문 요약) Byte Latent Transformer: Patches Scale Better Than Tokens](./docs/Language%20Model/Embedding/blt/)
