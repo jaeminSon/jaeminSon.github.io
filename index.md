@@ -4,6 +4,8 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) THEAGENTCOMPANY: BENCHMARKING LLM AGENTS ON CONSEQUENTIAL REAL WORLD TASKS](./docs/Language%20Model/Agents/agentcompany)
+
 [(잡생각) 역사의 굴레](./docs/Thoughts/history/)
 
 [(잡생각) 인간과 기계](./docs/Thoughts/human_machine/)
