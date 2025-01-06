@@ -4,6 +4,10 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) DeepSeek-V3 Technical Report](./docs/Language%20Model/Foundation%20Model/deepseekv3)
+
+[(논문 요약) Large Concept Models: Language Modeling in a Sentence Representation Space](./docs/Language%20Model/Embedding/largeconceptmodels)
+
 [(논문 요약) THEAGENTCOMPANY: BENCHMARKING LLM AGENTS ON CONSEQUENTIAL REAL WORLD TASKS](./docs/Language%20Model/Agents/agentcompany)
 
 [(잡생각) 역사의 굴레](./docs/Thoughts/history/)
