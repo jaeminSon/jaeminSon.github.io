@@ -4,6 +4,8 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) Do NOT Think That Much for 2+3=? On the Overthinking of o1-Like LLMs](./docs/Language%20Model/Training/overthink)
+
 [(논문 요약) DeepSeek-V3 Technical Report](./docs/Language%20Model/Foundation%20Model/deepseekv3)
 
 [(논문 요약) Large Concept Models: Language Modeling in a Sentence Representation Space](./docs/Language%20Model/Embedding/largeconceptmodels)
