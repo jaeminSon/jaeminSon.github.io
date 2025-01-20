@@ -10,7 +10,7 @@ layout: default
 
 [(논문 요약) Can LLMs Design Good Questions Based on Context?](./docs/Language%20Model/Analysis/llm_question/)
 
-[(잡생각) 평가](./docs/Thoughts/excellence/)
+[(잡생각) 탁월함](./docs/Thoughts/excellence/)
 
 [(논문 요약) Do NOT Think That Much for 2+3=? On the Overthinking of o1-Like LLMs](./docs/Language%20Model/Training/overthink)
 
