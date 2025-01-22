@@ -4,6 +4,8 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(블로그 요약) DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning](./docs/Language%20Model/Code%20and%20Math/deepseek-r1/)
+
 [(블로그 요약) Sky-T1: Train your own O1 preview model within $450](./docs/Language%20Model/Code%20and%20Math/skyt1/)
 
 [(논문 요약) rStar-Math: Small LLMs Can Master Math Reasoning with Self-Evolved Deep Thinking](./docs/Language%20Model/Code%20and%20Math/rstar/)
