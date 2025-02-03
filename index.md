@@ -4,6 +4,10 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) SFT Memorizes, RL Generalizes: A Comparative Study of Foundation Model Post-training](./docs/Language%20Model/Training/sft-rl/)
+
+[(블로그 요약) Qwen2.5-VL: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning](./docs/Vision%20Language%20Model/qwen2.5/)
+
 [(블로그 요약) DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning](./docs/Language%20Model/Code%20and%20Math/deepseek-r1/)
 
 [(블로그 요약) Sky-T1: Train your own O1 preview model within $450](./docs/Language%20Model/Code%20and%20Math/skyt1/)
