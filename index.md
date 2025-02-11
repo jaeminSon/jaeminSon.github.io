@@ -4,6 +4,8 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) LIMO: Less Is More for Reasoning](./docs/Language%20Model/Code%20and%20Math/limo)
+
 [(논문 요약) Gold-medalist Performance in Solving Olympiad Geometry with AlphaGeometry2](./docs/Language%20Model/Code%20and%20Math/alphageometry2)
 
 [(논문 요약) SFT Memorizes, RL Generalizes: A Comparative Study of Foundation Model Post-training](./docs/Language%20Model/Training/sft-rl/)
