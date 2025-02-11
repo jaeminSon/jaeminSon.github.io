@@ -1,5 +1,5 @@
 ---
-title: (논문 요약) SFT Memorizes, RL Generalizes: A Comparative Study of Foundation Model Post-training
+title: (논문 요약) SFT Memorizes, RL Generalizes; A Comparative Study of Foundation Model Post-training
 parent: Training
 ---
 
