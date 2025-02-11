@@ -4,6 +4,8 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(잡생각) 지능과 환경](./docs/Thoughts/intelligence_environment/)
+
 [(논문 요약) LIMO: Less Is More for Reasoning](./docs/Language%20Model/Code%20and%20Math/limo)
 
 [(논문 요약) Gold-medalist Performance in Solving Olympiad Geometry with AlphaGeometry2](./docs/Language%20Model/Code%20and%20Math/alphageometry2)
