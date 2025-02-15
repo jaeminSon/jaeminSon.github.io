@@ -7,7 +7,12 @@ parent: Code and Math
 
 ## 핵심 내용
 - DeepSeek-R1-Zero: RL 만으로 학습이 되는지 확인하기 위한 실험.
-   - Group Relative Policy Optimization 사용.
+   - Group Relative Policy Optimization 로 학습
+      - 문제 $q$ 에 대해 $G$ 개 output 생성후 PPO
+   <img src="/data/papers/deepseek-r1/grpo.png" width="800" />
+      - advantage $A_i=\frac{r_i-mean(r_1,...,r_G)}{std(r_1,...,r_G)}$
+      - KL estimator: [blog](http://joschu.net/blog/kl-approx.html)
+
    - Reward
       - Accuracy: 수학은 최종 정답이 맞는지, 코드는 실행 결과 정답과 일치하는지.
       - Format: think tag 를 붙이는지.
