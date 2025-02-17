@@ -4,7 +4,7 @@ layout: default
 # All pages (in chronological order)
 <br>
 
-[(개념 요약) Tokenization](./docs/Language%20Model/Training/tokenization)
+[(블로그 요약) R1-reproduce](./docs/Language%20Model/Code%20and%20Math/r1-reproduce)
 
 [(개념 요약) Tokenization](./docs/Language%20Model/Training/tokenization)
 
