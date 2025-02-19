@@ -4,6 +4,10 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse Attention](./docs/Language%20Model/Architecture/nsa)
+
+[(논문 요약) SWE-Lancer: Can Frontier LLMs Earn $1 Million from Real-World Freelance Software Engineering?](./docs/Language%20Model/Code%20and%20Math/lancer)
+
 [(블로그 요약) R1-reproduce](./docs/Language%20Model/Code%20and%20Math/r1-reproduce)
 
 [(개념 요약) Tokenization](./docs/Language%20Model/Training/tokenization)
