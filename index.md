@@ -4,6 +4,8 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) NATURALREASONING: Reasoning in the Wild with 2.8M Challenging Questions](./docs/Language%20Model/Code%20and%20Math/naturalreasoning)
+
 [(논문 요약) Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse Attention](./docs/Language%20Model/Architecture/nsa)
 
 [(논문 요약) SWE-Lancer: Can Frontier LLMs Earn $1 Million from Real-World Freelance Software Engineering?](./docs/Language%20Model/Code%20and%20Math/lancer)
