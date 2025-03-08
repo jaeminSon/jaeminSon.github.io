@@ -4,6 +4,10 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) Open-Reasoner-Zero: An Open Source Approach to Scaling Up Reinforcement Learning on the Base Model](./docs/Language%20Model/Code%20and%20Math/openreasonerzero)
+
+[(논문 요약) The Danger of Overthinking: Examining the Reasoning-Action Dilemma in Agentic Tasks](./docs/Language%20Model/Agents/overthinking)
+
 [(논문 요약) NATURALREASONING: Reasoning in the Wild with 2.8M Challenging Questions](./docs/Language%20Model/Code%20and%20Math/naturalreasoning)
 
 [(논문 요약) Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse Attention](./docs/Language%20Model/Architecture/nsa)

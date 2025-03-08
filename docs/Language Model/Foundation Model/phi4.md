@@ -6,7 +6,7 @@ parent: Foundation Model
 **(논문 요약) Phi-4 Technical Report** [(Paper)](https://arxiv.org/pdf/2412.08905)
 
 ## 모델
-- Phi-4: 14B, 16K context window, tiktoken tokenizer
+- Phi-4: 14B, 16K context window, tiktoken tokenizer, primarily English.
 - Phi-3 와 마찬가지로 데이터 퀄리티 높이는데 초점.
    - 실 데이터 (web content, code) + 생성 데이터 (총 10T tokens)
 
