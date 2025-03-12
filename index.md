@@ -4,6 +4,8 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) Cognitive Behaviors that Enable Self-Improving Reasoners, or, Four Habits of Highly Effective STaRs](./docs/Language%20Model/Code%20and%20Math/habitsSTaR)
+
 [(논문 요약) Open-Reasoner-Zero: An Open Source Approach to Scaling Up Reinforcement Learning on the Base Model](./docs/Language%20Model/Code%20and%20Math/openreasonerzero)
 
 [(논문 요약) The Danger of Overthinking: Examining the Reasoning-Action Dilemma in Agentic Tasks](./docs/Language%20Model/Agents/overthinking)
