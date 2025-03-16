@@ -4,6 +4,8 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) Phi-4-Mini Technical Report: Compact yet Powerful Multimodal Language Models via Mixture-of-LoRAs](./docs/Language%20Model/Foundation%20Model/phi4mini)
+
 [(논문 요약) Gemma 3 Technical Report](./docs/Language%20Model/Foundation%20Model/gemma3)
 
 [(논문 요약) Cognitive Behaviors that Enable Self-Improving Reasoners, or, Four Habits of Highly Effective STaRs](./docs/Language%20Model/Code%20and%20Math/habitsSTaR)
