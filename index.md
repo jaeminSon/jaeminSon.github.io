@@ -4,6 +4,10 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(블로그 요약) Aya Vision: Expanding the worlds AI can see](./docs/Vision%20Language%20Model/ayavision)
+
+[(논문 요약) olmOCR: Unlocking Trillions of Tokens in PDFs with Vision Language Models](./docs/Vision%20Language%20Model/olmocr)
+
 [(논문 요약) Phi-4-Mini Technical Report: Compact yet Powerful Multimodal Language Models via Mixture-of-LoRAs](./docs/Language%20Model/Foundation%20Model/phi4mini)
 
 [(논문 요약) Gemma 3 Technical Report](./docs/Language%20Model/Foundation%20Model/gemma3)
