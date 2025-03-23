@@ -4,6 +4,8 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) PaliGemma 2: A Family of Versatile VLMs for Transfer](./docs/Vision%20Language%20Model/paligemma2)
+
 [(블로그 요약) Aya Vision: Expanding the worlds AI can see](./docs/Vision%20Language%20Model/ayavision)
 
 [(논문 요약) olmOCR: Unlocking Trillions of Tokens in PDFs with Vision Language Models](./docs/Vision%20Language%20Model/olmocr)
