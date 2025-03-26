@@ -4,6 +4,8 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(모델 요약) Nemotron](./docs/Language%20Model/Foundation%20Model/nemotron)
+
 [(논문 요약) PaliGemma 2: A Family of Versatile VLMs for Transfer](./docs/Vision%20Language%20Model/paligemma2)
 
 [(블로그 요약) Aya Vision: Expanding the worlds AI can see](./docs/Vision%20Language%20Model/ayavision)

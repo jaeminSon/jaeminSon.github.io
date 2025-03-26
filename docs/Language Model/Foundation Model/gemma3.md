@@ -37,5 +37,5 @@ parent: Foundation Model
 
 - Input image size ablation
 
-<img src="/data/papers/gemma3/performance.png" width="400" />
+<img src="/data/papers/gemma3/performance.png" width="800" />
 
