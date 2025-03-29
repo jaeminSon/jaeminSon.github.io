@@ -4,6 +4,10 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) Compute Optimal Scaling of Skills: Knowledge vs Reasoning](./docs/Language%20Model/Training/scale_knowledge_reasoning)
+
+[(논문 요약) DAPO: An Open-Source LLM Reinforcement Learning System at Scale](./docs/Language%20Model/Code%20and%20Math/dapo)
+
 [(모델 요약) Nemotron](./docs/Language%20Model/Foundation%20Model/nemotron)
 
 [(논문 요약) PaliGemma 2: A Family of Versatile VLMs for Transfer](./docs/Vision%20Language%20Model/paligemma2)

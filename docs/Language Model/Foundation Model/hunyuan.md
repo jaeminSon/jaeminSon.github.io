@@ -10,7 +10,10 @@ parent: Foundation Model
 - Max 256K tokens  
 <img src="/data/papers/hunyuan/overview.png" width="800" />
    
-- Data 생성 (step 2 evolve 에서는 명확성, 다양성, 난이도를 높임)
+- Data 생성
+   - 수학, 논리, QA 등 각 도메인의 instruction 을 생성, 발전 시키는 모델을 학습함
+   - step 2 evolve 에서는 명확성, 다양성, 난이도를 높임
+
 <img src="/data/papers/hunyuan/data_synthesis.png" width="800" />
 
 
