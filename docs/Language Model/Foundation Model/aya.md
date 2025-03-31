@@ -1,9 +1,9 @@
 ---
-title: (논문 요약) Aya Expanse; Connecting Our World
+title: (블로그 요약) Aya Expanse; Connecting Our World
 parent: Foundation Model
 ---
 
-**(논문 요약) Aya Expanse: Connecting Our World** [(Blog)](https://cohere.com/blog/aya-expanse-connecting-our-world)
+**(블로그 요약) Aya Expanse: Connecting Our World** [(Blog)](https://cohere.com/blog/aya-expanse-connecting-our-world)
 
 ## 핵심 내용
 - param size: 8B, 32B

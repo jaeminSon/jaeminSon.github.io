@@ -4,6 +4,8 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) Qwen2.5-Omni Technical Report](./docs/Language%20Model/Foundation%20Model/qwen2.5-omni)
+
 [(논문 요약) Compute Optimal Scaling of Skills: Knowledge vs Reasoning](./docs/Language%20Model/Training/scale_knowledge_reasoning)
 
 [(논문 요약) DAPO: An Open-Source LLM Reinforcement Learning System at Scale](./docs/Language%20Model/Code%20and%20Math/dapo)

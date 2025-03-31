@@ -3,7 +3,7 @@ title: (모델 요약) NVIDIA Llama Nemotron
 parent: Foundation Model
 ---
 
-**(논문 요약) NVIDIA Llama Nemotron** [(blog)](https://developer.nvidia.com/blog/build-enterprise-ai-agents-with-advanced-open-nvidia-llama-nemotron-reasoning-models/)
+**(모델 요약) NVIDIA Llama Nemotron** [(blog)](https://developer.nvidia.com/blog/build-enterprise-ai-agents-with-advanced-open-nvidia-llama-nemotron-reasoning-models/)
 
 ## 핵심 내용
 - Llama 모델을 SFT 혹은 distill 한 뒤, SFT, RL 학습.
