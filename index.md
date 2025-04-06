@@ -4,6 +4,8 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(잡생각) 생명의 본질](./docs/Thoughts/life/)
+
 [(논문 요약) Qwen2.5-Omni Technical Report](./docs/Language%20Model/Foundation%20Model/qwen2.5-omni)
 
 [(논문 요약) Compute Optimal Scaling of Skills: Knowledge vs Reasoning](./docs/Language%20Model/Training/scale_knowledge_reasoning)
