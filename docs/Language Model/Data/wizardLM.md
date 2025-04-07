@@ -54,7 +54,7 @@ parent: Data
 <img src="/data/papers/wizardLM/wizard2.png" width="800" />
 
 - Preprocessing
-    - topic categorization
+    - 다양한 attributes 에 대한 distribution 파악
     - natural distribution 에 맞게 sampling
 - Learning
     - SFT
@@ -64,6 +64,6 @@ parent: Data
     - multi-agent 로 instruct 생성
     - 여러번 query 하여 response 를 개선
 - AI align AI
-    - Co-teaching: simulated chat, quality judging, improvement suggestions and closing skill gap, etc
+    - Co-teaching: 다양한 모델들로 simulated chat, quality judging, improvement suggestions and closing skill gap, etc
     - Self-teaching: 스스로 query 하여 데이터 셋을 생성
 
