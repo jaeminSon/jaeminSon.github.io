@@ -11,7 +11,7 @@ parent: Training
 ### Tokenization
 - Merge rules (예시: hu+g->hug) 를 순차적으로 적용.
 
-### Merge rules 생성: frequent 높은 pair 를 vocab 에 추가시켜나감.
+### Merge rules 생성: frequency 가 가장 높은 pair 를 vocab 에 추가시켜나감.
 - 1st Iter
    - Vocabulary: [b, g, h, n, p, s, u, **ug**]
    - Corpus: (h+ug, 10), (p+ug, 5), (p+u+n, 12), (b+u+n, 4), (h+ug+s, 5)

@@ -1,5 +1,5 @@
 ---
-title: (모델 요약) WizardLM; Empowering Large Language Models to Follow Complex Instructions
+title: (논문 요약) WizardLM; Empowering Large Language Models to Follow Complex Instructions
 parent: Data
 ---
 
