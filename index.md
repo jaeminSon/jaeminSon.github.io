@@ -4,6 +4,16 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) SigLIP 2: Multilingual Vision-Language Encoders with Improved Semantic Understanding, Localization, and Dense Features](./docs/Vision%20Language%20Model/siglip2)
+
+[(논문 요약) Why do LLMs attend to the first token?](./docs/Language%20Model/Analysis/sink)
+
+[(논문 요약) Ovis: Structural Embedding Alignment for Multimodal Large Language Model](./docs/Vision%20Language%20Model/ovis)
+
+[(블로그 요약) DeepCoder: A Fully Open-Source 14B Coder at O3-mini Level](./docs/Language%20Model/Code%20and%20Math/deepcoder)
+
+[(논문 요약) LIMA: Less Is More for Alignment](./docs/Language%20Model/Data/lima)
+
 [(논문 요약) WizardLM: Empowering Large Language Models to Follow Complex Instructions](./docs/Language%20Model/Data/wizardLM)
 
 [(잡생각) 생명의 본질](./docs/Thoughts/life/)

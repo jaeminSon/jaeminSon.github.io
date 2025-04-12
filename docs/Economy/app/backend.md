@@ -85,14 +85,15 @@ def get_stocks():
 ## NGINX 
 - HTTP web server, reverse proxy, content cache, load balancer, TCP/UDP proxy server, and mail proxy server
 
-## gunicorn
+## Gunicorn
 - Web Server Gateway Interface
+- Time-out, unexpected kill 등이 있는 경우, Gunicorn 은 자동으로 이를 디텍트하고, 새로운 worker 를 띄움
 
 ```
 # wsgi.py
 from run import app
 
-# run gunicorn with 4 workers and port 8000
+# run Gunicorn with 4 workers and port 8000
 $ gunicorn -w 4 -b 0.0.0.0:8000 wsgi:app
 ```
 
