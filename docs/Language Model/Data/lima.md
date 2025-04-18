@@ -1,5 +1,5 @@
 ---
-title: (논문 요약) LIMA: Less Is More for Alignment
+title: (논문 요약) LIMA; Less Is More for Alignment
 parent: Data
 ---
 

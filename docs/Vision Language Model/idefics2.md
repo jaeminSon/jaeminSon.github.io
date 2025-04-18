@@ -21,8 +21,6 @@ parent: Vision Language Model
 <img src="/data/papers/idefics2/visual_token.png" width="350" />
 - 이미지는 aspect ratio 유지하는 대신 정사각형이 나음.  
 <img src="/data/papers/idefics2/image_ratio.png" width="350" />
-- visual token 많이 필요 없음.  
-<img src="/data/papers/idefics2/visual_token.png" width="350" />
 - ocr 학습해야 DocVQA 잘함.  
 <img src="/data/papers/idefics2/ocr.png" width="350" />
 - 모델로 text generation 해도 데이터 추가하는게 도움됨.  

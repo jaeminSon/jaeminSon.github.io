@@ -1,5 +1,5 @@
 ---
-title: 3. Backend
+title: 2. Backend
 parent: 저평가 알람앱 개발
 ---
 
@@ -27,19 +27,22 @@ brew install postgresql
 
 ## PostgreSQL 기본 명령어
 ```
-# 유저 생성
+# 유저 (role) 생성
 createuser -s postgres
 
 # 로그인
 psql -U postgres 
 
-# 로그인 이후, db 생성, user 생성, 권한 부여 
+# 로그인 이후, db 생성, user 생성, 권한 부여 (';' 로 명령어 구분)
 CREATE DATABASE finance_db;
 CREATE USER myuser WITH ENCRYPTED PASSWORD '1234';
 GRANT ALL PRIVILEGES ON DATABASE finance_db TO myuser;
 
 # database 지우기
 DROP DATABASE <database>;
+
+# user 보기 
+\du
 
 # table 보기 
 \c <database>
