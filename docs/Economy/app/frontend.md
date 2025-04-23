@@ -48,14 +48,14 @@ npx create-expo-app frontend --template expo-template-blank-typescript
 cd frontend
 npx expo install react-dom react-native-web @expo/metro-runtime
 
-# chart 표시를 위한 pakcage 설치 
+# chart graph 를 위한 pakcage 설치 
 npx expo install react-native-chart-kit react-native-svg
 
 # guage bar 를 위한 pakcage 설치 (web, android)
 npm install react-gauge-chart 
-npm install react-native-gauge
+npm install @shipt/segmented-arc-for-react-native
 
-# 검색창을 위한 package 설치
+# dropdown 메뉴를 위한 package 설치
 npm i react-native-paper react-native-dropdown-picker @react-navigation/native-stack @react-navigation/native
 
 # 시작
@@ -76,7 +76,7 @@ npx expo start --android
 
 ## Code Refactoring
 ```
-npx prettier --write "**/*.{ts,tsx}"
+npx prettier --write .
 ```
 
 ## Troubleshootings 

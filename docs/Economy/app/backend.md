@@ -22,6 +22,7 @@ sudo apt install postgresql postgresql-contrib libpq-dev
 - Mac
 ```
 brew install postgresql
+brew services start postgresql
 ```
 
 
