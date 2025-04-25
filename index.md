@@ -4,6 +4,8 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(잡생각) Feedback](./docs/Thoughts/feedback)
+
 [(논문 요약) Efficient Memory Management for Large Language Model Serving with PagedAttention](./docs/Language%20Model/Compute%20Efficiency/vllm)
 
 [(의견 요약) Welcome to the Era of Experience](./docs/Language%20Model/Analysis/eraofexperience)
