@@ -4,6 +4,8 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(생활 꿀팁) 오래된 컴퓨터, OS 잘못 업데이트하면 해먹는다](./docs/Thoughts/oldcomputer)
+
 [(잡생각) Feedback](./docs/Thoughts/feedback)
 
 [(논문 요약) Efficient Memory Management for Large Language Model Serving with PagedAttention](./docs/Language%20Model/Compute%20Efficiency/vllm)

@@ -88,6 +88,7 @@ def get_stocks():
 
 ## NGINX 
 - HTTP web server, reverse proxy, content cache, load balancer, TCP/UDP proxy server, and mail proxy server
+- 이번엔 사용하지 않음.
 
 ## Gunicorn
 - Web Server Gateway Interface

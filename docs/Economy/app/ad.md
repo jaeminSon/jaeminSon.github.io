@@ -5,11 +5,17 @@ parent: 저평가 알람앱 개발
 
 [(참고 블로그)](https://nonmajor-be-developer.tistory.com/entry/React-Native-Expo%EC%97%90-google-AdMob%EC%9D%84-%EB%84%A3%EC%96%B4%EB%B3%B4%EC%9E%90)
 
-## google ad-mob 에서 ID 발급
-- 회원 가입: [google ad-mob](https://admob.google.com/home/)
-- Apps 탭에서 Add your first app 클릭 후, 광고 유형 선택 후, 최종적으로 ID 발급
+- Web 과 Android 는 google 광고 넣는 방식이 다름
 
-## 코드에 광고 넣기
+## Web 에 광고 넣기
+
+
+## Android 에 광고 넣기
+- google ad-mob 에서 ID 발급
+    - 회원 가입: [google ad-mob](https://admob.google.com/home/)
+    - Apps 탭에서 Add your first app 클릭 후, 광고 유형 선택 후, 최종적으로 ID 발급
+
+
 - package install
 
 ```
