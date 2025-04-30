@@ -1,6 +1,6 @@
 ---
 title: 2. Backend
-parent: 저평가 알람앱 개발
+parent: ETF 가격 지표앱 개발
 ---
 
 ## DB 선정

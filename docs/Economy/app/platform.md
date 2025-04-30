@@ -1,6 +1,6 @@
 ---
 title: 1. 플랫폼 선정
-parent: 저평가 알람앱 개발
+parent: ETF 가격 지표앱 개발
 ---
 
 ## 유명 platform

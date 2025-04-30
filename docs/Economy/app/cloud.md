@@ -1,6 +1,6 @@
 ---
 title: 5. 클라우드
-parent: 저평가 알람앱 개발
+parent: ETF 가격 지표앱 개발
 ---
 
 [(참고 블로그)](https://brunch.co.kr/@topasvga/168)
