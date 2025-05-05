@@ -106,3 +106,15 @@ $ gunicorn -w 4 -b 0.0.0.0:8000 wsgi:app
 - asyncpg
 - SQLAlchemy's async mode
 - Gunicorn + uvicorn worker
+
+## crontab 을 활용한 daily update
+
+```
+# crontab 열고, 내용 기입
+$ crontab -e
+<minute> <hour> * * * <path/to/shellscriptfile>
+
+# shell script 에 실행 권한 추가
+chmod +x <path/to/shellscriptfile>
+
+```

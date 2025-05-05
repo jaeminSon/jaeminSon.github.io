@@ -8,6 +8,9 @@ parent: ETF 가격 지표앱 개발
 - Web 과 Android 는 google 광고 넣는 방식이 다름
 
 ## Web 에 광고 넣기
+- [google adsense](https://www.google.com/adsense) 에서 website 인증을 받아야함.
+- backend 에서 (my-hostname)/ads.txt 을 query 하는 식으로 구현
+- 최종적으로 일 소요됨.
 
 
 ## Android 에 광고 넣기

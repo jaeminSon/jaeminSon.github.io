@@ -7,6 +7,7 @@ parent: Compute Efficiency
 
 [BitNet: Scaling 1-bit Transformers for Large Language Models](https://arxiv.org/pdf/2310.11453)
 [The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits](https://arxiv.org/pdf/2402.17764)
+[BitNet b1.58 2B4T Technical Report](https://arxiv.org/pdf/2504.12285)
 [(repo)](https://github.com/microsoft/BitNet)
 
 ## 핵심 내용
@@ -17,3 +18,10 @@ parent: Compute Efficiency
 
 ## 실험 결과
 <img src="/data/papers/bitnet/result.png" width="800" />
+
+## BitNet 2B 모델
+- BitLinear 사용하여 pre-training, SFT, and DPO.
+
+<img src="/data/papers/bitnet/comparison.png" width="800" />
+
+<img src="/data/papers/bitnet/comparison2.png" width="800" />

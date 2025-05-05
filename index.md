@@ -4,6 +4,18 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) Synthetic Data Generation & Multi-Step RL for Reasoning & Tool Use](./docs/Language%20Model/Code%20and%20Math/synthrl)
+
+[(논문 요약) Concise Reasoning via Reinforcement Learning](./docs/Language%20Model/Code%20and%20Math/concisereason)
+
+[(논문 요약) Does Reinforcement Learning Really Incentivize Reasoning Capacity in LLMs Beyond the Base Model?](./docs/Language%20Model/Code%20and%20Math/rlvr)
+
+[(논문 요약) DeepSeek-Prover-V2: Advancing Formal Mathematical Reasoning via Reinforcement Learning for Subgoal Decomposition](./docs/Language%20Model/Code%20and%20Math/deepseek-prover-v2)
+
+[(논문 요약) Phi-4-reasoning Technical Report](./docs/Language%20Model/Code%20and%20Math/phi4reason)
+
+[(블로그 요약) Qwen3: Think Deeper, Act Faster](./docs/Language%20Model/Foundation%20Model/qwen3)
+
 [(생활 꿀팁) 오래된 컴퓨터, OS 잘못 업데이트하면 해먹는다](./docs/Thoughts/oldcomputer)
 
 [(잡생각) Feedback](./docs/Thoughts/feedback)
