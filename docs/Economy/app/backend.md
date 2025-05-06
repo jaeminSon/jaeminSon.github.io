@@ -116,5 +116,4 @@ $ crontab -e
 
 # shell script 에 실행 권한 추가
 chmod +x <path/to/shellscriptfile>
-
 ```
