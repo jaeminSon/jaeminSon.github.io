@@ -4,6 +4,12 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(잡생각) 선의만 베풀어야 하는 이유](./docs/Thoughts/goodwill)
+
+[(잡생각) Pure Explorer 로서의 인간](./docs/Thoughts/human_role)
+
+[(잡생각) 정보 비대칭](./docs/Thoughts/information_asymmetry)
+
 [(논문 요약) Synthetic Data Generation & Multi-Step RL for Reasoning & Tool Use](./docs/Language%20Model/Code%20and%20Math/synthrl)
 
 [(논문 요약) Concise Reasoning via Reinforcement Learning](./docs/Language%20Model/Code%20and%20Math/concisereason)
