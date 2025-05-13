@@ -10,6 +10,8 @@ parent: ETF 가격 지표앱 개발
 ## Web 에 광고 넣기
 - [google adsense](https://www.google.com/adsense) 에서 website 인증을 받아야함.
 - backend 에서 (my-hostname)/ads.txt 을 query 하는 식으로 구현
+- 9 일 뒤에, "Google-served ads on screens without publisher-content" 로 거절 당함.
+    - "under construction" 때문 인가 싶어 다시 신청함.
 - 최종적으로 일 소요됨.
 
 
