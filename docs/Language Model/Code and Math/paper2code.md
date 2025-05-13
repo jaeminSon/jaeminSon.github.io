@@ -15,4 +15,4 @@ parent: Code and Math
 ## 실험 결과
 - 사람이 평가시, o3-mini-high 를 사용한 경우를 가장 선호함.
 
-<img src="/data/papers/paper2code/result.png" width="400" />
+<img src="/data/papers/paper2code/result.png" width="800" />
