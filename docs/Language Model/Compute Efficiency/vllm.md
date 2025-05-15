@@ -8,7 +8,7 @@ parent: Compute Efficiency
 [(paper)](https://arxiv.org/pdf/2309.06180)
 
 ## 핵심 내용
-- 기존 시스템의 문제: fragrmentation
+- 기존 시스템의 문제: fragmentation
    - internal fragmentation: max length (e.g. 2048) 혹은 fixed size 만큼 contiguous memory chunk 가 pre-allocate 됨.
    - external fragmentation: pre-allocated chunk 가 다양한 사이즈로 존재하여, 사용하지 않는 메모리 발생.
    - 20.4% ~ 38.2% 의 KV cache memory 만 실제로 사용됨.
