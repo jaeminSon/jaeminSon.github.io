@@ -4,6 +4,8 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) AlphaEvolve: A coding agent for scientific and algorithmic discovery](./docs/Language%20Model/Code%20and%20Math/alphaevolve)
+
 [(논문 요약) Paper2Code: Automating Code Generation from Scientific Papers in Machine Learning](./docs/Language%20Model/Code%20and%20Math/paper2code)
 
 [(잡생각) 진리에 관하여](./docs/Thoughts/truth)
