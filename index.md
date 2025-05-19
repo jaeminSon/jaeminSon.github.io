@@ -4,6 +4,8 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) Reinforcement Learning for Reasoning in Large Language Models with One Training Example](./docs/Language%20Model/Code%20and%20Math/rl_one_example)
+
 [(잡생각) 감정의 gradient](./docs/Thoughts/emotional_gradient)
 
 [(논문 요약) AlphaEvolve: A coding agent for scientific and algorithmic discovery](./docs/Language%20Model/Code%20and%20Math/alphaevolve)
