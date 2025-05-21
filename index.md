@@ -4,6 +4,10 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) FAST: Efficient Action Tokenization for Vision-Language-Action Models](./docs/Robot/pi0_fast)
+
+[(논문 요약) π0: A Vision-Language-Action Flow Model for General Robot Control](./docs/Robot/pi0)
+
 [(논문 요약) Reinforcement Learning for Reasoning in Large Language Models with One Training Example](./docs/Language%20Model/Code%20and%20Math/rl_one_example)
 
 [(잡생각) 감정의 gradient](./docs/Thoughts/emotional_gradient)
