@@ -4,6 +4,8 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(잡생각) 인간 vs 기계 계산량 비교](./docs/Thoughts/compute_comparison)
+
 [(논문 요약) FAST: Efficient Action Tokenization for Vision-Language-Action Models](./docs/Robot/pi0_fast)
 
 [(논문 요약) π0: A Vision-Language-Action Flow Model for General Robot Control](./docs/Robot/pi0)
