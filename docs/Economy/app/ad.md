@@ -13,39 +13,8 @@ parent: ETF 가격 지표앱 개발
 - 9 일 뒤에, "Google-served ads on screens without publisher-content" 로 거절 당함.
     - "under construction" 때문 인가 싶어 다시 신청함.
 - 최종적으로 2번 반려됨.
-- [kofi](https://github.com/jaeminSon/ETF-Percentile) 를 사용함.
-    - 다음과 같이 iframe 을 별도의 tsx 파일로 저장후, import 하여 사용
-
-```
-===========
-kofi.tsx
-===========
-import React from "react";
-
-const KoFiWidget: React.FC = () => {
-  return (
-    <iframe
-      id="kofiframe"
-      src="https://ko-fi.com/jaeminson/?hidefeed=true&widget=true&embed=true&preview=true"
-      style={{
-        border: 'black',
-        width: '100%',
-        background: 'white'
-      }}
-      height="712"
-      title="jaeminson"
-    ></iframe>
-  );
-};
-
-export default KoFiWidget;
-
-============
-screen.tsx
-============
-import KoFiWidget from "../component/kofi";
-<KoFiWidget />
-```
+- [Kofi](https://github.com/jaeminSon/ETF-Percentile) 를 사용함.
+    - Kofi iframe 을 별도의 tsx 파일로 저장후, import 하여 사용
 
 ## Android 에 광고 넣기
 - google ad-mob 에서 ID 발급
@@ -60,6 +29,7 @@ npx expo install react-native-google-mobile-ads
 ```
 
 - app.json 수정 
+
 ```
 {
   "expo": {
@@ -127,11 +97,14 @@ npx expo run
 ```
 
 - 주의 사항: Java, JDK, 환경 변수 세팅되어야함
+
 ```
 # JDK 설치
 brew install openjdk@17
 
 # 환경 변수
+export JAVA_HOME="/opt/homebrew/opt/openjdk@17"
+export PATH="$JAVA_HOME/bin:$PATH"
 ```
 
 - test id 를 발급받은 값으로 대체
