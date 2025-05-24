@@ -13,7 +13,7 @@ parent: Thoughts
 
 - LLM 이 학습한 텍스트를 인간이 읽기 위해 필요한 시간
    - 인간의 독서 속도를 분당 250 단어 라고 가정하는 경우,
-   - 3T tokens == 2.3T words
-   - 2.3T / 250 == 9.2B minutes == 17_503 years
+   - 3T tokens ~= 2.3T words
+   - 2.3T / 250 ~= 9.2B minutes ~= 17_503 years
    - 많은 양의 text 를 읽어야 할때는 LLM 에 물어보는게 이득!
 
