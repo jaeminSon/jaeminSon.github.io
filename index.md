@@ -4,6 +4,10 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) How much do language models memorize?](./docs/Language%20Model/Analysis/llm_memorize)
+
+[(잡생각) career](./docs/Thoughts/career)
+
 [(논문 요약) QWENLONG-L1: Towards Long-Context Large Reasoning Models with Reinforcement Learning](./docs/Language%20Model/Code%20and%20Math/qwenlongl1)
 
 [(논문 요약) Spurious Rewards: Rethinking Training Signals in RLVR](./docs/Language%20Model/Code%20and%20Math/rethink_rlvr)
