@@ -4,9 +4,11 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) π0.5; a Vision-Language-Action Model with Open-World Generalization](./docs/Robot/pi0_5)
+
 [(논문 요약) How much do language models memorize?](./docs/Language%20Model/Analysis/llm_memorize)
 
-[(잡생각) career](./docs/Thoughts/career)
+[(잡생각) Career](./docs/Thoughts/career)
 
 [(논문 요약) QWENLONG-L1: Towards Long-Context Large Reasoning Models with Reinforcement Learning](./docs/Language%20Model/Code%20and%20Math/qwenlongl1)
 
