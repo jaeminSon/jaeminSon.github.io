@@ -52,6 +52,9 @@ DROP DATABASE <database>;
 SELECT * FROM table_name;
 # row 숫자보기
 SELECT COUNT(*) FROM table_name;
+# 모든 테이블의 row 숫자 보기
+SELECT relname AS table_name, n_live_tup AS row_count
+FROM pg_stat_user_tables;
 
 # table 지우기
 DROP TABLE stock;
