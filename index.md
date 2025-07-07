@@ -4,6 +4,10 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) Prover Agent: An Agent-based Framework for Formal Mathematical Proofs](./docs/Language%20Model/Code%20and%20Math/prover_agent)
+
+[(블로그 요약) DeepSWE: Training a Fully Open-sourced, State-of-the-Art Coding Agent by Scaling RL](./docs/Language%20Model/Code%20and%20Math/deepswe_preview)
+
 [(논문 요약) π0.5; a Vision-Language-Action Model with Open-World Generalization](./docs/Robot/pi0_5)
 
 [(논문 요약) How much do language models memorize?](./docs/Language%20Model/Analysis/llm_memorize)
