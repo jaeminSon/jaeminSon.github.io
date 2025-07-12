@@ -1,5 +1,5 @@
 ---
-title: 8. 1차 업데이트
+title: 8. 업데이트
 parent: ETF 가격 지표앱 개발
 ---
 
@@ -13,13 +13,15 @@ parent: ETF 가격 지표앱 개발
 - 그외 sector
 - S&P500
 - IBIT, GEV, SOLV, SW 는 데이터 포인트가 200개 미만이어서 제외
+- 국가별 ETF 추가
+- Sector 별 추가
 
 
 ## 구현 순서
 - backend
 - frontend (web)
 - frontend (android)
-
+- nginx 추가 ([Client] → HTTPS → [Caddy] → HTTP (localhost:9000) → [NGINX] → Gunicorn (localhost:8000))
 
 ## 시행착오
 - s&p 500 을 표시하려 했는데 생각보다 많아서 보기도 어려움.
