@@ -1,9 +1,9 @@
 ---
-title: (논문 요약) Large Language Monkeys; Scaling Inference Compute with Repeated Sampling
+title: (논문 요약) DeepSeek-R1
 parent: Code and Math
 ---
 
-**(논문 요약) Large Language Monkeys: Scaling Inference Compute with Repeated Sampling** [(Github)](https://github.com/deepseek-ai/DeepSeek-R1/)
+**(논문 요약) DeepSeek-R1** [(Github)](https://github.com/deepseek-ai/DeepSeek-R1/)
 
 ## 핵심 내용
 - DeepSeek-R1-Zero: RL 만으로 학습이 되는지 확인하기 위한 실험.
