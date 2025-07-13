@@ -4,6 +4,8 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(잡생각) 문제 해결](./docs/Thoughts/problem_solving)
+
 [(논문 요약) Real-Time Execution of Action Chunking Flow Policies](./docs/Robot/real_time_chunking)
 
 [(논문 요약) GR00T N1: An Open Foundation Model for Generalist Humanoid Robots](./docs/Robot/gr00tN1)
