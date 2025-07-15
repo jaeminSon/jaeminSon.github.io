@@ -4,6 +4,8 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(모델 요약) Kimi-K2](./docs/Foundation%20Model/kimi2)
+
 [(잡생각) 문제 해결](./docs/Thoughts/problem_solving)
 
 [(논문 요약) Real-Time Execution of Action Chunking Flow Policies](./docs/Robot/real_time_chunking)
