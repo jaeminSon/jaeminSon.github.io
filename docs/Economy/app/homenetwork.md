@@ -19,3 +19,7 @@ parent: ETF 가격 지표앱 개발
 ```
 sudo caddy run --config ./Caddyfile --adapter caddyfile
 ```
+
+## 이사 후 세팅
+- 단말의 내부 IP 가 router admin panel 에서 port-forwarding 된 주소가 맞는지 확인
+   - 다른 경우, 내부 IP 수정
