@@ -6,7 +6,7 @@ layout: default
 
 [(논문 요약) One Token to Fool LLM-as-a-Judge](./docs/Language%20Model/Analysis/fool)
 
-[(모델 요약) Kimi-K2](./docs/Foundation%20Model/kimi2)
+[(모델 요약) Kimi-K2](./docs/Language%20Model/Foundation%20Model/kimi2)
 
 [(잡생각) 문제 해결](./docs/Thoughts/problem_solving)
 
