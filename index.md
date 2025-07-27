@@ -4,6 +4,8 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) AlphaGo Moment for Model Architecture Discovery](./docs/Language%20Model/Architecture/agent_nas)
+
 [(논문 요약) One Token to Fool LLM-as-a-Judge](./docs/Language%20Model/Analysis/fool)
 
 [(모델 요약) Kimi-K2](./docs/Language%20Model/Foundation%20Model/kimi2)

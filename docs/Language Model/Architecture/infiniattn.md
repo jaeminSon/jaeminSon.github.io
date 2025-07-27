@@ -11,7 +11,7 @@ parent: Architecture
   - 이전 Key, Value 들을 compressive memory 형태로 유지.
   - 현재의 Query 를 통해서 원하는 부분 추출.
   - 현재의 Multi-Head-Attention 과 interpolation (head 당 interpolation weight 학습).
-  - 
+
 <img src="/data/papers/infiniattn/concept.png" width="400" />  
 
   - Memory: <img src="/data/papers/infiniattn/mem_retrieval1.png" width="150" /> 
