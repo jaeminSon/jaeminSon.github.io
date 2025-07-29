@@ -4,6 +4,10 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) Learning without training: The implicit dynamics of in-context learning](./docs/Language%20Model/Analysis/incontextlearning)
+
+[(논문 요약) SUBLIMINAL LEARNING: LANGUAGE MODELS TRANSMIT BEHAVIORAL TRAITS VIA HIDDEN SIGNALS IN DATA](./docs/Language%20Model/Analysis/subliminal)
+
 [(논문 요약) AlphaGo Moment for Model Architecture Discovery](./docs/Language%20Model/Architecture/agent_nas)
 
 [(논문 요약) One Token to Fool LLM-as-a-Judge](./docs/Language%20Model/Analysis/fool)
