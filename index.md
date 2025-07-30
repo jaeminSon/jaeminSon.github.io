@@ -4,6 +4,8 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) Inverse Scaling in Test-Time Compute](./docs/Language%20Model/Compute%20Efficiency/inverse_ttc)
+
 [(논문 요약) Learning without training: The implicit dynamics of in-context learning](./docs/Language%20Model/Analysis/incontextlearning)
 
 [(논문 요약) SUBLIMINAL LEARNING: LANGUAGE MODELS TRANSMIT BEHAVIORAL TRAITS VIA HIDDEN SIGNALS IN DATA](./docs/Language%20Model/Analysis/subliminal)
