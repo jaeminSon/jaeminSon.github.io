@@ -4,6 +4,8 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(잡생각) Reproducibility](./docs/Thoughts/reproducibility)
+
 [(블로그 요약) Qwen3-Coder: Agentic Coding in the World](./docs/Language%20Model/Code%20and%20Math/qwen3_coder)
 
 [(논문 요약) CHEATING AUTOMATIC LLM BENCHMARKS: NULL MODELS ACHIEVE HIGH WIN RATES](./docs/Language%20Model/Analysis/null_model)
