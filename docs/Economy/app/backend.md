@@ -36,8 +36,8 @@ psql -U postgres
 
 # 로그인 이후, db 생성, user 생성, 권한 부여 (';' 로 명령어 구분)
 CREATE DATABASE finance_db;
-CREATE USER myuser WITH ENCRYPTED PASSWORD '1234';
-GRANT ALL PRIVILEGES ON DATABASE finance_db TO myuser;
+CREATE USER human WITH ENCRYPTED PASSWORD '1234';
+GRANT ALL PRIVILEGES ON DATABASE finance_db TO human;
 
 # database 지우기
 DROP DATABASE <database>;
@@ -56,8 +56,37 @@ SELECT COUNT(*) FROM table_name;
 SELECT relname AS table_name, n_live_tup AS row_count
 FROM pg_stat_user_tables;
 
+# row count 가 0 인 table 전부 지우기
+DO $$
+DECLARE
+    r RECORD;
+    row_count BIGINT;
+BEGIN
+    FOR r IN
+        SELECT schemaname, tablename
+        FROM pg_tables
+        WHERE schemaname NOT IN ('pg_catalog', 'information_schema')
+    LOOP
+        EXECUTE format('SELECT COUNT(*) FROM %I.%I', r.schemaname, r.tablename) INTO row_count;
+        IF row_count = 0 THEN
+            EXECUTE format('DROP TABLE %I.%I CASCADE', r.schemaname, r.tablename);
+            RAISE NOTICE 'Dropped table %.%', r.schemaname, r.tablename;
+        END IF;
+    END LOOP;
+END$$;
+
 # table 지우기
 DROP TABLE stock;
+```
+
+## Trouble shooting
+```
+*Error*
+HINT:  Is another postmaster (PID 470) running in data directory "/usr/local/var/postgresql@14"?
+2025-08-05 23:37:37.865 KST [2346] FATAL:  lock file "postmaster.pid" already exists
+
+*Solution*
+$ rm /usr/local/var/postgresql@14/postmaster.pid
 ```
 
 ## Flask 기본
