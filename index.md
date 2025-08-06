@@ -4,6 +4,14 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) Seed-Prover: Deep and Broad Reasoning for Automated Theorem Proving](./docs/Language%20Model/Code%20and%20Math/seed_prover)
+
+[(논문 요약) Geometric-Mean Policy Optimization](./docs/Language%20Model/Training/gmpo)
+
+[(논문 요약) Group Sequence Policy Optimization](./docs/Language%20Model/Training/gspo)
+
+[(논문 요약) CHEATPERSONA VECTORS: MONITORING AND CONTROLLING CHARACTER TRAITS IN LANGUAGE MODELS](./docs/Language%20Model/Analysis/persona)
+
 [(잡생각) Reproducibility](./docs/Thoughts/reproducibility)
 
 [(블로그 요약) Qwen3-Coder: Agentic Coding in the World](./docs/Language%20Model/Code%20and%20Math/qwen3_coder)
