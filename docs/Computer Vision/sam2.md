@@ -3,7 +3,7 @@ title: (논문 요약) SAM 2; Segment Anything in Images and Videos
 parent: Computer Vision
 ---
 
-**(논문 요약) SAM 2: Segment Anything in Images and Videos** [(Paper)]()
+**(논문 요약) SAM 2: Segment Anything in Images and Videos** [(Paper)](https://arxiv.org/pdf/2408.00714)
 
 ## 핵심 내용
 - 목표: video 에서 Promptable Visual Segmentation  
