@@ -4,6 +4,8 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) Beyond GPT-5: Making LLMs Cheaper and Better via Performance–Efficiency Optimized Routing](./docs/Language%20Model/Agents/beyondgpt5)
+
 [(논문 요약) DINOv3](./docs/Computer%20Vision/dinov3)
 
 [(논문 요약) Seed-Prover: Deep and Broad Reasoning for Automated Theorem Proving](./docs/Language%20Model/Code%20and%20Math/seed_prover)
