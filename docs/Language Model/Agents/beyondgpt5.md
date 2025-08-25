@@ -9,11 +9,14 @@ parent: Agents
 ## 핵심 내용
 - 각 query 별로 best model 을 선택.
    - Query 를  Qwen3-embedding-8B 로 embedding ($d=4096$)
-   - score 계산 (model $i$ 의 cluster $j$ 에 대한 performance 및 efficiency)
+   - k-means clustring (k=60)
+   - clsuter 별 score 계산 (model $i$ 의 cluster $j$ 에 대한 performance 및 efficiency)
+   - top-p nearest clusters ($p=4$) 로 score 합산 
 
 <img src="/data/papers/beyondgpt5/score1.png" width="200" />
 
 <img src="/data/papers/beyondgpt5/score2.png" width="250" />
+
 
 
 ## 실험 결과
