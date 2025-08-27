@@ -4,6 +4,10 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(잡생각) 혐오에 관하여](./docs/Thoughts/hatred)
+
+[(논문 요약) DEEP THINK WITH CONFIDENCE](./docs/Language%20Model/Analysis/deepthinkwithconf)
+
 [(논문 요약) Beyond GPT-5: Making LLMs Cheaper and Better via Performance–Efficiency Optimized Routing](./docs/Language%20Model/Agents/beyondgpt5)
 
 [(논문 요약) DINOv3](./docs/Computer%20Vision/dinov3)
