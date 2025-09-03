@@ -4,6 +4,12 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) Jet-Nemotron: Efficient Language Model with Post Neural Architecture Search](./docs/Language%20Model/Compute%20Efficiency/jetnemotron)
+
+[(논문 요약) Memory-R1: Enhancing Large Language Model Agents to Manage and Utilize Memories via Reinforcement Learning](./docs/Language%20Model/RAG/memoryr1)
+
+[(논문 요약) Anemoi: A Semi-Centralized Multi-agent System Based on Agent-to-Agent Communication MCP server from Coral Protocol](./docs/Language%20Model/Agents/anemoi)
+
 [(잡생각) 혐오에 관하여](./docs/Thoughts/hatred)
 
 [(논문 요약) DEEP THINK WITH CONFIDENCE](./docs/Language%20Model/Analysis/deepthinkwithconf)
