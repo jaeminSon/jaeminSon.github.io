@@ -4,6 +4,8 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(잡생각) 의지](./docs/Thoughts/will)
+
 [(논문 요약) Jet-Nemotron: Efficient Language Model with Post Neural Architecture Search](./docs/Language%20Model/Compute%20Efficiency/jetnemotron)
 
 [(논문 요약) Memory-R1: Enhancing Large Language Model Agents to Manage and Utilize Memories via Reinforcement Learning](./docs/Language%20Model/RAG/memoryr1)
