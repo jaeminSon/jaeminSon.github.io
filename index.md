@@ -4,6 +4,10 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) Disentangling the Factors of Convergence between Brains and Computer Vision Models](./docs/Language%20Model/Analysis/brain_vision)
+
+[(논문 요약) Why Language Models Hallucinate](./docs/Language%20Model/Analysis/hallucinate)
+
 [(잡생각) 의지](./docs/Thoughts/will)
 
 [(논문 요약) Jet-Nemotron: Efficient Language Model with Post Neural Architecture Search](./docs/Language%20Model/Compute%20Efficiency/jetnemotron)
