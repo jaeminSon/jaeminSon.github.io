@@ -23,7 +23,9 @@ parent: ETF 가격 지표앱 개발
 - frontend (android)
 - nginx 추가 ([Client] → HTTPS → [Caddy] → HTTP (localhost:9000) → [NGINX] → Gunicorn (localhost:8000))
 
+## scalability
+- 종목 1개씩 query 이던 것을 페이지 별로 나눔 (동시 처리 user 숫자: ~1명 -> ~100명)
+- 쿼리 숫자를 줄이는 것이 크게 작용하는 듯함.
+
 ## 시행착오
-- s&p 500 을 표시하려 했는데 생각보다 많아서 보기도 어려움.
-- 동시에 query 가 몰리는 경우, backend 가 잘 처리하지 못함.
-- 사용자가 늘어나는 경우, scalability 고려 필요함.
+- s&p 500 을 표시하려 했는데 생각보다 많아서 보기 어려움.
