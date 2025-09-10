@@ -4,6 +4,8 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) rStar2-Agent: Agentic Reasoning Technical Report](./docs/Language%20Model/Agents/rstar2)
+
 [(논문 요약) On the Theoretical Limitations of Embedding-Based Retrieval](./docs/Language%20Model/Analysis/embedding_bound)
 
 [(논문 요약) Adaptive LLM Routing under Budget Constraints](./docs/Language%20Model/Application/routing)
