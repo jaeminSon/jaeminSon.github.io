@@ -4,6 +4,10 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(모델 요약) Qwen3](./docs/Language%20Model/Foundation%20Model/qwen3_next)
+
+[(논문 요약) EMERGENT HIERARCHICAL REASONING IN LLMS THROUGH REINFORCEMENT LEARNING](./docs/Language%20Model/Training/hicra)
+
 [(논문 요약) rStar2-Agent: Agentic Reasoning Technical Report](./docs/Language%20Model/Agents/rstar2)
 
 [(논문 요약) On the Theoretical Limitations of Embedding-Based Retrieval](./docs/Language%20Model/Analysis/embedding_bound)
