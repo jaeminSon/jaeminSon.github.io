@@ -4,7 +4,9 @@ layout: default
 # All pages (in chronological order)
 <br>
 
-[(모델 요약) Qwen3](./docs/Language%20Model/Foundation%20Model/qwen3_next)
+[(모델 요약) Tongyi DeepResearch: A New Era of Open-Source AI Researchers](./docs/Language%20Model/Agents/tongyi)
+
+[(모델 요약) Qwen3-Next](./docs/Language%20Model/Foundation%20Model/qwen3_next)
 
 [(논문 요약) EMERGENT HIERARCHICAL REASONING IN LLMS THROUGH REINFORCEMENT LEARNING](./docs/Language%20Model/Training/hicra)
 
