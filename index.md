@@ -4,6 +4,8 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(잡생각) 의지](./docs/Thoughts/overproduction)
+
 [(모델 요약) Tongyi DeepResearch: A New Era of Open-Source AI Researchers](./docs/Language%20Model/Agents/tongyi)
 
 [(모델 요약) Qwen3-Next](./docs/Language%20Model/Foundation%20Model/qwen3_next)
