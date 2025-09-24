@@ -4,6 +4,10 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) Compute as Teacher: Turning Inference Compute Into Reference-Free Supervision](./docs/Language%20Model/Training/cat)
+
+[(논문 요약) K2-Think: A Parameter-Efficient Reasoning System](./docs/Language%20Model/Foundation%20Model/K2-think)
+
 [(잡생각) 과잉생산](./docs/Thoughts/overproduction)
 
 [(모델 요약) Tongyi DeepResearch: A New Era of Open-Source AI Researchers](./docs/Language%20Model/Agents/tongyi)
