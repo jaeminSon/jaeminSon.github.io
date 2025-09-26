@@ -4,6 +4,8 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) Towards General Agentic Intelligence via Environment Scaling](./docs/Language%20Model/Agents/general_agentic_intelligence)
+
 [(논문 요약) Compute as Teacher: Turning Inference Compute Into Reference-Free Supervision](./docs/Language%20Model/Training/cat)
 
 [(논문 요약) K2-Think: A Parameter-Efficient Reasoning System](./docs/Language%20Model/Foundation%20Model/K2-think)
