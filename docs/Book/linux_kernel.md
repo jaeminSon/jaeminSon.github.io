@@ -52,3 +52,35 @@ parent: Book
 - 프로세스는 1개 이상의 thread 를 가짐.
 
 - linux: monolithic kernel <-> windows: microkernel
+
+# Chapter 2 Getting Started with the Kernel
+- Kernel Source Tree (dirname:role)
+   - arch: Architecture-specific source
+   - block: Block I/O layer
+   - crypto: Crypto API
+   - Documentation: Kernel source documentation
+   - drivers: Device drivers
+   - firmware: Device firmware needed to use certain drivers
+   - fs: The VFS and the individual filesystems
+   - include: Kernel headers
+   - init: Kernel boot and initialization
+   - ipc: Interprocess communication code
+   - kernel: Core subsystems, such as the scheduler
+   - lib: Helper routines
+   - mm: Memory management subsystem and the VM
+   - net: Networking subsystem
+   - samples: Sample, demonstrative code
+   - scripts: Scripts used to build the kernel
+   - security: Linux Security Module
+   - sound: Sound subsystem
+   - usr: Early user-space code (called initramfs)
+   - tools: Tools helpful for developing Linux
+
+- Kernel code 의 특징
+   - C library 나 standard C headers 사용 불가.
+   - GNU C 코드로 작성됨.
+   - memory protection 없음.
+   - floating-point operations 사용 권장되지 않음.
+   - small per-process fixed-size stack 을 지님.
+   - synchronization, concurrency 에 유의해야함.
+   - Portability 를 유지해야함.
