@@ -4,6 +4,8 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) LIMI: Less is More for Agency](./docs/Language%20Model/Alignment/limi)
+
 [(논문 요약) Towards General Agentic Intelligence via Environment Scaling](./docs/Language%20Model/Agents/general_agentic_intelligence)
 
 [(논문 요약) Compute as Teacher: Turning Inference Compute Into Reference-Free Supervision](./docs/Language%20Model/Training/cat)
