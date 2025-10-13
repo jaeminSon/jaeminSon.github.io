@@ -84,3 +84,11 @@ parent: Book
    - small per-process fixed-size stack 을 지님.
    - synchronization, concurrency 에 유의해야함.
    - Portability 를 유지해야함.
+
+# Chapter 3 Process Management
+- 각 thread 는 다음을 가지고 있음.
+   - a unique program counter
+   - process stack
+   - set of processor registers
+- 새로운 process 는 fork() 로 생겨남.
+- 프로그램은 exit() system call 로 종료됨.

@@ -4,6 +4,8 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) Agent Learning via Early Experience](./docs/Language%20Model/Training/early_experience)
+
 [(논문 요약) LIMI: Less is More for Agency](./docs/Language%20Model/Alignment/limi)
 
 [(논문 요약) Towards General Agentic Intelligence via Environment Scaling](./docs/Language%20Model/Agents/general_agentic_intelligence)
