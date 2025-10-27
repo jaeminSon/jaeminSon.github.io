@@ -130,7 +130,7 @@ layout: default
 
 [(논문 요약) Phi-4-reasoning Technical Report](./docs/Language%20Model/Code%20and%20Math/phi4reason)
 
-[(블로그 요약) Qwen3: Think Deeper, Act Faster](./docs/Language%20Model/Foundation%20Model/qwen3)
+[(논문 요약) Qwen3 Technical Report](./docs/Language%20Model/Foundation%20Model/qwen3)
 
 [(생활 꿀팁) 오래된 컴퓨터, OS 잘못 업데이트하면 해먹는다](./docs/Thoughts/oldcomputer)
 

@@ -32,6 +32,34 @@ parent: Book
 11. init, systemd
    - background services 및 login sessions 기동
 
+# misc in linux kernel
+- kernel-spcae queue
+   - Workqueue
+   - Softirq queue
+   - Tasklet queue
+   - Timer queue (스케쥴 용도)
+   - RCU (read-copy-update) callback queue
+   - kthread worker queue – queues work specifically for custom kernel threads created by subsystems.
+
+- kernel-space daemon
+
+| Kernel Thread               | Purpose                                                                          |
+| --------------------------- | -------------------------------------------------------------------------------- |
+| **ksoftirqd/n**             | Processes deferred softirqs when immediate execution would take too long.        |
+| **kworker/n:m**             | Handles **workqueue items** in process context.                                  |
+| **kswapd/n**                | Manages **page reclaiming** and memory swapping.                                 |
+| **pdflush** (older kernels) | Flushes dirty pages to disk (replaced by **flush-* threads** in modern kernels). |
+| **ksmd**                    | Kernel Samepage Merging (memory deduplication).                                  |
+| **kthreadd**                | The **parent of all kernel threads**.                                            |
+| **kdevtmpfs** / **kdevd**   | Handles **device node creation** and uevents before user-space udev runs.        |
+| **irq/CPU-n**               | Handles **per-CPU interrupts**.                                                  |
+
+- kthread
+   - kernel thread 의 종류 중 하나.
+   - Device driver 나 Kernel subsystems 에서 만들어짐.
+   - User-space programs 은 kthread 를 직접 만들수 없음.
+
+
 # Chapter 1 Introduction to the Linux Kernel
 - Interaction: user -> clib -> system call -> kernel -> hardware
    - printf() clib == many features + write() system call
@@ -221,3 +249,93 @@ parent: Book
    - process context: sleep, schedule 가능.
    - softirqs 가 CPU 를 독점하지 않도록 조율.
    - 보통 CPU 당 한개의 ksoftirqd 기동.
+
+- workqueue
+   - sleep 이 필요할때
+   - allocate a lot of memory
+   - obtain a semaphore
+   - perform block I/O
+   - 각 workqueue 는 한개/복수개의 worker threads 를 가지며, workqueue 안의 work 들을 처리.
+
+# Chapter 9 An Introduction to Kernel Synchronization
+- critical region: code or a data that must be accessed exclusively by one method or thread at a time.
+- race condition: multiple threads or processes read and write the same variable.
+- atomic operation: execute without interruption of any other process in between their execution phase. 
+- contention: lock 이 사용되고 있고, 이를 다른 process 가 기다리는 상황.
+- critical region 을 atomic operation 으로 처리하면 race condition 이 발생하지 않음.
+   - 반대로, interrupt 된 상태에서 다른 process 가 critical region 에 접근하면 race condition 발생.
+- deadlock 을 방지하는 아이디어
+   - disable local interrupt when getting a spinlock.
+   - lock ordering (enforced by barrier operations that instruct the compiler not to reorder instructions).
+   - no double-acquiring the same lock.
+
+# Chapter 10 Kernel Synchronization Methods
+- atomic_t, atomic64_t type: atomic function 에서 counter 로 쓰임.
+   - atomic_set, atomic_add, atomic_sub, atomic_inc, atomic_dec 함수로 값 변경.
+   - atomic_read 로 값 읽음.
+
+- samphore
+   - 1개의 thread 만 허용되는 경우: binary semaphore
+   - 복수개의 thread 가 허용되는 경우: counting semaphore
+   - down count: semophore 취득시 (count 가 0 보다 작으면 wait queue 에 들어감)
+   - up count: semophore 반납시
+
+| Feature            | **Spinlock**                         | **Semaphore**                    |
+| ------------------ | ------------------------------------ | -------------------------------- |
+| **Sleep allowed?** | ❌ No (busy-waits)                   | ✅ Yes                            |
+| **Context**        | Used in **atomic/interrupt** context | Used in **process** context      |
+| **Use case**       | Very short critical sections         | Longer waits or shared resources |
+| **Overhead**       | Low (no context switch)              | Higher (can block & wake up)     |
+| **Concurrency**    | Only one holder (no queue)           | Can have queue of waiters        |
+| **Performance**    | Best for short locks                 | Better for long operations       |
+
+| Feature                  | **Binary Semaphore**                           | **Mutex**                                                      |
+| ------------------------ | ---------------------------------------------- | -------------------------------------------------------------- |
+| **Purpose**              | Generic signaling (not always ownership-based) | Designed for **mutual exclusion** (lock/unlock by same thread) |
+| **Context**              | Used in **process** context                    | Used in **process** context      |
+| **Ownership**            | No ownership — any thread can up/down          | Has ownership — only the locker can unlock                     |
+| **Priority inheritance** | ❌ Not supported                               | ✅ Supported (prevents priority inversion)                      |
+| **Usage safety**         | Easier to misuse                               | Safer and simpler for locking                                  |
+| **Common use**           | Synchronization between tasks                  | Protecting shared data (critical sections)                     |
+
+- Read/Write
+   - reader lock: shared and concurrent
+   - writer lock: exclusive
+
+| Feature            | **rwlock_t (spinlock)**    | **rw_semaphore**                             |
+| ------------------ | -------------------------- | -------------------------------------------- |
+| **Sleep allowed?** | ❌ No (busy-wait)           | ✅ Yes (can block)                            |
+| **Context**        | Atomic / interrupt context | Process context only                         |
+| **Best for**       | Short critical sections    | Long operations (e.g. disk I/O, file access) |
+| **Performance**    | Low latency, no sleep      | Can sleep, less CPU usage when waiting       |
+
+- Seqlocks (sequence locks) 
+   - frequently read, rarely written data.
+   - favor writers over readers and never allow readers to starve writers.
+   - e.g. timekeeping (xtime), VDSO data, and networking stats
+
+- spinlock 사용 예시
+
+```
+spin_lock(&mr_lock);
+/* critical region ... */
+spin_unlock(&mr_lock);
+```
+
+- semaphore 사용 예시
+```
+/* define and declare a semaphore, named mr_sem, with a count of one */
+static DECLARE_MUTEX(mr_sem);
+
+/* attempt to acquire the semaphore ... */
+if (down_interruptible(&mr_sem)) {
+   /* signal received, semaphore not acquired ... */
+}
+
+/* critical region ... */
+
+/* release the given semaphore */
+up(&mr_sem);
+```
+
+# Chapter 11 Timers and Time Management
