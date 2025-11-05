@@ -1,161 +1,205 @@
 ---
-title: Linux Kernel Development (3rd edition)
+title: Linux Kernel Development (3rd edition) (+ gpt5 로 내용 수정)
 parent: Book
 ---
-# 부팅시 일어나는 일 (번외)
-1. Power 버튼 누름.
-2. Motherboard 가 power supply 에 신호 보냄.
-3. (power supply unit 이 power good 판정을 내리면) CPU 가 registers 리셋 함.
-4. Firmware (BIOS or UEFI) 가 저장된 주소로 jump.
-5. Firmware 가 하드웨어 체크 (memory tests, chipset setup, and peripheral detection)
-6. Firmware 가 boot device (disk, USB, network) 를 찾아내고, boot sector (boot device 의 첫 sector) 를 메모리에 로드함.
-7. Boot sector 는 나머지 Bootloader 를 로드함.
-8. Bootloader (e.g., GRUB) 가 다음을 실행함.
-   - boot menu 표시.
-   - Linux kernel image (vmlinuz) 메모리에 로드.
-   - initramfs 메모리에 로드.
-   - kernel parameter 를 전달하고 kernel entry point 로 jump.
-9. CPU 가 architecture-specific assembly (e.g., arch/x86/kernel/head_64.S) 를 실행함.
-   - CPU mode (Protected / Long mode for 64-bit)
-   - Memory mappings
-   - Page tables
-   - Stack
-   - Segment registers
-   - 최종적으로 init/main.c 의 start_kernel() 로 jump
-10. start_kernel() 에서 다음을 초기화 함.
-   - Memory management (page allocator, zones)
-   - Interrupt handling
-   - Scheduler
-   - Device drivers
-   - Filesystems
-   - 마지막으로 user-space process 실행함 (/sbin/init 혹은 systemd)
-11. init, systemd
-   - background services 및 login sessions 기동
+# Booting sequence
+### Firmware → Bootloader → Kernel → systemd → User Session
+
+### 1️⃣ Power-On and Firmware Initialization
+- Pressing the Power button → motherboard signals PSU.
+- CPU resets registers and jumps to firmware (BIOS/UEFI).
+- Firmware performs POST, detects hardware, and finds a bootable device.
+
+### 2️⃣ Bootloader (e.g. GRUB)
+- Loads the Linux kernel (`vmlinuz`) and `initramfs`.
+- Passes kernel parameters and jumps to the kernel entry point.
+
+### 3️⃣ Kernel Initialization
+- Architecture-specific setup (modes, page tables, stacks).
+- Calls `start_kernel()` — initializes memory, scheduler, devices, filesystems.
+- Finally launches the first userspace process (`/sbin/init` or `systemd`).
+
+### 4️⃣ User Space Initialization
+- `systemd` (now standard) starts background services, mounts filesystems, and manages targets.
 
 # misc in linux kernel
-- kernel-spcae queue
-   - Workqueue
-   - Softirq queue
-   - Tasklet queue
-   - Timer queue (스케쥴 용도)
-   - RCU (read-copy-update) callback queue
-   - kthread worker queue – queues work specifically for custom kernel threads created by subsystems.
+### subsystems
+- Process Management
+- Memory Management
+- File Systems
+- I/O Subsystems
+- Networking
+- Device Drivers
+- Security Subsystems
+- Inter-Process Communication (IPC)
+- Kernel Timers and Clocks
+- Virtualization and Containers
+- Power Management
+- Debugging and Tracing
+- Kernel Modules and Loadable Subsystems
+- Input/Output Scheduling
+- Filesystem Caching and Buffers
 
-- kernel-space daemon
+### kernel-space queue
+- Workqueue
+- Softirq queue
+- Tasklet queue
+- Timer queue
+- RCU (read-copy-update) callback queue
+- kthread worker queue – queues work specifically for custom kernel threads created by subsystems.
+
+### kernel-space daemon
 
 | Kernel Thread               | Purpose                                                                          |
 | --------------------------- | -------------------------------------------------------------------------------- |
 | **ksoftirqd/n**             | Processes deferred softirqs when immediate execution would take too long.        |
 | **kworker/n:m**             | Handles **workqueue items** in process context.                                  |
 | **kswapd/n**                | Manages **page reclaiming** and memory swapping.                                 |
-| **pdflush** (older kernels) | Flushes dirty pages to disk (replaced by **flush-* threads** in modern kernels). |
 | **ksmd**                    | Kernel Samepage Merging (memory deduplication).                                  |
 | **kthreadd**                | The **parent of all kernel threads**.                                            |
-| **kdevtmpfs** / **kdevd**   | Handles **device node creation** and uevents before user-space udev runs.        |
 | **irq/CPU-n**               | Handles **per-CPU interrupts**.                                                  |
 
-- kthread
-   - kernel thread 의 종류 중 하나.
-   - Device driver 나 Kernel subsystems 에서 만들어짐.
-   - User-space programs 은 kthread 를 직접 만들수 없음.
+### Kernel Threads
+- Exist only in kernel space and do not have a user-space address space (mm = NULL).
+- Are schedulable and preemptible like user processes.
+- kthread != kernel thread
+    - kthread are kernel threads that use the kthread_*() API such as kthread_create(), kthread_run(), kthread_stop(), kthread_should_stop()
 
+### Non-Uniform Memory Access (NUMA)
+- Each NUMA node has its own set of processors and directly attached local memory.
+- A processor can access its local memory much faster than it can access memory located on a remote NUMA node (non-local memory)
+
+
+### misc
+- 'volatile' keyword: have compiler read from and write to the variable's memory location directly every time, without optimizing (such as register caching).
+- system cache line: A fixed-size memory block used during data transfer RAM ↔ cache. 
 
 # Chapter 1 Introduction to the Linux Kernel
-- Interaction: user -> clib -> system call -> kernel -> hardware
-   - printf() clib == many features + write() system call
-   - open() clib ~= open() system call
-   - strcpy() clib: no system call
+### Interaction: user → C library (glibc) → system call → kernel → hardware
+- printf() (in C library): performs formatting and buffering; internally uses the write() system call to output to a file descriptor.
+- open() (in C library): mostly a thin wrapper around the open() or openat() system call.
+- strcpy() (in C library): pure memory operation — does not make a system call (operates entirely in user space).
+- Modern Linux uses vDSO (virtual dynamic shared object) to accelerate some system calls (e.g., gettimeofday(), clock_gettime()), allowing certain kernel services to be accessed without a full context switch.
 
-- processor 는 시점에 상관없이 다음 3 가지 중 하나의 코드를 실행
-   - user space
-   - kernel space (process context)
-   - kernel space (interrupt context)
+### A processor is always executing one of three types of code:   
+- user space
+- kernel space (process context)
+- kernel space (interrupt context)
 
-- process: independent execution context
-   - own virtual memory space, open files, stack, heap, CPU state
-   - 각 process 는 task_struct 로 표현됨.
-- thread: lightweight unit of execution within a process
-   - 같은 process 내의 thread 와 메모리, 자원 공유.
-   - 각자 execution context 를 갖음 (stack 과 CPU registers 는 따로 갖음).
-- 프로세스는 1개 이상의 thread 를 가짐.
-- linux 에서 thread 는 사실 process 로 구현되며, 다른 process 와 자원을 소유하는 process 임.
+### Process & Thread
+- Process: independent execution context
+    - Has its own virtual memory space, open file table, stack, heap, and CPU state.
+    - Each process is represented by a task_struct in the kernel.
+- Thread: lightweight execution unit within a process
+    - Threads within the same process share memory and most resources (e.g., file descriptors, address space).
+    - Each thread has its own execution context (separate stack and CPU registers).
+    - A process always has at least one thread (the main thread).
+- Implementations in Linux
+    - In Linux, threads are implemented as tasks—the same structure as processes.
+    - Threads are created using the clone() system call, which allows fine-grained control over what is shared (memory, file descriptors, etc.).
+    - Each thread has its own task_struct, but threads belonging to the same process share the same thread group ID (TGID).
 
-- linux: monolithic kernel <-> windows: microkernel
+### Kernel Architecture
+- Linux: monolithic kernel with modular design (loadable kernel modules).
+   - Core kernel runs in a single address space but supports dynamically loadable modules (e.g., device drivers).
+   - Uses preemption and fine-grained locking for scalability in modern SMP systems.
+- Windows: hybrid kernel (not a true microkernel).
+   - Combines monolithic performance with microkernel modularity — kernel, executive, and drivers run in kernel mode.
 
 # Chapter 2 Getting Started with the Kernel
-- Kernel Source Tree (dirname:role)
-   - arch: Architecture-specific source
-   - block: Block I/O layer
-   - crypto: Crypto API
-   - Documentation: Kernel source documentation
-   - drivers: Device drivers
-   - firmware: Device firmware needed to use certain drivers
-   - fs: The VFS and the individual filesystems
-   - include: Kernel headers
-   - init: Kernel boot and initialization
-   - ipc: Interprocess communication code
-   - kernel: Core subsystems, such as the scheduler
-   - lib: Helper routines
-   - mm: Memory management subsystem and the VM
-   - net: Networking subsystem
-   - samples: Sample, demonstrative code
-   - scripts: Scripts used to build the kernel
-   - security: Linux Security Module
-   - sound: Sound subsystem
-   - usr: Early user-space code (called initramfs)
-   - tools: Tools helpful for developing Linux
+### Kernel Source Tree (dirname:role)
+- arch: Architecture-specific source
+- block: Block I/O layer
+- crypto: Crypto API
+- Documentation: Kernel source documentation
+- drivers: Device drivers
+- firmware: Device firmware needed to use certain drivers
+- fs: The VFS and the individual filesystems
+- include: Kernel headers
+- init: Kernel boot and initialization
+- ipc: Interprocess communication code
+- kernel: Core subsystems, such as the scheduler
+- lib: Helper routines
+- mm: Memory management subsystem and the VM
+- net: Networking subsystem
+- samples: Sample, demonstrative code
+- scripts: Scripts used to build the kernel
+- security: Linux Security Module
+- sound: Sound subsystem
+- usr: Early user-space code (called initramfs)
+- tools: Tools helpful for developing Linux
 
-- Kernel code 의 특징
-   - C library 나 standard C headers 사용 불가.
-   - GNU C 코드로 작성됨.
-   - memory protection 없음.
-   - floating-point operations 사용 권장되지 않음.
-   - small per-process fixed-size stack 을 지님.
-   - synchronization, concurrency 에 유의해야함.
-   - Portability 를 유지해야함.
+### Characteristics of Linux Kernel Code
+- Cannot use the standard C library (libc) or standard user-space headers.
+    - Kernel code runs in a separate environment from user space and must use kernel-provided equivalents instead.
+- Written in GNU C (a variant of C with GNU extensions).
+    - Most kernel code is written in GNU C, with limited use of assembly where necessary.
+- Runs in a protected memory space (kernel space).
+    - Unlike user processes, kernel code has full access to system memory but is isolated from user space via hardware-enforced memory protection.
+- Floating-point operations are strongly discouraged.
+    - The kernel avoids using the floating-point unit (FPU) because saving and restoring FPU state adds overhead and can disrupt user-space FPU usage.
+- Each kernel thread or process has a small, fixed-size kernel stack.
+    - Typically 16 KB on 64-bit systems (and 8 KB on older 32-bit ones), which limits deep recursion and large local variables.
+- Concurrency and synchronization are critical concerns.
+    - Kernel code often runs in parallel on multiple CPUs and must use proper locking mechanisms (e.g., spinlocks, mutexes, RCU).
+- Portability must be maintained across different architectures.
+    - Kernel code should be architecture-independent where possible, using abstraction layers and standardized APIs.
 
 # Chapter 3 Process Management
-- 각 process 는 다음을 가지고 있음.
-   - a unique program counter
-   - process stack
-   - set of processor registers
-- 새로운 process 는 fork() 로 생겨남.
-   - 모든 process 는 하나의 parent 를 가짐.
-   - 모든 process 는 init (pid=1) 의 자손.
-   - init 의 process descriptor 는 statically allocated 된 init_task 주소에 저장됨.
-   - return 값으로 parent 는 child 의 pid, child 는 0 을 받음.
-- process 는 exit() system call 로 종료됨.
-   - 먼저 process 의 resources 가 free 됨
-   - process 는 EXIT_ZOMBIE 상태가 됨.
-   - process 의 parent 에게 SIGCHLD 시그널 전송
-   - process children 들의 parent 가 process 의 parent 혹은 init 혹은 systemd 로 갱신됨.
-- list of processor descriptor
-   - doubly linked list
-   - 각 entity: task_struct 로 state, priority, pid 등의 정보 가지고 있음.
+### Each process has:
+- A unique program counter
+- A process stack
+- A set of CPU registers
 
-<img src="/data/linux/process.png" width="600" />
+### Process Creation (fork())
+- New processes are created using the fork() system call.
+- Every process has one parent.
+- All processes ultimately descend from init (PID 1) in older systems, or systemd (PID 1) in modern Linux.
+- The process descriptor of the initial process is stored at the statically allocated address init_task.
+- Return values:
+    - Parent receives the child’s PID.
+    - Child receives 0.
 
-- fork() 시 Copy-on-Write (COW)
-   - Parent 와 child 가 같은 physical pages 를 공유함.
-   - 두 page tables 는 read-only 로 세팅됨.
-   - 어느 쪽에서든 write 가 발생하면 page fault 발생.
-   - 새로운 페이지를 만들고 데이터를 복사함.
+### Process Termination (exit())
+- A process terminates via the exit() system call:
+    - Its resources (memory, file descriptors, etc.) are freed.
+    - The process enters the EXIT_ZOMBIE state.
+    - A SIGCHLD signal is sent to its parent.
+    - Its child processes are re-parented to the parent process, or to init / systemd if the parent no longer exists.
 
-- kernel thread
-    - kernel space 에만 존재.
-    - address space 가 NULL
-    - schedulable and preemptable
-    - e.g. flush, ksoftirqd
+### Process Descriptor List
+- All process descriptors are maintained in a doubly linked list.
+- Each descriptor is a task_struct, containing fields such as state, priority, and PID.
+
+### Process States and Sleep
+- When a process sleeps, its state is set to:
+    - TASK_INTERRUPTIBLE (can wake on signals) or
+    - TASK_UNINTERRUPTIBLE (cannot wake on signals).
+- Sleeping processes are placed into a wait queue.
+
+<img src="/data/linux/process.png" width="800" />
+
+### Copy-on-Write (COW) in fork()
+- After fork(), parent and child share the same physical memory pages.
+- Both page tables are marked read-only.
+- When either writes to a shared page, a page fault occurs, and the kernel allocates a new private copy for that process.
+
 
 # Chapter 4 Process Scheduling
-- real-time processes vs. normal processes
+### real-time processes vs. normal processes
 
-| Scheduler class    | Typical policies                           | Priority range (낮을수록 우선순위 높음)       | Notes                                    |
+| Scheduler class    | Typical policies                           | Priority range (the lower, the more priority)       | Notes                                    |
 | ------------------ | ------------------------------------------ | ---------------------------------------- | ---------------------------------------- |
 | **Real-time (RT)** | `SCHED_FIFO`, `SCHED_RR`                   | 1–99                                     | rt_priority 가 높은 것이 항상 먼저 실행됨 |
 | **CFS (fair)**     | `SCHED_OTHER`, `SCHED_BATCH`, `SCHED_IDLE` | 100–139 (user-space `nice` = –20 to +19) | weight = $1024 / 1.25^{nice}$ 에 비례하여 time-slice 배정|
 
-- equal-weight 시 time-slice 계산
+### CFS (Completely Fair Scheduler)
+- The scheduler always runs the process with the smallest vruntime, which represents how much CPU time the task has used relative to its weight (priority/niceness).
+- All runnable tasks are stored in a red-black tree, ordered by vruntime; the leftmost node (least vruntime) is selected to run next.
+- When a task calls a blocking function (e.g., read() on an empty pipe or futex_wait()), it is removed from the red-black tree and added to the corresponding wait queue (e.g., I/O wait queue, futex wait queue).
+- When the event that the task was waiting for occurs (e.g., I/O completion, lock release, timer expiration), the task is moved from the wait queue back to the red-black tree, making it runnable again.
+
+### Time-slice calculation during equal-weighting with CFS
 
 | Runnable tasks | Time slice per task | Effective latency (config) |
 | -------------- | ------------------- | ----------------- |
@@ -165,120 +209,167 @@ parent: Book
 | 16             | 6 ms (min reached)  | 96 ms (16×6ms)    |
 | 32             | 6 ms (min reached)  | 192 ms (32×6ms)   |
 
-- normal processes
-   - 가장 vruntime = “how much CPU the task has already used relative to its weight” 이 적은 process 를 실행함.
-   - red-black tree 로 가장 왼쪽 (least vruntime) node 접근 가능
-   - blocking function (e.g., read() on an empty pipe or futex_wait()) 호출시, rb tree 에서 제거되고 해당 wait-queue (e.g. I/O queue, futex queue) 에 추가됨.
-   - Event (I/O done, lock released, timer expired) 발생시, 해당 wait-queue 에서 제거되고, rb tree 에 추가됨.
 
-- schedule() 함수 안에서 context_switch() 가 일어남
-   - 현 process 의 CPU registers, kernel stack 저장.
-   - 다음 process 의 상태 로드.
+### schedule() and Context Switching
+- The schedule() function decides the next task to run.
+- A context switch occurs via context_switch(), which:
+    - Saves the current task’s CPU registers and kernel stack pointer.
+    - Loads the next task’s saved state and updates CPU context accordingly.
+- On modern kernels, context switches are optimized with lazy FPU saving and NUMA-aware scheduling.
+    - Lazy FPU saving defers the expensive process of saving and restoring the state of the Floating Point Unit (FPU) registers until it is absolutely necessary
+    - NUMA-aware scheduler ensures that all the resources requested by a performance-critical application are available within a single NUMA zone.
 
 # Chapter 5 System Calls
-- user-space <-> c library (glibc, musl) <-> system call interface <-> system call handler <-> kernel implementation
-- getpid() 의 kernel-side implementation: **asmlinkage long sys_getpid(void)**
-   - asmlinkage: kernel-specific macro (compiler 시 'All function arguments are passed on the stack, not in CPU registers.')
-   - kernel 의 return type 은 long
-   - naming convention: sys_* 
-- sys_call_table: sys_call 함수의 numbering 이 저장되어있음.
-- user-space memory 와 kernel-space memory 는 분리되어있고, kernel-space 에서 다음 함수를 사용하여 메모리를 복사함.
-   - copy_from_user()
-   - copy_to_user()
+### user-space ↔ c library (glibc, musl) ↔ system call interface ↔ system call handler ↔ kernel implementation
+
+### System Call Table
+- The sys_call_table contains pointers to system call handler functions, indexed by their system call numbers.
+- In modern kernels, this table is architecture-specific and generally not exported to modules for security and stability reasons.
+
+### User-space and Kernel-space Memory
+- User-space and kernel-space memory are strictly separated for protection and stability.
+- The kernel must use special helper functions to safely copy data between these spaces:
+     - copy_from_user() — copies data from user space to kernel space.
+     - copy_to_user() — copies data from kernel space to user space.
+- These functions perform access checks to prevent invalid memory references and ensure kernel safety.
+
 
 # Chapter 7 Interrupts and Interrupt Handlers
-- terminology
-   - irq: interrupt request
-   - isr: interrupt service routine
-   - idt: interrupt descriptor table
-- hardware -> electrical signal → interrupt controller (e.g. APIC or PIC) → irq → cpu → idt → kernel interrupt handler → device driver → isr → return to normal execution
-- interrupt context 는 process 와 관계 없음.
-- Top half
-    - Runs immediately when the interrupt occurs.
-    - Handles urgent, time-critical work (e.g., reading device status, clearing the interrupt).
-    - Runs in interrupt context (no sleeping allowed).
-    - Must finish very quickly.
-- Bottom half
-    - Runs later, after the top half finishes.
-    - Handles deferred, longer tasks (e.g., processing data, waking up processes).
-    - Runs in softirq/tasklet/workqueue context.
-- hardware driver loading/unloading 시 interrupt handler 및 interrupt line 관리
-   - driver load 시: request_irq()
-   - driver unload 시: free_irq()
-- shared interrupt line: 여러 device 가 같은 irq 사용.
-   - interrupt 발생 시, 모든 handler 호출.
-   - 각 hanlder 는 담당하는 device 의 status register 를 보고 해당 device 가 interrupt 를 발생시켰는지 파악.
-   - 다른 device 가 발생시킨 interrupt 인 경우, 처리하지 않고 IRQ_NONE return.
-- interrupt 가 disable 되는 경우
-   - interrupt top half 도중
-   - critical kernel data 에 접근할때
-   - context switch 혹은 scheduler operations 도중
-   - local_irq_disable() 혹은 spin_lock_irqsave() 호출시
-- kernel 은 특정 device 에서 interrupt 를 받은 경우, repeated interrupt 를 막기 위해 interrupt line 을 disable 함.
+### Terminology
+- IRQ (Interrupt Request): A signal sent by hardware to request CPU attention.
+- ISR (Interrupt Service Routine): Function executed in response to an interrupt.
+- IDT (Interrupt Descriptor Table): Table mapping interrupt vectors to their handlers.
+- APIC (Advanced Programmable Interrupt Controller)
+- MSI (Message-Signaled Interrupts)
+- Interrupt vector: index used by the CPU to know which handler to run when an interrupt arrives.
+
+### Interrupt Flow
+- Hardware → electrical signal → interrupt controller (e.g., APIC) → IRQ → CPU → IDT → kernel interrupt entry → registered interrupt handler (driver ISR) → return to normal execution
+
+### Interrupt Context
+- Executed independently of any process context (no associated user process).
+- No blocking or sleeping is allowed.
+- Used for immediate, time-critical handling.
+
+### Top Half
+- Runs immediately when the interrupt occurs.
+- Handles urgent tasks, such as acknowledging or clearing the interrupt and reading device state.
+- Runs in interrupt context (atomic, cannot sleep).
+- Must complete quickly to minimize interrupt latency.
+
+### Bottom Half
+- Runs after the top half completes.
+- Handles deferred work, such as data processing or notifying waiting processes.
+- Implemented using softirqs or workqueues in modern Linux.
+
+### Driver and Interrupt Management
+- On driver load: request_irq() registers an ISR for a given IRQ.
+- On driver unload: free_irq() releases the IRQ line.
+- Modern drivers may also use devm_request_irq() for automatic resource management.
+
+### Shared Interrupt Lines
+- Multiple devices can share a single IRQ line.
+- When an interrupt occurs, all registered handlers for that IRQ are called.
+- Each handler checks its device status register to confirm the source.
+- If not responsible, the handler returns IRQ_NONE.
+
+### Interrupt Disabling
+- Interrupts may be disabled temporarily:
+   - During the top half of interrupt handling.
+   - While accessing critical kernel data or performing atomic operations.
+   - During context switches or scheduler operations.
+   - Via calls such as local_irq_disable(), spin_lock_irqsave(), or similar primitives.
+- The kernel automatically re-enables interrupts when safe to do so, and modern kernels minimize interrupt disabling to reduce latency.
+
+### Interrupt Masking
+- When an interrupt is received, the kernel (via the interrupt controller) may mask or disable the interrupt temporarily to prevent repeated interrupts from the same device until it is fully serviced. 
+- MSI (Message-Signaled Interrupts)
+     - The device writes a small message to a specific memory-mapped address (MSI address).
+     - The message is then translated by the PCIe controller/APIC into an interrupt vector for the CPU.
+     - Devices will not send another MSI message for that vector until the previous interrupt is fully handled.
+
 
 # Chapter 8 Bottom Halves and Deferring Work
-- Top half
-   - 최소한의 작업만 진행.
-   - e.g. hardware 에 interrupt 신호 받았음을 알리는 동작.
-- Bottom half
-   - 당장이 아닌 미래로 작업을 미룸 (interrupt 가 켜져있을때 실행)
 
-| Mechanism     | Runs in                              | Concurrency                                                       | Use for                                                      |
-| ------------- | ------------------------------------ | ----------------------------------------------------------------- | ------------------------------------------------------------ |
-| **Softirq**   | Interrupt context                    | Can run on multiple CPUs at once                                  | High-frequency, time-critical tasks (e.g. networking)        |
-| **Tasklet**   | Interrupt context (built on softirq) | Serialized per tasklet type (never runs concurrently on another CPU) | Lightweight, driver-specific deferred work                   |
-| **Workqueue** | Process context (kernel thread)      | Can sleep/block                                                   | Longer or blocking tasks (e.g. disk I/O, user notifications) |
+| Mechanism     | Runs in                                 | Concurrency                                                          | Use for                                                                                         |
+| ------------- | --------------------------------------- | -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| **Softirq**   | Interrupt context                       | Can run on multiple CPUs concurrently (each CPU handles its own)     | High-frequency, time-critical kernel tasks (e.g., networking, block I/O)                        |
+| **Workqueue** | Process context (kernel thread)         | Can sleep/block; multiple worker threads may run in parallel         | Deferred work that can sleep or perform blocking operations (e.g., memory allocation, file I/O) |
 
-- softirq
-   - 같은 CPU 에서 돌고 있는 다른 softirq 를 preempt 하지 않음.
-   - interrupt context 에서 실행되어, sleep, block 불가.
-   - 대게 interrupt handler 에 의해 softirq 가 pending 으로 marking 됨.
-   - 다음 상황에 __do_softirq() 가 호출됨.
-       - On return from a hardware interrupt
-       - By the ksoftirqd kernel thread
-       - By code that explicitly runs pending softirqs (e.g., networking)
-   - 2개의 subsystems 만 직접 softirq 사용 (나머지는 tasklet 사용).
-       - **networking (e.g. NET_RX_SOFTIRQ, NET_TX_SOFTIRQ)**
-       - **block I/O (e.g. BLOCK_SOFTIRQ)** 
+### SoftIRQ
+- A type of bottom-half mechanism used for high-performance, low-latency tasks (e.g., networking).
+- Executes in interrupt context, so it cannot sleep or block.
+- SoftIRQs do not preempt other softirqs running on the same CPU.
+- Usually marked as pending by an interrupt handler.
+- Only a few subsystems directly use softirqs today:
+     - Networking (NET_RX_SOFTIRQ, NET_TX_SOFTIRQ)
+     - Block I/O (BLOCK_SOFTIRQ)
 
-- tasklet
-   - normal-priority tasklets 과 high-priority tasklets 는 다른 linked list, function 사용.
-   - interrupt context 에서 실행되어, sleep, block 불가.
+### Workqueue
+- Used when the deferred task may sleep or requires operations such as:
+    - Allocating large memory regions
+    - Acquiring semaphores or mutexes
+    - Performing blocking I/O
+- Each workqueue maintains one or more worker threads that execute queued work items in process context.
+- Modern kernels (since 2.6 and later) use unified workqueues (system_wq, system_highpri_wq, etc.) shared across subsystems for efficiency.
 
-- ksoftirqd
-   - process context: sleep, schedule 가능.
-   - softirqs 가 CPU 를 독점하지 않도록 조율.
-   - 보통 CPU 당 한개의 ksoftirqd 기동.
+### ksoftirqd
+- A per-CPU kernel thread that runs softirqs in process context, allowing scheduling and sleeping.
+- Prevents softirqs from monopolizing CPU time.
+- Typically, one ksoftirqd/<CPU> thread exists per CPU.
 
-- workqueue
-   - sleep 이 필요할때
-   - allocate a lot of memory
-   - obtain a semaphore
-   - perform block I/O
-   - 각 workqueue 는 한개/복수개의 worker threads 를 가지며, workqueue 안의 work 들을 처리.
 
 # Chapter 9 An Introduction to Kernel Synchronization
-- critical region: code or a data that must be accessed exclusively by one method or thread at a time.
-- race condition: multiple threads or processes read and write the same variable.
-- atomic operation: execute without interruption of any other process in between their execution phase. 
-- contention: lock 이 사용되고 있고, 이를 다른 process 가 기다리는 상황.
-- critical region 을 atomic operation 으로 처리하면 race condition 이 발생하지 않음.
-   - 반대로, interrupt 된 상태에서 다른 process 가 critical region 에 접근하면 race condition 발생.
-- deadlock 을 방지하는 아이디어
-   - disable local interrupt when getting a spinlock.
-   - lock ordering (enforced by barrier operations that instruct the compiler not to reorder instructions).
-   - no double-acquiring the same lock.
+### Concurrency Concepts in Modern Linux
+- Critical region: A section of code or data that must be accessed by only one thread or process at a time to maintain consistency.
+- Race condition: A situation where multiple threads or processes access and modify shared data concurrently, and the final outcome depends on the timing of their execution.
+- Atomic operation: An operation that completes entirely without being interrupted. In Linux, atomic operations are typically implemented using CPU instructions such as atomic_add(), cmpxchg(), or xchg().
+- Contention: A state in which a lock is already held by one thread or process, forcing others to wait until it is released.
+
+### When race conditions occur?
+- If a critical region is protected using atomic operations or proper locking mechanisms (e.g., spinlocks, mutexes), race conditions do not occur.
+- Conversely, if a critical region is interrupted or accessed by another thread without synchronization, a race condition arises.
+
+### Common Deadlock Prevention Techniques
+- Disable local interrupts when acquiring a spinlock (common in kernel-level code) to prevent preemption during lock acquisition.
+- Lock ordering: Always acquire multiple locks in a consistent global order to avoid circular dependencies. Modern Linux uses lockdep to detect violations dynamically.
+- Avoid double-acquisition: Never attempt to acquire the same lock twice in the same thread without releasing it first.
 
 # Chapter 10 Kernel Synchronization Methods
-- atomic_t, atomic64_t type: atomic function 에서 counter 로 쓰임.
-   - atomic_set, atomic_add, atomic_sub, atomic_inc, atomic_dec 함수로 값 변경.
-   - atomic_read 로 값 읽음.
+### Blocking vs. Spinning
+- Blocking: When a process or thread cannot proceed until a condition is met, the scheduler puts it into a sleeping state and switches to other runnable tasks.
+- Spinning: A thread repeatedly checks (busy-waits) for a lock to become available, consuming CPU time. Used in spinlocks, typically within interrupt context or very short critical sections where sleeping is not allowed.
 
-- samphore
-   - 1개의 thread 만 허용되는 경우: binary semaphore
-   - 복수개의 thread 가 허용되는 경우: counting semaphore
-   - down count: semophore 취득시 (count 가 0 보다 작으면 wait queue 에 들어감)
-   - up count: semophore 반납시
+### Example: Spinlock
+```
+spinlock_t mr_lock;
+
+spin_lock(&mr_lock);
+/* critical section ... */
+spin_unlock(&mr_lock);
+```
+
+### Semaphore
+- Binary semaphore: allows one thread at a time (similar to a mutex).
+- Counting semaphore: allows multiple concurrent holders.
+- Down operation: (down(), down_interruptible(), or down_killable()) — attempts to acquire; if count is 0, the task sleeps in the wait queue.
+- Up operation: (up()) — releases the semaphore and wakes one waiting task.
+
+### Example: Semaphore
+```
+/* define and initialize a semaphore named mr_sem with a count of one */
+static DEFINE_SEMAPHORE(mr_sem);
+
+/* attempt to acquire the semaphore (sleep if unavailable) */
+if (down_interruptible(&mr_sem)) {
+    /* interrupted by a signal before acquisition */
+}
+
+/* critical section ... */
+
+/* release the semaphore */
+up(&mr_sem);
+```
 
 | Feature            | **Spinlock**                         | **Semaphore**                    |
 | ------------------ | ------------------------------------ | -------------------------------- |
@@ -298,9 +389,10 @@ parent: Book
 | **Usage safety**         | Easier to misuse                               | Safer and simpler for locking                                  |
 | **Common use**           | Synchronization between tasks                  | Protecting shared data (critical sections)                     |
 
-- Read/Write
-   - reader lock: shared and concurrent
-   - writer lock: exclusive
+### Read/Write Locks
+- Reader lock: shared; multiple readers can hold it simultaneously.
+- Writer lock: exclusive; only one writer at a time.
+- Implemented using rwlock_t (for spin-based locks) or rw_semaphore (for sleepable locks).
 
 | Feature            | **rwlock_t (spinlock)**    | **rw_semaphore**                             |
 | ------------------ | -------------------------- | -------------------------------------------- |
@@ -309,33 +401,297 @@ parent: Book
 | **Best for**       | Short critical sections    | Long operations (e.g. disk I/O, file access) |
 | **Performance**    | Low latency, no sleep      | Can sleep, less CPU usage when waiting       |
 
-- Seqlocks (sequence locks) 
-   - frequently read, rarely written data.
-   - favor writers over readers and never allow readers to starve writers.
-   - e.g. timekeeping (xtime), VDSO data, and networking stats
-
-- spinlock 사용 예시
-
-```
-spin_lock(&mr_lock);
-/* critical region ... */
-spin_unlock(&mr_lock);
-```
-
-- semaphore 사용 예시
-```
-/* define and declare a semaphore, named mr_sem, with a count of one */
-static DECLARE_MUTEX(mr_sem);
-
-/* attempt to acquire the semaphore ... */
-if (down_interruptible(&mr_sem)) {
-   /* signal received, semaphore not acquired ... */
-}
-
-/* critical region ... */
-
-/* release the given semaphore */
-up(&mr_sem);
-```
+### Sequence Locks (Seqlocks)
+- Designed for data that is read frequently but rarely written.
+- Writers are never starved, but readers may retry if a write occurs during reading.
+- e.g. timekeeping (xtime), VDSO data, and networking stats
 
 # Chapter 11 Timers and Time Management
+
+| Hardware                              | Description                                                 | Usage                                                                  |
+| ------------------------------------- | ----------------------------------------------------------- | ---------------------------------------------------------------------- |
+| **TSC (Time Stamp Counter)**          | A counter in each CPU core that increments every CPU cycle. | High-resolution, fast timing source. Used for fine-grained timestamps. |
+| **HPET (High Precision Event Timer)** | A separate hardware timer chip with nanosecond precision.   | Used for system clock, scheduling, and timekeeping if available.       |
+| **APIC timer (Local/IO-APIC)**        | Per-CPU timer used for generating periodic interrupts.      | Used for task scheduling and time slicing.                             |
+| **RTC (Real-Time Clock)**             | Battery-backed clock chip on motherboard.                   | Maintains wall-clock time across reboots.                              |
+
+### Timer Tick Mechanism:
+- A periodic interrupt increments a global timer counter when ticks are enabled (historically, 1 ms interval for desktop and laptop).
+- In tickless mode, the kernel stops these periodic ticks during idle periods and instead programs a hardware timer (e.g., HPET, Local APIC timer, or TSC-deadline timer) to generate the next wake-up event.
+
+### jiffies:
+- A global variable representing the total number of timer ticks since system boot. 
+- It is still maintained even on tickless systems for compatibility.
+
+### Timers in the Kernel:
+- Deferred work such as timer callbacks runs in the softirq context, specifically under TIMER_SOFTIRQ.
+- A timer expires when the current jiffies value is equal to or greater than its expiration time (actual execution may be delayed slightly).
+- Modern kernels also use hrtimers (high-resolution timers) for more precise scheduling.
+
+### Waiting in Drivers:
+- Hardware drivers sometimes wait for device operations to complete.
+- A simple busy-wait loop can be used with a timeout check (less efficient).
+- The preferred approach is to call schedule_timeout() or wait_event_timeout() to sleep for a defined duration.
+- These sleep functions must not be called in interrupt context.
+
+# Chapter 12 Memory Management
+### Memory Management Unit (MMU)
+- The MMU (Memory Management Unit) translates virtual addresses to physical addresses using page tables. 
+- Translation occurs on a per-page basis, typically with 4 KB pages.
+- Large and huge pages, such as 2 MB or 1 GB, are also supported on modern systems.
+
+### struct page
+- Each physical page frame in memory is represented by a struct page in the kernel. It contains:
+   - flags — status bits (locked, dirty, referenced, etc.)
+   - reference count — number of mappings or users of the page
+   - mapping — pointer to the associated file or anonymous memory (via address_space or anon_vma)
+   - virtual address — kernel virtual address (if permanently mapped; not all pages are)
+
+### Page Fault
+- A page fault occurs when a process accesses a virtual address not currently mapped in its page tables or when access permissions are violated.
+- If the data exists in physical memory (but the page table is missing the entry), the kernel updates the page table and resumes the process.
+- If the data must be read from swap space or a file (lazy loading), the kernel loads it, updates the page table, and resumes the process.
+- If the process accesses an invalid or protected address, the kernel raises a segmentation fault (invalid page fault).
+
+### Memory Zones
+- Physical memory pages are divided into zones for allocation constraints:
+   - ZONE_DMA – reserved for DMA-capable hardware (legacy devices)
+   - ZONE_NORMAL – directly mapped in the kernel’s virtual address space
+   - ZONE_HIGHMEM – used only on 32-bit systems; not permanently mapped
+- Typical configurations:
+   - x86-32 (legacy):
+       - ZONE_DMA: < 16 MB
+       - ZONE_NORMAL: 16 – 896 MB
+       - ZONE_HIGHMEM: > 896 MB
+   - x86-64:
+       - No ZONE_HIGHMEM; all memory is directly mapped
+
+### Contiguous Memory
+- Physically contiguous memory improves DMA and CPU access efficiency.
+    - **kmalloc** → physically & virtually contiguous
+    - **vmalloc** → virtually contiguous, but not physically contiguous
+        - Used for large kernel allocations (e.g., dynamically loaded modules, buffers)
+- User-space **malloc** simply requests virtual memory via brk or mmap; it’s not physically contiguous.
+
+### SLUB
+- kernel memory allocator in modern Linux for small, frequently used kernel objects. 
+- Each cache (e.g., kmalloc-64, task_struct) holds objects of one size/type.
+- Each cache consists of multiple slabs, which are groups of contiguous pages divided into equal-size objects.
+
+
+# Chapter 13 The Virtual Filesystem
+### user space ↔ VFS ↔ filesystem (FAT, NTFS, ext4, etc) ↔ physical media
+
+### Core VFS Structures
+- super_block
+    - Holds filesystem-wide metadata such as type, size, and status. It exists both in memory and on disk (as part of the filesystem’s metadata region).
+- inode
+    - Represents individual files or directories and stores metadata (permissions, ownership, timestamps, size, etc.). Each inode usually has an on-disk representation and an in-memory cache.
+- dentry (directory entry)
+    - Represents a single component in a pathname and links a name to its corresponding inode. Dentries exist only in memory and are managed by the dentry cache to speed up path lookup (e.g., /bin/vi has dentries for bin and vi).
+- file
+    - Represents an open file instance. It holds references to a dentry and an inode and is created in memory by the open() system call and released by close().
+
+### A process’s file-related data structures are accessible through its task_struct:
+- files_struct – Table of open file descriptors (FDs) for the process.
+- fs_struct – Holds filesystem context such as the current working directory and root directory.
+- nsproxy – References the namespaces the process belongs to (e.g., mount, PID, network, IPC).
+
+# Chapter 14 The Block I/O Layer
+### Linux Block I/O Overview
+- Block device: A device that supports random access to fixed-size blocks (e.g., hard disks, SSDs, flash memory).
+- Character device: A device that transfers data as a continuous stream (e.g., serial ports, keyboards, mice, printers).
+- Sector: The smallest physical storage unit of a block device (typically 512 bytes or 4 KiB).
+- Block (filesystem level): The smallest logical I/O unit used by the filesystem, typically a power-of-two multiple of the sector size.
+- Segment: A contiguous range of blocks used within an I/O request.
+
+### I/O Request Structures
+- struct bio: Represents a single block I/O request, composed of one or more segments.
+   - Contains an array of struct bio_vec elements.
+   - struct bio_vec describes a segment: (page, offset, len).
+- Request queue:
+   - Filesystems and other kernel components enqueue I/O requests (struct request) to the queue.
+   - The device driver dequeues and submits them to the hardware.
+   - Each struct request may reference one or more struct bios.
+
+### I/O Schedulers (Legacy and Modern)
+- I/O Scheduler: Optimizes performance by merging and ordering requests before dispatching to hardware. 
+   - Merge: Combine adjacent I/O requests into a larger one.
+   - Sort: Order requests by physical sector to reduce seek time.
+- Traditional Schedulers
+   - Deadline Scheduler: Prevents starvation by maintaining three queues (sorted, read FIFO, write FIFO).
+       - Typical expiration: reads ~500 ms, writes ~5 s.
+       - Prioritizes reads to reduce latency.
+   - Anticipatory Scheduler: Waits briefly (~6 ms) after a read, anticipating nearby read requests. (Removed since Linux 2.6.33)
+   - CFQ (Completely Fair Queuing): Assigns each process its own queue and services them in a round-robin fashion. (Replaced by BFQ and MQ-deadline in modern kernels)
+   - Noop Scheduler: Performs simple request merging only; useful for SSDs where seek optimization is irrelevant.
+- Modern Schedulers (blk-mq era)
+   - MQ-Deadline: A multi-queue version of the deadline scheduler, suitable for modern multi-core systems.
+   - BFQ (Budget Fair Queuing): Provides fairness and throughput control, often used on desktop systems.
+   - None Scheduler: Disables scheduling, handing requests directly to the device (often optimal for high-performance SSDs and NVMe).
+
+# Chapter 15 The Process Address Space
+### Linux Process Memory Layout
+- Each process has its own virtual address space, isolated from others.
+- Threads within the same process share this address space (and thus the same memory mappings).
+
+### Memory Regions
+- Text (code) segment: executable program instructions
+- Data segment: initialized global and static variables
+- BSS segment: uninitialized global/static variables (zero-filled at load time)
+- Heap: dynamically allocated memory (e.g., via malloc())
+- Stack: user-space stack for each thread
+- Shared libraries: mapped regions for dynamically linked libraries (e.g., libc)
+- Memory-mapped files: file contents mapped into memory via mmap()
+- Shared memory segments: explicitly shared regions between processes (shmget, mmap, etc.)
+- Anonymous mappings: non-file-backed regions (used by the heap, stacks, etc.)
+
+### struct mm_struct — Process Memory Descriptor
+- Represents the entire virtual memory layout of a process.
+- Key components include:
+   - Page tables: map virtual addresses to physical pages
+   - List/tree of VMAs (vm_area_struct): each describes one continuous mapped region
+   - Segment boundaries: start and end of code, data, heap, and stack
+   - Reference counters, locks, and statistics: e.g., resident set size, swap usage
+
+### struct vm_area_struct — Virtual Memory Area (VMA)
+- Represents a contiguous region of memory with uniform properties:
+   - Start and end virtual addresses
+   - Access permissions (read, write, execute)
+   - Mapping flags and attributes
+   - Associated file (if file-backed) and offset
+   - Each mm_struct contains multiple VMAs, usually organized as a red-black tree for efficient lookup.
+
+### mmap() and munmap()
+- mmap() creates mappings between files or devices and a process’s virtual memory.
+     - It can also allocate anonymous memory (when no file descriptor is specified).
+- munmap() removes such mappings.
+
+### Page Table Structure (x86_64, 4-level paging)
+- PGD: Page Global Directory (top-level)
+- P4D: Page 4th-level Directory (often folded in older kernels)
+- PMD: Page Middle Directory
+- PTE: Page Table Entry (points to a physical page)
+- Each struct page represents a physical page frame in memory.
+
+### TLB (Translation Lookaside Buffer)
+- A hardware cache that stores recent virtual→physical translations.
+- The CPU checks the TLB first.
+- On a miss, it walks the page tables, retrieves the mapping, and updates the TLB automatically.
+
+
+# Chapter 16 The Page Cache and Page Writeback
+### Linux Page Cache and Writeback
+- Page cache: Stores disk data in main memory to reduce disk I/O and speed up file access.
+- Page writeback: When cached pages are modified, they are marked as dirty. The kernel periodically writes dirty pages back to disk in batches, managed by the writeback mechanism (flush-* kernel threads).
+   - Laptop mode: When enabled (/proc/sys/vm/laptop_mode), the kernel delays dirty page writeback to reduce disk activity and save battery power—especially useful for spinning disks.
+
+### Cache eviction
+- LRU eviction: Least Recently Used pages are evicted first to free memory.
+- Two-list strategy: The kernel maintains an active and an inactive LRU list. Pages that are frequently accessed are promoted to the active list, while less-used pages are demoted to the inactive list and eventually reclaimed.
+
+### struct address_space
+- Represents the cache of a file in memory.
+- Includes a pointer to the owner of the address space, usually the file system's struct inode or a struct block_device.
+- Includes a data structure (often an xarray) used to store pointers to the actual struct page objects that make up the page cache for this object, indexed by file offset.
+
+
+# Chapter 17 Devices and Modules
+### Device Types
+- Block devices: Provide buffered access to data in fixed-size blocks (e.g., disks, SSDs). Accessed via files like /dev/sda.
+- Character devices: Provide unbuffered, sequential access to data (e.g., serial ports, keyboards). Accessed via files like /dev/ttyS0.
+- Network devices: Represent interfaces for packet-based communication (e.g., eth0, wlan0), managed through the kernel’s networking stack rather than the traditional device file interface.
+
+### Loadable Kernel Modules (LKM)
+- LKMs can be dynamically loaded and unloaded into the running Linux kernel without rebooting, using tools like insmod, rmmod, or modprobe.
+- module_init() registers the module’s initialization function (called when loaded).
+- module_exit() registers the cleanup function (called when unloaded).
+- Modern kernels often use the MODULE_LICENSE, MODULE_AUTHOR, and MODULE_DESCRIPTION macros for metadata.
+- Kernel module parameters can be exposed and configured using module_param() or module_param_array().
+
+### Kernel Objects
+- struct kobject: Core structure representing kernel objects.
+    - Includes members such as name, parent, kset, ktype, and reference count (kref).
+- struct ktype: Defines shared behavior for a group of kobjects.
+    - Callbacks like release, sysfs_ops (read/write), and default_attrs.
+- struct kset: Represents a collection of kobjects (e.g., all block devices). 
+    - Each kset has its own subsystem and uevent operations.
+
+### Sysfs
+- Sysfs is an in-memory virtual filesystem mounted at /sys, exposing kernel objects to user space.
+- It maps kobjects to directory entries (dentries), allowing structured access to kernel attributes.
+- Common top-level directories include /sys/block, /sys/bus, /sys/class, /sys/devices, /sys/kernel, /sys/module, and /sys/power.
+- Sysfs allows user-space tools (like udev and systemd-udevd) to query and react to kernel state changes.
+
+### Kernel Events (Uevents)
+- The Kernel Events Layer notifies user space of significant system events
+   - e.g., device addition/removal, disk changes, power events.
+- An event includes:
+   - Source: The associated kobject and its sysfs path.
+   - Action: The event type (add, remove, change, etc.).
+   - Optional attributes: Extra key–value pairs from sysfs.
+   - Events are delivered via netlink sockets (specifically, the NETLINK_KOBJECT_UEVENT family).
+   - User-space daemons like udevd listen for these messages and handle them asynchronously (e.g., creating device nodes in /dev).
+
+# Chapter 18 Debugging
+### Requirements for Effective Kernel Debugging
+- A well-defined and reproducible bug.
+- Knowledge of the kernel version and configuration where the issue appears.
+- Familiarity with the relevant subsystem or sufficient investigation skills (and sometimes luck).
+
+### Types of Bugs
+- Common issues include logic errors, race conditions, and hardware mismanagement.
+- These can lead to slow performance, crashes, or data corruption.
+- Kernel developers typically start from visible symptoms (e.g., crashes, hangs) and work backward to identify root causes.
+
+### Using printk()
+- During early boot, normal printk() may be unavailable; only early_printk() (architecture-dependent) can output messages.
+- Kernel messages are logged via the ring buffer, accessible through /proc/kmsg, dmesg, or the journald system (systemd-journald) on modern Linux systems.
+- Older systems used klogd and syslogd, which wrote messages to /var/log/messages.
+
+### Oops Messages
+- An Oops occurs when the kernel detects an exception (e.g., null pointer dereference, illegal instruction).
+- The kernel prints register contents, stack trace, and code location.
+- Symbols can be decoded using kallsyms or analyzed via dmesg, gdb, or crash utilities.
+- After an Oops, the affected process is usually terminated, but the system may remain partially functional.
+
+### Kernel Panic
+- A kernel panic occurs when the kernel hits an unrecoverable error in a critical context (e.g., init, idle, or interrupt handlers).
+- The system halts and displays a message like: *Kernel panic – not syncing: Fatal exception*
+- If the fault happens in a non-critical context, only the offending process is killed, not the whole system.
+
+### Compile-Time Debugging Options
+- Build-time flags such as CONFIG_DEBUG_SPINLOCK, CONFIG_DEBUG_ATOMIC_SLEEP, or CONFIG_DEBUG_SLAB help detect improper locking, memory misuse, or sleeping in atomic contexts.
+
+### Assertion and Debug Macros
+- The kernel provides assertion-style macros to detect unexpected conditions:
+     - BUG(), BUG_ON(), WARN_ON(), BUILD_BUG_ON(), panic(), dump_stack().
+- These macros are used to stop execution or log critical diagnostics when conditions fail.
+
+### Debuggers
+- Static analysis: gdb vmlinux /proc/kcore allows inspection and disassembly of kernel memory and code (read-only, no breakpoints).
+- Remote debugging: kgdb enables full source-level debugging by connecting a debug host to a target machine running the kernel, supporting breakpoints, variable inspection, and single-stepping.
+- Modern tools like crash, drgn, and bpftrace can also assist with live or post-mortem kernel debugging.
+
+
+# Chapter 19 Portability
+### Word Size
+- Word size: the amount of data a machine can process in a single operation (e.g., 64-bit CPU).
+- Typically equals the size of a general-purpose register (GPR), but this can vary on some architectures (e.g., ARM may have mixed register sizes).
+
+### Opaque Types
+- Opaque types have their internal structure and implementation details hidden.
+- Do not assume their size or representation.
+- Examples: pid_t, uid_t, gid_t, dev_t, atomic_t, size_t, etc.
+
+### Notes and Best Practices
+- Some kernel variables must use specific types — for example, interrupt flags should be of type unsigned long.
+- Use exact-width integer types for hardware, networking, and binary data: u8, u16, u32, u64 and their signed variants.
+- Always distinguish between signed char and unsigned char; they are not interchangeable.
+- Respect natural alignment and use padding properly to avoid performance issues or misalignment faults.
+- Never assume endianness; use conversion macros such as cpu_to_le32(), le32_to_cpu(), etc.
+- Use the HZ constant for time conversions (e.g., jiffies to seconds) instead of assuming a fixed tick rate.
+- Do not hardcode page size; use PAGE_SIZE, which varies by architecture and configuration.
+- Some architectures have weak memory ordering — use appropriate memory barriers (mb(), rmb(), wmb()) when needed.
+- Ensure code is SMP-safe, preemption-safe, and supports high memory where applicable.
+- In modern kernels, prefer using type-safe helper APIs (e.g., ktime_get(), atomic64_t, refcount_t) instead of raw integer manipulation.

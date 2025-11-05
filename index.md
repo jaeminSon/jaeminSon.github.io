@@ -4,6 +4,8 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) HOW DO LLMS USE THEIR DEPTH?](./docs/Language%20Model/Analysis/use_depth)
+
 [(모델 요약) HOW TO TEACH LARGE MULTIMODAL MODELS NEW SKILLS?](./docs/Language%20Model/Training/teach_new_skill)
 
 [(모델 요약) Ling-1T](./docs/Language%20Model/Foundation%20Model/ling1t)
