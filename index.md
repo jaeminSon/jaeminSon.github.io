@@ -4,6 +4,10 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) Kosmos: An AI Scientist for Autonomous Discovery](./docs/Language%20Model/Agents/kosmos)
+
+[(논문 요약) Towards Robust Mathematical Reasoning](./docs/Language%20Model/Code%20and%20Math/imo)
+
 [(논문 요약) HOW DO LLMS USE THEIR DEPTH?](./docs/Language%20Model/Analysis/use_depth)
 
 [(모델 요약) HOW TO TEACH LARGE MULTIMODAL MODELS NEW SKILLS?](./docs/Language%20Model/Training/teach_new_skill)
