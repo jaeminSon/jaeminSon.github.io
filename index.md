@@ -4,6 +4,8 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) The Path Not Taken: RLVR Provably Learns Off the Principals](./docs/Language%20Model/Training/rlvr)
+
 [(논문 요약) Kosmos: An AI Scientist for Autonomous Discovery](./docs/Language%20Model/Agents/kosmos)
 
 [(논문 요약) Towards Robust Mathematical Reasoning](./docs/Language%20Model/Code%20and%20Math/imo)
