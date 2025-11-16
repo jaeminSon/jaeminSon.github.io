@@ -4,6 +4,12 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) GPTQ: ACCURATE POST-TRAINING QUANTIZATION FOR GENERATIVE PRE-TRAINED TRANSFORMERS](./docs/Language%20Model/Compute%20Efficiency/gptq)
+
+[(논문 요약) AWQ: ACTIVATION-AWARE WEIGHT QUANTIZATION FOR ON-DEVICE LLM COMPRESSION AND ACCELERATION](./docs/Language%20Model/Compute%20Efficiency/awq)
+
+[(코드 탐색) llm-compressor](./docs/Code%20Review/llmcompressor)
+
 [(논문 요약) The Path Not Taken: RLVR Provably Learns Off the Principals](./docs/Language%20Model/Training/rlvr)
 
 [(논문 요약) Kosmos: An AI Scientist for Autonomous Discovery](./docs/Language%20Model/Agents/kosmos)
