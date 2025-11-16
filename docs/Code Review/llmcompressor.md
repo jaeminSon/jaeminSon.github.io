@@ -9,14 +9,8 @@ parent: Code Review
 - 2025년 기준, inference 는 BF16 혹은 FP16 사용함.
    - weight-only quantization: weight 만 int4, int8, fp4, fp8 로 양자화.
    - weight & activation quantization: weight 및 activation 을 양자화 하며, FP8, NVFP4 등이 자주 쓰임.
-
-### 지원 되는 양자화 기법
-- GPTQ (Generalized Post-Training Quantization)
-- AWQ (Activation-aware Weight Quantization)
-- Round-to-Nearest (RTN)
-- FP8
-   - weights: static, per-channel quantization
-   - activations: dynamic (computed at runtime), per-token quantization
+        - weights: static, per-channel quantization
+        - activations: dynamic (computed at runtime), per-token quantization
 
 
 ### MISC
