@@ -14,7 +14,9 @@ parent: Code Review
 - GPTQ (Generalized Post-Training Quantization)
 - AWQ (Activation-aware Weight Quantization)
 - Round-to-Nearest (RTN)
-- Dynamic 
+- FP8
+   - weights: static, per-channel quantization
+   - activations: dynamic (computed at runtime), per-token quantization
 
 
 ### MISC
