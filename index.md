@@ -4,9 +4,9 @@ layout: default
 # All pages (in chronological order)
 <br>
 
-[(논문 요약) SPICE: Self-Play In Corpus Environments Improves Reasoning](./docs/Language%20Model/Compute%20Efficiency/gptq)
+[(논문 요약) SPICE: Self-Play In Corpus Environments Improves Reasoning](./docs/Language%20Model/Agents/spice)
 
-[(논문 요약) MathSE: Improving Multimodal Mathematical Reasoning via Self-Evolving Iterative Reflection and Reward-Guided Fine-Tuning](./docs/Language%20Model/Compute%20Efficiency/gptq)
+[(논문 요약) MathSE: Improving Multimodal Mathematical Reasoning via Self-Evolving Iterative Reflection and Reward-Guided Fine-Tuning](./docs/Language%20Model/Code%20and%20Math/mathse)
 
 [(블로그 요약) SIMA 2: An Agent that Plays, Reasons, and Learns With You in Virtual 3D Worlds](./docs/Language%20Model/Agents/sima2)
 
