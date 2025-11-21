@@ -45,15 +45,18 @@ DROP DATABASE <database>;
 # user 보기 
 \du
 
+# database 목록 보기
+\l
+
 # table 보기 
 \c <database>
 \dt
 # 전체 row 보기
-SELECT * FROM table_name;
+SELECT * FROM "table_name";
 # row 숫자보기
-SELECT COUNT(*) FROM table_name;
+SELECT COUNT(*) FROM "table_name";
 # 모든 테이블의 row 숫자 보기
-SELECT relname AS table_name, n_live_tup AS row_count
+SELECT relname AS "table_name", n_live_tup AS row_count
 FROM pg_stat_user_tables;
 
 # row count 가 0 인 table 전부 지우기
