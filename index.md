@@ -4,6 +4,10 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) LeJEPA: Provable and Scalable Self-Supervised Learning Without the Heuristics](./docs/Computer%20Vision/lejepa)
+
+[(논문 요약) SAM 3D: 3Dfy Anything in Images](./docs/Computer%20Vision/sam3d)
+
 [(논문 요약) SPICE: Self-Play In Corpus Environments Improves Reasoning](./docs/Language%20Model/Agents/spice)
 
 [(논문 요약) MathSE: Improving Multimodal Mathematical Reasoning via Self-Evolving Iterative Reflection and Reward-Guided Fine-Tuning](./docs/Language%20Model/Code%20and%20Math/mathse)
