@@ -4,6 +4,10 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) Fara-7B: An Efficient Agentic Model for Computer Use](./docs/Language%20Model/Agents/fara)
+
+[(논문 요약) Qwen3-VL Technical Report](./docs/Vision%20Language%20Model/qwen3/)
+
 [(논문 요약) LeJEPA: Provable and Scalable Self-Supervised Learning Without the Heuristics](./docs/Computer%20Vision/lejepa)
 
 [(논문 요약) SAM 3D: 3Dfy Anything in Images](./docs/Computer%20Vision/sam3d)
