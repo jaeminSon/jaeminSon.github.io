@@ -4,6 +4,14 @@ layout: default
 # All pages (in chronological order)
 <br>
 
+[(논문 요약) LEAF: Knowledge Distillation of Text Embedding Models with Teacher-Aligned Representations](./docs/Language%20Model/Embedding/leaf)
+
+[(논문 요약) Chain-of-Visual-Thought: Teaching VLMs to See and Think Better with Continuous Visual Tokens](./docs/Vision%20Language%20Model/covt)
+
+[(논문 요약) DR Tulu: Reinforcement Learning with Evolving Rubrics for Deep Research](./docs/Language%20Model/Training/tulu)
+
+[(논문 요약) Evolution Strategies at the Hyperscale](./docs/Language%20Model/Training/eggroll)
+
 [(논문 요약) Fara-7B: An Efficient Agentic Model for Computer Use](./docs/Language%20Model/Agents/fara)
 
 [(논문 요약) Qwen3-VL Technical Report](./docs/Vision%20Language%20Model/qwen3/)
