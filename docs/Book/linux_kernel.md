@@ -73,6 +73,15 @@ parent: Book
 ### misc
 - 'volatile' keyword: have compiler read from and write to the variable's memory location directly every time, without optimizing (such as register caching).
 - system cache line: A fixed-size memory block used during data transfer RAM ↔ cache. 
+- process states in top command
+   - R: Running or Runnable
+   - S: Interruptible Sleep
+   - D: Uninterruptible Sleep (waiting for I/O to complete)
+   - Z: Zombie - terminated, but its parent process has not yet called the wait() system call to collect its exit status and release its resources
+   - T: Stopped - suspended by a job control signal (like SIGSTOP, SIGTSTP, SIGTTIN, or SIGTTOU) 
+   - t: Tracing Stop - stopped by a debugger (e.g., gdb)
+   - X: Dead - about to be completely removed from memory
+
 
 # Chapter 1 Introduction to the Linux Kernel
 ### Interaction: user → C library (glibc) → system call → kernel → hardware

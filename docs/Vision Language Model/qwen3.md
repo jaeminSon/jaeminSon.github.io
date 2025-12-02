@@ -9,7 +9,6 @@ parent: Vision Language Model
 - Vision Encoder 에서 DeepStack 사용 (논문의 figure 1, section 2.2)
 - coordinate 은 [0, 1000] 로 normalize
 - patch size: 32 x 32
-- video 의 경우, 3D conv 사용
 - ViT 를 pretrained checkpoint 부터 학습
   - SigLIP2-SO-400M 
   - SigLIP2-Large (300M) for small-scale LLMs (2B and 4B).
