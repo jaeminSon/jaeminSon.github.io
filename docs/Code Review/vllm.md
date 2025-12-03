@@ -79,21 +79,29 @@ scalar_t* out_ptr = out + seq_idx * num_heads * max_num_partitions * HEAD_SIZE
 
 <img src="/data/vllm_code/value2.png" width="800" />
 
-
+## Plugins
+- Plugins: *user-registered code that vLLM executes (allows users to add custom features without modifying the vLLM codebase)*
+    - plugins 종류: model, platform, pre/post-processing, logger
+- IO Processor Plugins: *pass a custom input to vLLM that is converted into one or more model prompts and fed to the model encode method.*
+- LoRA Resolver Plugins: *dynamically load LoRA adapters at runtime.*
 
 ## Prefix caching
 - cache the kv-cache blocks of processed requests, and reuse these blocks when a new request comes in with the same prefix as previous requests.
 
-## Hybrid KV Cache Manager¶
+## Hybrid KV Cache Manager
 - Sliding window attention (sw) + full attention (full): gpt-oss, Gemma 2/3, Ministral, cohere, etc.
 - Mamba + full: Bamba, Jamba, Minimax, etc.
 - Local chunked attention + full: Llama4
-
-<img src="/data/vllm_code/hybridKVCache.png" width="800" />
 
 ## P2P NCLL Connector
 - Prefill 수행하는 gpu -> decode 수행하는 gpu
 - ZeroMQ (ZMQ): asynchronous messaging library
 - NCCL: NVIDIA Collective Communications Library
 
-<img src="/data/vllm_code/2p3d.png" width="800" />
+## Dual Batch Overlap
+- Data Parallel + Expert Parallel 인 경우 대상.
+- 2 개의 CPU worker threads 가 ping-pong 하면서 계산-통신하면서 MoE layer 처리.
+
+## Fused MoE Kernel
+- FusedMoE layer 의 expert parallelism (EP) 를 구현하기 위한 all2all communication backends 가 여럿 존재함 (e.g. triton, flashinfer).
+- Modular Kernel 도 지원.

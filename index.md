@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-# All pages (in chronological order)
+# Literature Reviews (in chronological order)
 <br>
 
 [(논문 요약) LEAF: Knowledge Distillation of Text Embedding Models with Teacher-Aligned Representations](./docs/Language%20Model/Embedding/leaf)
@@ -54,8 +54,6 @@ layout: default
 
 [(논문 요약) K2-Think: A Parameter-Efficient Reasoning System](./docs/Language%20Model/Foundation%20Model/K2-think)
 
-[(잡생각) 과잉생산](./docs/Thoughts/overproduction)
-
 [(모델 요약) Tongyi DeepResearch: A New Era of Open-Source AI Researchers](./docs/Language%20Model/Agents/tongyi)
 
 [(모델 요약) Qwen3-Next](./docs/Language%20Model/Foundation%20Model/qwen3_next)
@@ -72,15 +70,11 @@ layout: default
 
 [(논문 요약) Why Language Models Hallucinate](./docs/Language%20Model/Analysis/hallucinate)
 
-[(잡생각) 의지](./docs/Thoughts/will)
-
 [(논문 요약) Jet-Nemotron: Efficient Language Model with Post Neural Architecture Search](./docs/Language%20Model/Compute%20Efficiency/jetnemotron)
 
 [(논문 요약) Memory-R1: Enhancing Large Language Model Agents to Manage and Utilize Memories via Reinforcement Learning](./docs/Language%20Model/RAG/memoryr1)
 
 [(논문 요약) Anemoi: A Semi-Centralized Multi-agent System Based on Agent-to-Agent Communication MCP server from Coral Protocol](./docs/Language%20Model/Agents/anemoi)
-
-[(잡생각) 혐오에 관하여](./docs/Thoughts/hatred)
 
 [(논문 요약) DEEP THINK WITH CONFIDENCE](./docs/Language%20Model/Analysis/deepthinkwithconf)
 
@@ -95,8 +89,6 @@ layout: default
 [(논문 요약) Group Sequence Policy Optimization](./docs/Language%20Model/Training/gspo)
 
 [(논문 요약) CHEATPERSONA VECTORS: MONITORING AND CONTROLLING CHARACTER TRAITS IN LANGUAGE MODELS](./docs/Language%20Model/Analysis/persona)
-
-[(잡생각) Reproducibility](./docs/Thoughts/reproducibility)
 
 [(블로그 요약) Qwen3-Coder: Agentic Coding in the World](./docs/Language%20Model/Code%20and%20Math/qwen3_coder)
 
@@ -114,8 +106,6 @@ layout: default
 
 [(모델 요약) Kimi-K2](./docs/Language%20Model/Foundation%20Model/kimi2)
 
-[(잡생각) 문제 해결](./docs/Thoughts/problem_solving)
-
 [(논문 요약) Real-Time Execution of Action Chunking Flow Policies](./docs/Robot/real_time_chunking)
 
 [(논문 요약) GR00T N1: An Open Foundation Model for Generalist Humanoid Robots](./docs/Robot/gr00tN1)
@@ -128,13 +118,9 @@ layout: default
 
 [(논문 요약) How much do language models memorize?](./docs/Language%20Model/Analysis/llm_memorize)
 
-[(잡생각) Career](./docs/Thoughts/career)
-
 [(논문 요약) QWENLONG-L1: Towards Long-Context Large Reasoning Models with Reinforcement Learning](./docs/Language%20Model/Code%20and%20Math/qwenlongl1)
 
 [(논문 요약) Spurious Rewards: Rethinking Training Signals in RLVR](./docs/Language%20Model/Code%20and%20Math/rethink_rlvr)
-
-[(잡생각) 인간 vs 기계 계산량 비교](./docs/Thoughts/compute_comparison)
 
 [(논문 요약) FAST: Efficient Action Tokenization for Vision-Language-Action Models](./docs/Robot/pi0_fast)
 
@@ -142,19 +128,9 @@ layout: default
 
 [(논문 요약) Reinforcement Learning for Reasoning in Large Language Models with One Training Example](./docs/Language%20Model/Code%20and%20Math/rl_one_example)
 
-[(잡생각) 감정의 gradient](./docs/Thoughts/emotional_gradient)
-
 [(논문 요약) AlphaEvolve: A coding agent for scientific and algorithmic discovery](./docs/Language%20Model/Code%20and%20Math/alphaevolve)
 
 [(논문 요약) Paper2Code: Automating Code Generation from Scientific Papers in Machine Learning](./docs/Language%20Model/Code%20and%20Math/paper2code)
-
-[(잡생각) 진리에 관하여](./docs/Thoughts/truth)
-
-[(잡생각) 선의만 베풀어야 하는 이유](./docs/Thoughts/goodwill)
-
-[(잡생각) Pure Explorer 로서의 인간](./docs/Thoughts/human_role)
-
-[(잡생각) 정보 비대칭](./docs/Thoughts/information_asymmetry)
 
 [(논문 요약) Synthetic Data Generation & Multi-Step RL for Reasoning & Tool Use](./docs/Language%20Model/Code%20and%20Math/synthrl)
 
@@ -169,8 +145,6 @@ layout: default
 [(논문 요약) Qwen3 Technical Report](./docs/Language%20Model/Foundation%20Model/qwen3)
 
 [(생활 꿀팁) 오래된 컴퓨터, OS 잘못 업데이트하면 해먹는다](./docs/Thoughts/oldcomputer)
-
-[(잡생각) Feedback](./docs/Thoughts/feedback)
 
 [(논문 요약) Efficient Memory Management for Large Language Model Serving with PagedAttention](./docs/Language%20Model/Compute%20Efficiency/vllm)
 
@@ -187,8 +161,6 @@ layout: default
 [(논문 요약) LIMA: Less Is More for Alignment](./docs/Language%20Model/Data/lima)
 
 [(논문 요약) WizardLM: Empowering Large Language Models to Follow Complex Instructions](./docs/Language%20Model/Data/wizardLM)
-
-[(잡생각) 생명의 본질](./docs/Thoughts/life/)
 
 [(논문 요약) Qwen2.5-Omni Technical Report](./docs/Language%20Model/Foundation%20Model/qwen2.5-omni)
 
@@ -224,8 +196,6 @@ layout: default
 
 [(개념 요약) Tokenization](./docs/Language%20Model/Training/tokenization)
 
-[(잡생각) 지능과 환경](./docs/Thoughts/intelligence_environment/)
-
 [(논문 요약) LIMO: Less Is More for Reasoning](./docs/Language%20Model/Code%20and%20Math/limo)
 
 [(논문 요약) Gold-medalist Performance in Solving Olympiad Geometry with AlphaGeometry2](./docs/Language%20Model/Code%20and%20Math/alphageometry2)
@@ -242,8 +212,6 @@ layout: default
 
 [(논문 요약) Can LLMs Design Good Questions Based on Context?](./docs/Language%20Model/Analysis/llm_question/)
 
-[(잡생각) 탁월함](./docs/Thoughts/excellence/)
-
 [(논문 요약) Do NOT Think That Much for 2+3=? On the Overthinking of o1-Like LLMs](./docs/Language%20Model/Training/overthink)
 
 [(논문 요약) DeepSeek-V3 Technical Report](./docs/Language%20Model/Foundation%20Model/deepseekv3)
@@ -252,19 +220,11 @@ layout: default
 
 [(논문 요약) THEAGENTCOMPANY: BENCHMARKING LLM AGENTS ON CONSEQUENTIAL REAL WORLD TASKS](./docs/Language%20Model/Agents/agentcompany)
 
-[(잡생각) 역사의 굴레](./docs/Thoughts/history/)
-
-[(잡생각) 인간과 기계](./docs/Thoughts/human_machine/)
-
-[(잡생각) 프로 스포츠](./docs/Thoughts/sports/)
-
 [(논문 요약) Byte Latent Transformer: Patches Scale Better Than Tokens](./docs/Language%20Model/Embedding/blt/)
 
 [(논문 요약) CUT YOUR LOSSES IN LARGE-VOCABULARY LANGUAGE MODELS](./docs/Language%20Model/Compute%20Efficiency/cce/)
 
 [(논문 요약) Training Large Language Models to Reason in a Continuous Latent Space](./docs/Language%20Model/Code%20and%20Math/coconut/)
-
-[(잡생각) 지식](./docs/Thoughts/knowledge/)
 
 [(논문 요약) Phi-4 Technical Report](./docs/Language%20Model/Foundation%20Model/phi4/)
 
@@ -291,10 +251,6 @@ layout: default
 [(논문 요약) OPENCODER: THE OPEN COOKBOOK FOR TOP-TIER CODE LARGE LANGUAGE MODELS](./docs/Language%20Model/Code%20and%20Math/opencoder/)
 
 [(논문 요약) LayerSkip: Enabling Early Exit Inference and Self-Speculative Decoding](./docs/Language%20Model/Compute%20Efficiency/layerskip/)
-
-[(잡생각) 목표의 최적화](./docs/Thoughts/optimization_future_plan/)
-
-[(잡생각) 가치에 관하여](./docs/Thoughts/value/)
 
 [(논문 요약) Executable Code Actions Elicit Better LLM Agents](./docs/Language%20Model/Code%20and%20Math/executable)
 
@@ -336,8 +292,6 @@ layout: default
 
 [(논문 요약) MLE-BENCH: EVALUATING MACHINE LEARNING AGENTS ON MACHINE LEARNING ENGINEERING](./docs/Language%20Model/Agents/mlebench/)
 
-[(잡생각) 스토리](./docs/Thoughts/story/)
-
 [(논문 요약) Movie Gen: A Cast of Media Foundation Models](./docs/Computer%20Vision/moviegen)
 
 [(논문 요약) Scaling Proprioceptive-Visual Learning with Heterogeneous Pre-trained Transformers](./docs/Vision%20Language%20Model/proprioceptive)
@@ -347,8 +301,6 @@ layout: default
 [(논문 요약) Not All LLM Reasoners Are Created Equal](./docs/Language%20Model/Analysis/notequal/)
 
 [(논문 요약) Archon: An Architecture Search Framework for Inference-Time Techniques](./docs/Language%20Model/Agents/archon/)
-
-[(잡생각) 피라미드 구조의 조직](./docs/Thoughts/pyramid/)
 
 [(논문 요약) Molmo and PixMo: Open Weights and Open Data for State-of-the-Art Multimodal Models](./docs/Vision%20Language%20Model/molmo)
 
@@ -360,41 +312,23 @@ layout: default
 
 [(논문 요약) GPT o1 검증](./docs/Language%20Model/Application/o1/)
 
-[(Quant) 자산 배분](./docs/Economy/allocation)
-
-[(Quant) 포트폴리오 구성](./docs/Economy/portfolio)
-
-[(Quant) 종목 선정](./docs/Economy/etf)
-
-[(잡생각) 자본과 미디어](./docs/Thoughts/capital/)
-
 [(모델 요약) Llama 3.2: Revolutionizing edge AI and vision with open, customizable models](./docs/Vision%20Language%20Model/llama32/)
 
 [(논문 요약) Training Language Models to Self-Correct via Reinforcement Learning](./docs/Language%20Model/Training/selfcorrect/)
 
 [(논문 요약) TORA: A TOOL-INTEGRATED REASONING AGENT FOR MATHEMATICAL PROBLEM SOLVING](./docs/Language%20Model/Code%20and%20Math/tora/)
 
-[(잡생각) 미래의 직업](./docs/Thoughts/futurejobs/)
-
 [(논문 요약) Qwen2.5-Coder Technical Report](./docs/Language%20Model/Code%20and%20Math/qwen2_code/)
 
 [(논문 요약) QWEN2 TECHNICAL REPORT](./docs/Language%20Model/Foundation%20Model/qwen2/)
 
-[(잡생각) 종과 개체](./docs/Thoughts/species/)
-
 [(책 요약) Quantitative Finance with Python](./docs/Economy/quant_python/)
-
-[(잡생각) Intelligence](./docs/Thoughts/intelligence/)
 
 [(논문 요약) LLAMA-OMNI: SEAMLESS SPEECH INTERACTION WITH LARGE LANGUAGE MODELS](./docs/Language%20Model/Training/llamaomni)
 
 [(논문 요약) AGENT WORKFLOW MEMORY](./docs/Language%20Model/Agents/workflow)
 
 [(논문 요약) Knowing When to Ask - Bridging Large Language Models and Data](./docs/Language%20Model/Application/datagemma)
-
-[(잡생각) statistical models](./docs/Thoughts/statistical_model/)
-
-[(잡생각) 좌절 관리 알고리즘](./docs/Thoughts/depressed/)
 
 [(논문 요약) Automatic Data Curation for Self-Supervised Learning: A Clustering-Based Approach](./docs/Language%20Model/Data/datacuration/)
 
@@ -548,8 +482,6 @@ layout: default
 
 [(논문 요약) Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet](./docs/Language%20Model/Analysis/sonnetinterpret)
 
-[(코드 탐색) llama.cpp](./docs/Code%20Review/llamacpp)
-
 [(논문 요약) Granite Code Models: A Family of Open Foundation Models for Code Intelligence](./docs/Language%20Model/Code%20and%20Math/granite)
 
 [(논문 요약) Does Fine-Tuning LLMs on New Knowledge Encourage Hallucinations?](./docs/Language%20Model/Hallucination/finetuning-hallucination)
@@ -655,14 +587,3 @@ layout: default
 [(논문 요약) Neural Discrete Representation Learning](./docs/Computer%20Vision/vqvae)
 
 [(논문 요약) ROFORMER: ENHANCED TRANSFORMER WITH ROTARY POSITION EMBEDDING](./docs/Language%20Model/Embedding/rope)
-
-[FED 금리 수익률 곡선](./docs/Economy/fed_interest)
-
-[Undistort Image with OpenCV-Python](./docs/Computer%20Vision/undistort)
-
-[Top-view perspective transform with OpenCV-Python](./docs/Computer%20Vision/topview_transformation)
-
-[Rotation matrix with Quaternion](./docs/Computer%20Vision/quaternion)
-
-[Visualize a point cloud with Open3D](./docs/Computer%20Vision/pointcloud)
-
