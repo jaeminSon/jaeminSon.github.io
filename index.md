@@ -4,6 +4,10 @@ layout: default
 # Literature Reviews (in chronological order)
 <br>
 
+[(논문 요약) Latent Collaboration in Multi-Agent Systems](./docs/Language%20Model/Agents/latent_collaboration)
+
+[(논문 요약) Guided Self-Evolving LLMs with Minimal Human Supervision](./docs/Language%20Model/Training/guided_self_evolving)
+
 [(논문 요약) LEAF: Knowledge Distillation of Text Embedding Models with Teacher-Aligned Representations](./docs/Language%20Model/Embedding/leaf)
 
 [(논문 요약) Chain-of-Visual-Thought: Teaching VLMs to See and Think Better with Continuous Visual Tokens](./docs/Vision%20Language%20Model/covt)
