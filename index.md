@@ -4,6 +4,12 @@ layout: default
 # Literature Reviews (in chronological order)
 <br>
 
+[(논문 요약) Gated Attention for Large Language Models: Non-linearity, Sparsity, and Attention-Sink-Free](./docs/Language%20Model/Training/sdpa)
+
+[(논문 요약) DeepSeek-V3.2: Pushing the Frontier of Open Large Language Models](./docs/Language%20Model/Training/stabilizingRL)
+
+[(논문 요약) Stabilizing Reinforcement Learning with LLMs: Formulation and Practices](./docs/Language%20Model/Training/stabilizingRL)
+
 [(논문 요약) Latent Collaboration in Multi-Agent Systems](./docs/Language%20Model/Agents/latent_collaboration)
 
 [(논문 요약) Guided Self-Evolving LLMs with Minimal Human Supervision](./docs/Language%20Model/Training/guided_self_evolving)
