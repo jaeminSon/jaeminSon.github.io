@@ -24,6 +24,26 @@ parent: Code Review
 - In vLLM V1, piecewise cudagraphs are captured between attention operation (i.e. the first graph before any attention operation, the last graph after all the attention operation)
 - cudagraphs are captured and managed by the compiler backend, and replayed when the batch size has corresponding cudagraph captured
 
+```
+# graph capture 예V시
+bool graphCreated=false;
+cudaGraph_t graph;
+cudaGraphExec_t instance;
+for(int istep=0; istep<NSTEP; istep++){
+  if(!graphCreated){
+    cudaStreamBeginCapture(stream, cudaStreamCaptureModeGlobal);
+    for(int ikrnl=0; ikrnl<NKERNEL; ikrnl++){
+      shortKernel<<<blocks, threads, 0, stream>>>(out_d, in_d);
+    }
+    cudaStreamEndCapture(stream, &graph);
+    cudaGraphInstantiate(&instance, graph, NULL, NULL, 0);
+    graphCreated=true;
+  }
+  cudaGraphLaunch(instance, stream);
+  cudaStreamSynchronize(stream);
+}
+```
+
 <img src="/data/vllm_code/cudagraph.png" width="800" />
 
 <img src="/data/vllm_code/batch_descriptor.png" width="800" />
