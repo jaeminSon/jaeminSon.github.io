@@ -35,7 +35,14 @@ parent: Code Review
 
 ### 동작 방식
 - 핵심 quantization logic 은 **compressed_tensors** 페키지에 존재.
-- oneshot 혹은 modify_save_pretrained 함수 실행시, 모델의 save_pretrained method 가 갈아끼워짐.
+- Entroy point
+   - oneshot: generate calibration dataloader -> apply recipe modifier -> post_process
+   - modify_save_pretrained: 함수 실행시, 모델의 save_pretrained method 가 갈아끼워짐.
+
+### 세부구현
+- session 을 reset, initialize, finalize 하며 관리.
+- lifecycle 의 calibration_epoch_start, calibration_epoch_end 등으로 event 생성.
+- pipeline 안에서 inference 이후 각 subgraph 의 activation 은 cache 되어 quantize 시 활용됨.
 
 ### Misc
 - Observer class: weights, activations 및 scale, zero_point 과 같은 quantization parameters 분석하는 utility class.
