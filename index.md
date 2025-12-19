@@ -1,8 +1,10 @@
 ---
 layout: default
 ---
-# Literature Reviews (in chronological order)
+# Literature Reviews (in reverse chronological order)
 <br>
+
+[(논문 요약) QLORA: Efficient Finetuning of Quantized LLMs](./docs/Language%20Model/Training/qlora)
 
 [(논문 요약) QwenLong-L1.5: Post-Training Recipe for Long-Context Reasoning and Memory Management](./docs/Language%20Model/Training/qwenlong)
 
