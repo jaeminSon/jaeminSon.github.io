@@ -4,6 +4,10 @@ layout: default
 # Literature Reviews (in chronological order)
 <br>
 
+[(논문 요약) QwenLong-L1.5: Post-Training Recipe for Long-Context Reasoning and Memory Management](./docs/Language%20Model/Training/qwenlong)
+
+[(논문 요약) FAST AND ACCURATE CAUSAL PARALLEL DECODING USING JACOBI FORCING](./docs/Language%20Model/Compute%20Efficiency/jacobiforcing)
+
 [(논문 요약) Gated Attention for Large Language Models: Non-linearity, Sparsity, and Attention-Sink-Free](./docs/Language%20Model/Training/sdpa)
 
 [(논문 요약) DeepSeek-V3.2: Pushing the Frontier of Open Large Language Models](./docs/Language%20Model/Training/stabilizingRL)
