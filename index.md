@@ -4,6 +4,20 @@ layout: default
 # Literature Reviews (in reverse chronological order)
 <br>
 
+[(논문 요약) Hogwild! Inference: Parallel LLM Generation via Concurrent Attention](./docs/Language%20Model/Compute%20Efficiency/hogwild)
+
+[(논문 요약) ReTool: Reinforcement Learning for Strategic Tool Use in LLMs](./docs/Language%20Model/Code%20and%20Math/retool)
+
+[(논문 요약) Reasoning Models Can Be Effective Without Thinking](./docs/Language%20Model/Compute%20Efficiency/nothinking)
+
+[(논문 요약) Perception Encoder: The best visual embeddings are not at the output of the network](./docs/Vision%20Language%20Model/pe)
+
+[(논문 요약) Inference-Time Scaling for Generalist Reward Modeling](./docs/Language%20Model/Training/grm)
+
+[(논문 요약) TTRL: Test-Time Reinforcement Learning](./docs/Language%20Model/Training/ttrl)
+
+[(논문 요약) Next-Embedding Prediction Makes Strong Vision Learners](./docs/Computer%20Vision/nepa)
+
 [(논문 요약) QLORA: Efficient Finetuning of Quantized LLMs](./docs/Language%20Model/Training/qlora)
 
 [(논문 요약) QwenLong-L1.5: Post-Training Recipe for Long-Context Reasoning and Memory Management](./docs/Language%20Model/Training/qwenlong)
