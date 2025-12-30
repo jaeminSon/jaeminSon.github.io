@@ -4,6 +4,8 @@ layout: default
 # Literature Reviews (in reverse chronological order)
 <br>
 
+[(논문 요약) Latent Implicit Visual Reasoning](./docs/Language%20Model/Vision%20Language%20Model/latent_visual)
+
 [(논문 요약) Hogwild! Inference: Parallel LLM Generation via Concurrent Attention](./docs/Language%20Model/Compute%20Efficiency/hogwild)
 
 [(논문 요약) ReTool: Reinforcement Learning for Strategic Tool Use in LLMs](./docs/Language%20Model/Code%20and%20Math/retool)
