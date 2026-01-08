@@ -4,7 +4,11 @@ layout: default
 # Literature Reviews (in reverse chronological order)
 <br>
 
-[(논문 요약) Latent Implicit Visual Reasoning](./docs/Language%20Model/Vision%20Language%20Model/latent_visual)
+[(논문 요약) Latent Implicit Visual Reasoning](./docs/Language%20Model/Foundation%20Model/mhc)
+
+[(논문 요약) Diversity or Precision? A Deep Dive into Next Token Prediction](./docs/Language%20Model/Training/diversity_precision)
+
+[(논문 요약) Latent Implicit Visual Reasoning](./docs/Vision%20Language%20Model/latent_visual)
 
 [(논문 요약) Hogwild! Inference: Parallel LLM Generation via Concurrent Attention](./docs/Language%20Model/Compute%20Efficiency/hogwild)
 

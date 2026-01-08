@@ -3,7 +3,7 @@ title: (모델 요약) DeepSeek-V3.2; Pushing the Frontier of Open
 parent: Foundation Model
 ---
 
-**(모델 요약) Large Language Models** [(paper)](https://arxiv.org/pdf/2512.02556)
+**(모델 요약) DeepSeek-V3.2: Pushing the Frontier of Open** [(paper)](https://arxiv.org/pdf/2512.02556)
 
 ## 핵심 내용
 

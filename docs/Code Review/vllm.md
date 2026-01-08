@@ -14,6 +14,15 @@ parent: Code Review
 
 - VllmConfig class 가 공통 config 로 사용됨.
 - 개별 모델의 constructor 를 Model 로 통일.
+- EngineCoreProc: handshake_address (query 를 주고 받는데 사용), model_executor 변수 소유.
+   - model_executor.execute_model 함수의 return 으로 new tokens 이 전달되며, 이는 내부에서 collective_rpc 에서 return 됨.
+   - collective_rpc==gpu_worker (혹은 다른 worker) 의 execute_model 함수
+- gpu_worker 의 execute_model 함수 안에서 gpu_model_runner (혹은 다른 model runner) 의 execute_model 함수가 호출됨.
+- (gpu_model_runner 의 경우) gpu_model_runner 의 execute_model 함수 안에서 CUDAGraphWrapper 의 \_\_call\_\_ 함수가 호출됨.
+   - gpu_model_runner 는 attention backend config 를 바탕으로 compiled model 을 가지고 있음.
+- CUDAGraphWrapper 의 \_\_call\_\_ 함수 안에서 모델 (e.g. qwen) 의 forward 가 호출됨.
+- 모델 (e.g. qwen) 의 forward 함수 안에서 PIECEWISEBackend class 의 \_\_call\_\_ 함수가 호출됨.
+- PIECEWISEBackend class 의 \_\_call\_\_ 함수 안에서 torch._inductor.output_code.CompiledFxGraph 에서 실제 계산이 일어남.
 
 ## Huggingface 모델 로딩 방법
 - config.json 에서 정보 취득.
