@@ -4,6 +4,14 @@ layout: default
 # Literature Reviews (in reverse chronological order)
 <br>
 
+[(논문 요약) SWE-LEGO: PUSHING THE LIMITS OF SUPERVISED FINE-TUNING FOR SOFTWARE ISSUE RESOLVING](./docs/Language%20Model//Code%20and%20Math/swe-lego)
+
+[(논문 요약) VL-JEPA: Joint Embedding Predictive Architecture for Vision-language](./docs/Vision%20Language%20Model/vl-jepa)
+
+[(논문 요약) RECURSIVE LANGUAGE MODELS](./docs/Language%20Model/Compute%20Efficiency/recursive_lm)
+
+[(모델 요약) NousCoder-14B](./docs/Language%20Model/Code%20and%20Math/nouscoder)
+
 [(논문 요약) Latent Implicit Visual Reasoning](./docs/Language%20Model/Foundation%20Model/mhc)
 
 [(논문 요약) Diversity or Precision? A Deep Dive into Next Token Prediction](./docs/Language%20Model/Training/diversity_precision)

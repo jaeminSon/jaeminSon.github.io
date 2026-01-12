@@ -87,12 +87,13 @@ for(int istep=0; istep<NSTEP; istep++){
 <img src="/data/vllm_code/torchcompile.png" width="800" />
 
 ### Compile cache
-- modelinfos: hash 및 model_info (architecture name, vllm params)
-- torch_compile_cache: 각 노드별 (e.g. rank_0_0) 다음 파일들이 저장되어있음.
-   - computation_graph.py: GraphModule(torch.nn.Module) 의 forward 내부에서 submodule 실행되며 파일 안에 submodule 함수 정의 존재.
-   - vllm_compile_cache.py: 각 layer 별 torch.fx.graph 경로 및 triton 등의 CUDA kernel 을 사용하는 call 함수가 정의된 python 코드 경로
-- inductor_cache
-- triton_cache
+- modelinfos: 개별 모델별 hash 및 model_info (architecture name, vllm params) 에 관한 파일들이 들어있음.
+- torch_compile_cache: 각 노드별 (e.g. rank_0_0) 다음 폴더들이 저장되어있음.
+    - inductor_cache
+    - triton_cache
+    - backbone
+       - computation_graph.py: GraphModule(torch.nn.Module) 의 forward 내부에서 실행되는 submodule 함수들이 구현되어있음.
+       - vllm_compile_cache.py: 각 layer 별, inductor_cache 의 torch.fx.graph 의 폴더 이름 및 python wrapper (compiled CUDA kernels 호출) 가 명시되어있음.
 
 ### Implementation
 - VllmBackend 가 CompilerManager 소유.
