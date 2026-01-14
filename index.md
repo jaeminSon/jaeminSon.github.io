@@ -4,7 +4,11 @@ layout: default
 # Literature Reviews (in reverse chronological order)
 <br>
 
-[(논문 요약) SWE-LEGO: PUSHING THE LIMITS OF SUPERVISED FINE-TUNING FOR SOFTWARE ISSUE RESOLVING](./docs/Language%20Model//Code%20and%20Math/swe-lego)
+[(논문 요약) EAGLE: Speculative Sampling Requires Rethinking Feature Uncertainty](./docs/Language%20Model/Compute%20Efficiency/eagle)
+
+[(논문 요약) Extracting books from production language models](./docs/Language%20Model/Analysis/extract)
+
+[(논문 요약) SWE-LEGO: PUSHING THE LIMITS OF SUPERVISED FINE-TUNING FOR SOFTWARE ISSUE RESOLVING](./docs/Language%20Model/Code%20and%20Math/swe-lego)
 
 [(논문 요약) VL-JEPA: Joint Embedding Predictive Architecture for Vision-language](./docs/Vision%20Language%20Model/vl-jepa)
 
