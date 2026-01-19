@@ -4,7 +4,7 @@ layout: default
 # Literature Reviews (in reverse chronological order)
 <br>
 
-[(논문 요약) GDPO: Group reward-Decoupled Normalization Policy Optimization for Multi-reward RL Optimization](./docs/Language%20Model/Training/eagle)
+[(논문 요약) GDPO: Group reward-Decoupled Normalization Policy Optimization for Multi-reward RL Optimization](./docs/Language%20Model/Training/gdpo)
 
 [(논문 요약) EAGLE: Speculative Sampling Requires Rethinking Feature Uncertainty](./docs/Language%20Model/Compute%20Efficiency/eagle)
 
