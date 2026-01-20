@@ -4,6 +4,10 @@ layout: default
 # Literature Reviews (in reverse chronological order)
 <br>
 
+[(논문 요약) Conditional Memory via Scalable Lookup: A New Axis of Sparsity for Large Language Models](./docs/Language%20Model/Training/conditional_memory)
+
+[(논문 요약) STEM: Scaling Transformers with Embedding Modules](./docs/Language%20Model/Training/stem)
+
 [(논문 요약) GDPO: Group reward-Decoupled Normalization Policy Optimization for Multi-reward RL Optimization](./docs/Language%20Model/Training/gdpo)
 
 [(논문 요약) EAGLE: Speculative Sampling Requires Rethinking Feature Uncertainty](./docs/Language%20Model/Compute%20Efficiency/eagle)
