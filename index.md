@@ -4,6 +4,10 @@ layout: default
 # Literature Reviews (in reverse chronological order)
 <br>
 
+[(논문 요약) Dr. Zero: Self-Evolving Search Agents without Training Data](./docs/Language%20Model/Agents/drzero)
+
+[(논문 요약) LLM-in-Sandbox Elicits General Agentic Intelligence](./docs/Language%20Model/Agents/sandbox)
+
 [(논문 요약) Conditional Memory via Scalable Lookup: A New Axis of Sparsity for Large Language Models](./docs/Language%20Model/Training/conditional_memory)
 
 [(논문 요약) STEM: Scaling Transformers with Embedding Modules](./docs/Language%20Model/Training/stem)
