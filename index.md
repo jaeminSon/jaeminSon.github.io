@@ -4,6 +4,8 @@ layout: default
 # Literature Reviews (in reverse chronological order)
 <br>
 
+[(논문 요약) Learning to Discover at Test Time](./docs/Language%20Model/Training/testtime)
+
 [(논문 요약) Dr. Zero: Self-Evolving Search Agents without Training Data](./docs/Language%20Model/Agents/drzero)
 
 [(논문 요약) LLM-in-Sandbox Elicits General Agentic Intelligence](./docs/Language%20Model/Agents/sandbox)
