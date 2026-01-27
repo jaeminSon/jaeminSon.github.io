@@ -12,10 +12,11 @@ parent: Training
     - $P(s)$: proportional to s’s rank in the buffer sorted by rewar
     - $n(s)$: number of times $s$ or its descendants have been expande
     - $T$: total number of expansions
-- 1 step per iteration
-- Batch size 512
-   - 8 groups with 64 rollouts each
-   - each group shares the same context and initial state
-- LoRA rank: 32
+- 학습 
+   - 1 step per iteration
+   - Batch size 512
+      - 8 groups with 64 rollouts each
+      - each group shares the same context and initial state
+   - LoRA rank: 32
 
 <img src="/data/papers/testtime/algorithm.png" width="800" />
