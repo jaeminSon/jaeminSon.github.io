@@ -22,3 +22,8 @@ parent: Thoughts
    - real world 와 video game 의 물리 엔진은 완전히 같지 않음.
    - video game 의 물리 엔진이 기동되기 위해서 real world 의 전기와 실리콘이 필요하지만, 룰 자체는 독립적으로 존재함.
    - A 사의 내규인지 B 사의 내규인지, 법률 문제인지, 사회적 규범에 어긋나는지 등 구분이 필요.
+
+### 시스템 A 에 존재하는 state 와 transition rule 이 시스템 B 에서는 전혀 다른 state, transition rule 에 대응될수 있음
+- state: 모델링 하고자 하는 대상이 '시스템 내에서 어떻게 레이블되느냐' 로 대상 그 자체가 아님.
+- transition rule 이 전혀 다를수도 있음.
+- 서로 다른 사람이 같은 물체/현상을 경험하고 다르게 느끼는 것은 당연함.
