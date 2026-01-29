@@ -4,6 +4,10 @@ layout: default
 # Literature Reviews (in reverse chronological order)
 <br>
 
+[(논문 요약) Teaching Models to Teach Themselves: Reasoning at the Edge of Learnability](./docs/Language%20Model/Training/)
+
+[(논문 요약) SERA: Soft-Verified Efficient Repository Agents](./docs/Language%20Model/Training/sera)
+
 [(논문 요약) Learning to Discover at Test Time](./docs/Language%20Model/Training/testtime)
 
 [(논문 요약) Dr. Zero: Self-Evolving Search Agents without Training Data](./docs/Language%20Model/Agents/drzero)
