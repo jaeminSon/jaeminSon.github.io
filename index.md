@@ -4,7 +4,9 @@ layout: default
 # Literature Reviews (in reverse chronological order)
 <br>
 
-[(논문 요약) Teaching Models to Teach Themselves: Reasoning at the Edge of Learnability](./docs/Language%20Model/Training/)
+[(논문 요약) Self-Distillation Enables Continual Learning](./docs/Language%20Model/Training/selfdistill)
+
+[(논문 요약) Teaching Models to Teach Themselves: Reasoning at the Edge of Learnability](./docs/Language%20Model/Training/selfcorrect)
 
 [(논문 요약) SERA: Soft-Verified Efficient Repository Agents](./docs/Language%20Model/Training/sera)
 
