@@ -14,5 +14,5 @@ parent: Training
        - runtime error
        - failed test cases
        - (실패한 경우), successful trace
-   - loss: KL(student policy || teacher policy) -> student 가 true distribution 에 오는 것이 핵심.
+   - loss: KL(student policy \|\| teacher policy) -> student 가 true distribution 에 오는 것이 핵심.
 - GRPO 보다 나은 성능.
