@@ -15,8 +15,9 @@ parent: License
 - 2차의 공법과 1차의 민법이 어렵다고 함.
 - 2016년~2025년 기출 문제 다운로드 
     - [(download at qnet)](https://www.q-net.or.kr/cst003.do?id=cst00309&gSite=L&gId=08)
-    - [(2016~2025 기출)](https://drive.google.com/file/d/1AIhrQBv6gzzFQM-0UtFt2owiZQ4daGxO/view?usp=sharing)
+    - [(2016~2025 기출)](https://drive.google.com/file/d/11G5CUI3brCHvgWYccqs8WkcSDBIuq8v_/view?usp=sharing)
 - pdf 하나로 묶는 python code
+
 ```
 import os
 from pypdf import PdfWriter
