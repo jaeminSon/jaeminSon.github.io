@@ -4,6 +4,8 @@ layout: default
 # Literature Reviews (in reverse chronological order)
 <br>
 
+[(논문 요약) Learning to Reason in 13 Parameters](./docs/Language%20Model/Training/13_params)
+
 [(논문 요약) SWE-Universe: Scale Real-World Verifiable Environments to Millions](./docs/Language%20Model/Code%20and%20Math/swe-uni)
 
 [(논문 요약) Quantization-Aware Distillation for NVFP4 Inference Accuracy Recovery](./docs/Language%20Model/Training/qad)
