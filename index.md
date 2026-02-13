@@ -4,6 +4,10 @@ layout: default
 # Literature Reviews (in reverse chronological order)
 <br>
 
+[(논문 요약) iGRPO: Self-Feedback–Driven LLM Reasoning](./docs/Language%20Model/Training/igrpo)
+
+[(논문 요약) Maximum Likelihood Reinforcement Learning](./docs/Language%20Model/Training/mlrl)
+
 [(논문 요약) Learning to Reason in 13 Parameters](./docs/Language%20Model/Training/13_params)
 
 [(논문 요약) SWE-Universe: Scale Real-World Verifiable Environments to Millions](./docs/Language%20Model/Code%20and%20Math/swe-uni)
