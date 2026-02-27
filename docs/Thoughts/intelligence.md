@@ -6,10 +6,8 @@ parent: Thoughts
 **(잡생각) Intelligence**
 
 ### LLM 의 Intelligence Quotient
-- [GPT4 의 verbal IQ 가 155 (상위 0.1%) 라는 썰...](https://www.scientificamerican.com/article/i-gave-chatgpt-an-iq-test-heres-what-i-discovered/)
-- 아예 GPT4 이상부터는 인간의 IQ 를 능가했다고 생각하는 사람도... 
-[![Models in Sep 2024](https://s10251.pcdn.co/wp-content/uploads/2024/09/2024-Alan-D-Thompson-AI-Models-IQ-MMLU-GPQA-Tetris-Rev-3.png)](https://lifearchitect.ai/mapping/)
-- 하지만 현존 최강 (2024-09-19 기준) GPT-o1 에겐, CUDA 설치는 너무나도 어려움.
+- [GPT4 의 verbal IQ 가 155 (상위 0.1%) 라는 썰](https://www.scientificamerican.com/article/i-gave-chatgpt-an-iq-test-heres-what-i-discovered/)
+- 하지만 현존 최강 (2024-09-19 기준) GPT-o1 에겐, CUDA 설치는 어려워함.
 [![failed to install cuda](https://preview.redd.it/its-over-v0-4yyvqbogmzod1.jpeg?auto=webp&s=7decbb8dd1ba85f4faf0c331a2bcf7526ae03374)](https://www.reddit.com/r/ChatGPT/comments/1fhei0j/its_over/)
 
 ### LLM 이 높은 Intelligence Quotient 를 달성하는 것은 어렵지 않음.
@@ -32,6 +30,11 @@ parent: Thoughts
 ### 만약, Intelligence 를 "특정 domain 의 (문제, 정답) pattern 을 근사하는 능력" 으로 정의하면, 잘 학습된 LLM이 인간보다 정답을 빠르게 도출함으로써, 해당 domain 에서 뛰어난 Intelligence 를 보이는 것은 당연함.
 - 주어진 resource 안에서, target domain 을 정의하고, 이에 특화된 모델을 만들수 있을 것임.
 - 정답이 명확한 domain 에서 특화된 LLM 이 전문가 수준의 조언을 해준다면, 대중들에게 쓸모가 있을듯함.
+
+### 유한한 파라미터를 가진 모델은 담을수 있는 정보의 양이 유한함.
+- 뇌의 뉴런 개수, LLM 의 파라미터 숫자는 한정적임.
+- capacity 를 넘는 정보의 양을 담으려고 할때 forgetting 이 일어나는 것은 당연해 보임.
+- 모든 domain 에서 뛰어난 모델을 만들수 있을지 의문임.
 
 ### 생각해보면, 역사상 모든 test 의 (문제, 정답) 들은 인간들에 의해 고안됨.
 - 특정 분야의 test 에 능한 것은 알려진 문제들에 대한 정답을 빠르게 찾을수 있다는 것이지, open question 을 잘 푼다는 의미는 아님.
