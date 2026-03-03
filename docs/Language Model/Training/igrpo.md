@@ -1,5 +1,5 @@
 ---
-title: (논문 요약) iGRPO: Self-Feedback–Driven LLM Reasoning
+title: (논문 요약) iGRPO; Self-Feedback–Driven LLM Reasoning
 parent: Training
 ---
 

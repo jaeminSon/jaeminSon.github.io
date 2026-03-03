@@ -1,6 +1,6 @@
 ---
 title: 오래된 컴퓨터, OS 잘못 업데이트하면 해먹는다
-parent: Thoughts
+parent: Life
 ---
 
 **오래된 컴퓨터, OS 잘못 업데이트하면 해먹는다**
