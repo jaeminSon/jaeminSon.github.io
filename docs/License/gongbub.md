@@ -1,5 +1,5 @@
 ---
-title: 부동산 공법
+title: 4.부동산 공법
 parent: Realtor
 ---
 

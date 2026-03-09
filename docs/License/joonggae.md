@@ -1,5 +1,5 @@
 ---
-title: 공인중개사 법령 및 실무
+title: 3.공인중개사 법령 및 실무
 parent: Realtor
 ---
 

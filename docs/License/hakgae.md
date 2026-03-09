@@ -1,5 +1,5 @@
 ---
-title: 부동산학개론
+title: 1. 부동산학개론
 parent: Realtor
 ---
 

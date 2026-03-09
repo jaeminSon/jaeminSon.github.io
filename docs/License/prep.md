@@ -1,5 +1,5 @@
 ---
-title: 준비
+title: 0. 준비
 parent: Realtor
 ---
 
