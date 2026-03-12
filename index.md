@@ -4,6 +4,8 @@ layout: default
 # Literature Reviews (in reverse chronological order)
 <br>
 
+[(논문 요약) On-Policy Self-Distillation for Reasoning Compression](./docs/Language%20Model/Training/self-distill)
+
 [(논문 요약) iGRPO: Self-Feedback–Driven LLM Reasoning](./docs/Language%20Model/Training/igrpo)
 
 [(논문 요약) Maximum Likelihood Reinforcement Learning](./docs/Language%20Model/Training/mlrl)
