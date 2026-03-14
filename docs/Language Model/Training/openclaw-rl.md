@@ -19,6 +19,6 @@ parent: Training
   - PRM output reward: {+1, −1, 0}
   - Hindsight-Guided On-Policy Distillation (OPD)
     - $s_{enhanced}$: $s_t\oplus$ hint
-      - hint: $PRM(a_t|s_{t+1})=+1$ 인 경우, PRM 이 $s_{t+1}$ 을 1~3 sentences 로 summarize
+      - hint: $PRM(a_t\|s_{t+1})=+1$ 인 경우, PRM 이 $s_{t+1}$ 을 1~3 sentences 로 summarize
     - advantage: $\log \pi_{teacher}(a_t\|s_{enhanced}) - \log \pi_{\theta}(a_t\|s_t)$
     

@@ -4,7 +4,7 @@ layout: default
 # Literature Reviews (in reverse chronological order)
 <br>
 
-[(논문 요약) Thinking to Recall: How Reasoning Unlocks Parametric Knowledge in LLMs](./docs/Language%20Model/Training/openclaw-rl)
+[(논문 요약) Thinking to Recall: How Reasoning Unlocks Parametric Knowledge in LLMs](./docs/Language%20Model/Analysis/thinking-to-recall)
 
 [(논문 요약) OpenClaw-RL: Train Any Agent Simply by Talking](./docs/Language%20Model/Training/openclaw-rl)
 
