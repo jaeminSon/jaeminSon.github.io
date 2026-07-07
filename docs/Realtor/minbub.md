@@ -1316,6 +1316,10 @@ parent: Realtor
 - (기출) 경매에 들어가서 낙찰되면, 가등기 담보권은 소멸된다 (저당권과 같이 소멸됨).
 
 ### 명의 신탁 약정
+<img src="/docs/Realtor/samja.jpeg" width="800" />
+
+<img src="/docs/Realtor/maemae.jpeg" width="800" />
+
 - 모든 물권이 명의 신탁 금지 대상
     - 명의 신탁 약정은 무효.
     - 신탁자와 수탁자 사이의 등기 및 물권 변동도 무효.
