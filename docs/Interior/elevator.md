@@ -7,5 +7,9 @@ parent: Interior
 - 엘레베이터 2겹으로 보양할 것.
 - 복도는 보양 필요 없음.
 
+### 계획
+
+<img src="/docs/Interior/elevator.jpg" width="800" />
+
 ### 기타 사항
 - 동의 받을때 통로 들어가기 위해서 경비실 호출 버튼 누르기.
