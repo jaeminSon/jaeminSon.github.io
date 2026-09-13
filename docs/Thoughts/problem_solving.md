@@ -5,6 +5,14 @@ parent: Thoughts
 
 **(잡생각) 문제 해결**
 
+### Step
+1. Define the Goal
+2. Assess the current state
+3. Figure out constraints
+4. Minimize the constraints
+5. Find paths
+6. Compare paths and pick
+
 ### 문제 해결의 정의
 - 문제: 현재 만족되지 않은 특정 조건 (e.g. 정확도, 처리 속도, 매출, 영업 이익, 고객 만족도)
 - 문제 해결: 특정 조건을 만족하는 상태로 만드는 것.
@@ -13,7 +21,7 @@ parent: Thoughts
 - 문제를 해결하였거나 (1), 해결하지 못한 상태 (0).
 - 문제를 해결하고 있는 중이라면, 해결하지 못한 상태에 포함됨.
 - 문제를 해결하려고 노력하다가 포기를 했다면, 아예 시도하지 않은 것과 같음.
-- 인재를 나누는 기준: 문제를 해결하는 편 vs 문제를 해결하지 못하는 편.
+- 문제를 끝까지 해결해야 의미가 있음.
 
 ### 효율성을 최대한 높이는 전략
 - 문제를 해결한 시점에, 투입된 자원으로 효율성을 따짐.
