@@ -11,5 +11,8 @@ parent: Interior
 
 <img src="/docs/Interior/elevator.jpg" width="800" />
 
+### 실제 진행
+- 다른 세대가 우리보다 하루 전에 시작하여 하루 후에 끝나서 보양 전혀 안함.
+
 ### 기타 사항
 - 동의 받을때 통로 들어가기 위해서 경비실 호출 버튼 누르기.
