@@ -9,10 +9,14 @@ parent: Interior
 
 ### 계획
 
-<img src="/docs/Interior/elevator.jpg" width="800" />
+<img src="/docs/Interior/elevator.jpg" width="400" />
 
 ### 실제 진행
 - 다른 세대가 우리보다 하루 전에 시작하여 하루 후에 끝나서 보양 전혀 안함.
+- 현관 앞에만 보양함.
+
+<img src="/docs/Interior/protective_panel.jpg" width="400" />
+
 
 ### 기타 사항
 - 동의 받을때 통로 들어가기 위해서 경비실 호출 버튼 누르기.
