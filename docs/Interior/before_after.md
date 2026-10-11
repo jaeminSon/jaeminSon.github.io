@@ -15,3 +15,7 @@ parent: Interior
 <img src="/docs/Interior/after1.jpg" width="400" />
 
 <img src="/docs/Interior/after2.jpg" width="400" />
+
+<img src="/docs/Interior/after3.jpg" width="400" />
+
+<img src="/docs/Interior/after4.jpg" width="400" />
