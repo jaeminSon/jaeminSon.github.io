@@ -25,7 +25,18 @@ parent: Thoughts
 - 발명: '인간이 경험한 자연'에 존재하지 않지만, valid transition 을 규명하여 지식으로 편입하는 것.
 - **무한한 가능성의 세계**: '인간이 경험한 자연'에 존재하지 않고, valid transition 인지, unreachable 인지 모르는 것.
 
+### AI 의 발달은 **발명의 폭발**을 야기할것
+- 과실을 어떻게 나눌것인가?
+    - 강제로 나누는것은 오히려 독재적이고 강압적
+    - open source 로 공개하면 필요한 주체가 가져갈 수 있음.
+    - 필요한 주체가 많을수록 공급자의 부담이 덜함.
+- 시스템을 유지하기 위해 필요한 것
+    - storng reasoning model
+    - self-improving loop
+    - construction (temperature control facility)
+    - compute resources
+    - electricity
+
 ### 무한한 가능성의 세계로 생각할수 있는 것들.
 - 미지의 수학적 체계: 미지의 axiom 들로 부터 도출 가능한 체계.
 - 개인의 미래: 아직 구현되지 않은 무한히 존재하는 trajectory 중 하나를 '샘플링' 하는 것.
-
